@@ -1,0 +1,204 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Vatsal Trivedi",
+    "label": "Full Spectrum Engineer | Integration Specialist | UI/UX Enthusiast",
+    "image": "https://avatars.githubusercontent.com/u/14287645?v=4",
+    "email": "trivedivatsal005@gmail.com",
+    "phone": "(+91) 7600 635 053",
+    "url": "",
+    "summary": "With 6+ years of experience in developing innovative web applications, I am skilled in solving integration challenges and using data visualization tools. My expertise spans modern development frameworks, ensuring robust, data-driven solutions that exceed client expectations. I am proficient in UI/UX design tools for enhanced user experiences and have extensive experience in SaaS product development. My stack-agnostic approach allows me to adapt and leverage the best technologies to deliver optimal solutions.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Benguluru",
+      "countryCode": "IN",
+      "region": "India"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "trivedi-vatsal",
+        "url": "https://github.com/trivedi-vatsal"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "trivedi-vatsal",
+        "url": "https://linkedin.com/in/trivedi-vatsal"
+      },
+      {
+        "network": "Behance",
+        "username": "trivedivatsal",
+        "url": "https://behance.net/trivedivatsal"
+      },
+      {
+        "network": "Dribbble",
+        "username": "trivedivatsal",
+        "url": "https://dribbble.com/trivedivatsal"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Comviva",
+      "location": "Benguluru, India",
+      "description": "MobiLytix™ Rewards & MobiLytix™ Digital Marketing Product",
+      "position": "Technical Lead",
+      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
+      "startDate": "2021-12-01",
+      "endDate": "",
+      "summary": "MobiLytix™ Rewards (MR) platform is an end-to-end engagement marketing solution designed to create reward-based promotional campaigns and loyalty programs. These, in turn, are aimed at enabling enterprises to achieve their business KPIs throughout the consumer's lifecycle journey.",
+      "highlights": [
+        "Leading the transformation of the MR platform into a state-of-the-art, cloud-agnostic SaaS solution. This project integrates advanced AI/ML features and employs a cutting-edge technology stack, including TypeScript, React, FeatherJS, Delta Lake, Postgres, and vector databases, to enhance performance, scalability, and user engagement."
+      ]
+    },
+    {
+      "name": "Comviva",
+      "location": "Benguluru, India",
+      "description": "MobiLytix™ Digital Marketing Product",
+      "position": "Senior Engineer",
+      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-digital-marketing/",
+      "startDate": "2020-06-01",
+      "endDate": "2021-11-01",
+      "summary": "MobiLytix™ Digital Marketing is an Omni Channel Marketing Automation SaaS Platform incubated by TechMahindra's Comviva. As a Full Stack Developer, I delivered comprehensive solutions enhancing scalability, performance, and security, and tackled integrations.",
+      "highlights": [
+        "Notable Integrations: Shopify Public App, Seatgeek, GoodData, Data Studio, AWS QuickSight, Matomo, HubSpot, WooCommerce, WordPress, Batch (Mobile Push), Web Push Notifications, Social Media Stats (Facebook, Instagram, LinkedIn, Twitter), Glitnir's Ticketing, and Unlayer Editor. (Integration Count: 14)",
+        "Technical Solutions: Developed and maintained services using React, Strapi, Nifi, Postgres, BigQuery, and GoodData.",
+        "ML-driven Insights: Created solutions using Google BigQuery and GoodData for customer understanding and marketing optimization.",
+        "Performance Optimization: Improved application performance through optimized database queries, caching, and leveraging CDNs.",
+        "Integration Challenges: Proven ability to solve issues related to scalability, performance, and security."
+      ]
+    },
+    {
+      "name": "Tata Consultancy Services (TCS)",
+      "location": "Gandhinagar, India",
+      "description": "Worked in the Lifescience space",
+      "position": "Assistant System Engineer",
+      "url": "https://www.tcs.com/what-we-do/industries/life-sciences/solution/tcs-lifesciences-interactive",
+      "startDate": "2018-09-01",
+      "endDate": "2020-05-01",
+      "summary": "",
+      "highlights": [
+        "Provided business solutions and achieved deliverables using various technology, frameworks, and services.",
+        "Delivered end-to-end solutions using JavaScript libraries like ReactJS, Angular, NodeJS, and Express, ensuring the successful delivery of projects.",
+        "Helped businesses deliver solutions with Microsoft 365 applications and services like SharePoint Online, Microsoft Teams, Power Automate, Power BI, Graph API, and more.",
+        "Worked with GA360 custom solutions using Google Analytics, Tag Manager, and Data Studio, enabling businesses to gain actionable insights and make data-driven decisions."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Google Developer Groups Ahmedabad",
+      "position": "Creative Designer",
+      "url": "https://devfest.gdgahmedabad.com/",
+      "startDate": "2018-09-01",
+      "endDate": "",
+      "summary": "Lead the design team at the Google Developers Group Ahmedabad Chapter, contributing to the creation of banners, graphics, and social media posts for events.",
+      "highlights": []
+    },
+    {
+      "organization": "GirlScript",
+      "position": "GirlScript Summer of Code'20 Mentor",
+      "url": "https://gssoc.girlscript.tech/",
+      "startDate": "2020-02-01",
+      "endDate": "2020-05-01",
+      "summary": "Contributed being a mentor for the project during the summer of code challenge",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Birla Vishvakarma Mahavidyalaya Engg. College, Vallabh Vidyanagar",
+      "url": "https://bvmengineering.ac.in/",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2014-06-01",
+      "endDate": "2018-05-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "SQL"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "level": "",
+      "keywords": [
+        "ReactJS",
+        "NodeJS",
+        "Express",
+        "Strapi",
+        "FeathersJS",
+        "Kafka",
+        "Nifi",
+        "Contentful",
+        "Bootstrap",
+        "Redux",
+        "Shopify",
+        "GA 360",
+        "GraphQL",
+        "Rest API",
+        "Git",
+        "OpenAI",
+        "LLM"
+      ]
+    },
+    {
+      "name": "Database",
+      "level": "",
+      "keywords": [
+        "Postgres",
+        "Big Query",
+        "MongoDB",
+        "Cassandra",
+        "Redis",
+        "IndexDB"
+      ]
+    },
+    {
+      "name": "Data Visualization",
+      "level": "",
+      "keywords": [
+        "Data Studio",
+        "Power BI",
+        "Quicksight",
+        "Metabase",
+        "GoodData"
+      ]
+    },
+    {
+      "name": "Designing Tools",
+      "level": "",
+      "keywords": ["CorelDraw", "Figma", "Affinity suite", "Procreate"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "Gujarati",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2024-05-23T00:00:00",
+    "theme": "jsonresume-theme-local"
+  }
+}
