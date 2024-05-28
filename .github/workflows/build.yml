@@ -1,4 +1,5 @@
 name: Build and Deploy
+
 on:
   push:
     paths:
@@ -11,28 +12,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Use Node.js 20
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: npm run build # Assuming build script creates resume.pdf
 
-      - name: Move index.html to root
-        run: mv build/index.html index.html
+      - name: Print working directory (optional for debugging)
+        run: pwd # Print current directory
 
-      - name: Create pdf folder
-        run: mkdir pdf
+      - name: Move resume.pdf to root (if needed)
+        run: mv build/resume.pdf . # Assuming resume.pdf is in build/
 
-      - name: Move resume.pdf to pdf folder
-        run: mv resume.pdf pdf/resume.pdf
+      - name: Create pdf folder (if needed)
+        run: mkdir -p pdf # Create pdf folder if it doesn't exist (-p flag)
+
+      - name: Move resume.pdf to pdf folder (optional for organization)
+        run: mv resume.pdf pdf/ # Move resume.pdf if desired
 
       - name: Copy resume.json to root
-        run: cp resume.json resume.json
+        run: cp resume.json .
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
