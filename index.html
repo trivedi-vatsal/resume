@@ -5,10 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Vatsal Trivedi - Full Spectrum Engineer"
-    />
+     <meta name="description" content="Vatsal Trivedi" />
     <title>Vatsal Trivedi</title>
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -22,526 +19,508 @@
     />
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
-      @charset "utf-8";
-      @-webkit-viewport {
-        width: device-width;
-      }
-      @-moz-viewport {
-        width: device-width;
-      }
-      @-ms-viewport {
-        width: device-width;
-      }
-      @-o-viewport {
-        width: device-width;
-      }
-      @viewport {
-        width: device-width;
-      }
+@charset "utf-8";
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
 
-      :root {
-        --main-resume-color: #1833f6;
-        --main-resume-background-color: #5d79f6;
-        --main-resume-container-color: #ededed;
-        --main-resume-badge-color: #fff;
-      }
+:root {
+  --main-resume-color: #1833f6;
+  --main-resume-background-color: #5d79f6;
+  --main-resume-container-color: #ededed;
+  --main-resume-badge-color: #fff;
+}
 
-      body {
-        font-family: "Open Sans", Arial, Tahoma;
-        font-weight: 400;
-        color: #363636;
-        background: var(--main-resume-background-color);
-      }
-      blockquote {
-        font-size: 1em;
-      }
+body {
+  font-family: "Open Sans", Arial, Tahoma;
+  font-weight: 400;
+  color: #363636;
+  background: var(--main-resume-background-color);
+}
+blockquote {
+  font-size: 1em;
+}
 
-      .container {
-        margin-top: 80px;
-        margin-bottom: 15px;
-        background: var(--main-resume-container-color);
-      }
+.container {
+  margin-top: 80px;
+  margin-bottom: 15px;
+  background: var(--main-resume-container-color);
+}
 
-      #photo-header {
-        margin-top: -75px;
-      }
-      #photo {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        overflow: hidden;
-        padding: 5px;
-        background: var(--main-resume-background-color);
-        display: inline-block;
-      }
-      #photo img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-      }
-      #text-header h1 {
-        margin: 0;
-        padding: 0;
-        font-size: 1.5em;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: -1px;
-      }
-      #text-header h1::first-line {
-        font-size: 1.5em;
-        font-weight: 800;
-        line-height: 1.5em;
-      }
-      #text-header h1 span {
-        color: var(--main-resume-color);
-        opacity: 0.7;
-      }
-      #text-header h1 sup {
-        opacity: 0.5;
-      }
-      #text-header:after {
-        width: 100%;
-        height: 3px;
-        border-bottom: 1px solid #ddd;
-        margin-top: 15px;
-        content: "";
-        display: block;
-      }
+#photo-header {
+  margin-top: -75px;
+}
+#photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  background: var(--main-resume-background-color);
+  display: inline-block;
+}
+#photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#text-header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+#text-header h1::first-line {
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5em;
+}
+#text-header h1 span {
+  color: var(--main-resume-color);
+  opacity: 0.7;
+}
+#text-header h1 sup {
+  opacity: 0.5;
+}
+#text-header:after {
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 15px;
+  content: "";
+  display: block;
+}
 
-      .box {
-        padding-bottom: 10px;
-        margin-bottom: 25px;
-      }
-      .box h2 {
-        color: var(--main-resume-color);
-        font-size: 1.5em;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
+.box {
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.box h2 {
+  color: var(--main-resume-color);
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-      #awards,
-      #education {
-        margin-top: 20px;
-        margin-bottom: 0;
-        position: relative;
-        padding: 1em 0;
-        list-style: none;
-      }
-      #awards:before,
-      #education:before {
-        width: 5px;
-        height: 100%;
-        position: absolute;
-        left: 35px;
-        top: 0;
-        content: " ";
-        display: block;
-        background: #32475c;
-        background: -moz-linear-gradient(
-          top,
-          #ffffff 0%,
-          #32475c 7%,
-          #32475c 89%,
-          #ffffff 100%
-        );
-        background: -webkit-gradient(
-          linear,
-          left top,
-          left bottom,
-          color-stop(0%, #ffffff),
-          color-stop(7%, #32475c),
-          color-stop(89%, #32475c),
-          color-stop(100%, #ffffff)
-        );
-        background: -webkit-linear-gradient(
-          top,
-          #ffffff 0%,
-          #32475c 7%,
-          #32475c 89%,
-          #ffffff 100%
-        );
-        background: -o-linear-gradient(
-          top,
-          #ffffff 0%,
-          #32475c 7%,
-          #32475c 89%,
-          #ffffff 100%
-        );
-        background: -ms-linear-gradient(
-          top,
-          #ffffff 0%,
-          #32475c 7%,
-          #32475c 89%,
-          #ffffff 100%
-        );
-        background: linear-gradient(
-          to bottom,
-          #ffffff 0%,
-          #32475c 7%,
-          #32475c 89%,
-          #ffffff 100%
-        );
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
-      }
-      #awards li,
-      #education li {
-        width: 100%;
-        z-index: 2;
-        position: relative;
-        float: left;
-      }
-      #awards .year,
-      #education .year {
-        width: 14%;
-        background: #fff;
-        padding: 10px;
-        font-weight: 700;
-        display: inline-block;
-      }
-      #awards .description,
-      #education .description {
-        width: 83%;
-        display: inline-block;
-        background: #eee;
-        margin-bottom: 10px;
-        position: relative;
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-      }
-      #awards .description:after,
-      #education .description:after {
-        content: "";
-        position: absolute;
-        top: 15px;
-        right: 0;
-        left: -16px;
-        height: 0;
-        width: 0;
-        border: solid transparent;
-        border-right-color: #eee;
-        border-width: 8px;
-        pointer-events: none;
-      }
-      #awards .description h3,
-      #education .description h3 {
-        font-size: 1.2em;
-        margin: 0;
-        padding: 0;
-        font-weight: 700;
-      }
-      #awards .description p,
-      #education .description p {
-        margin-top: 5px;
-        padding: 0;
-      }
+#awards,
+#education {
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: relative;
+  padding: 1em 0;
+  list-style: none;
+}
+#awards:before,
+#education:before {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 35px;
+  top: 0;
+  content: " ";
+  display: block;
+  background: #32475c;
+  background: -moz-linear-gradient(
+    top,
+    #ffffff 0%,
+    #32475c 7%,
+    #32475c 89%,
+    #ffffff 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #ffffff),
+    color-stop(7%, #32475c),
+    color-stop(89%, #32475c),
+    color-stop(100%, #ffffff)
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #ffffff 0%,
+    #32475c 7%,
+    #32475c 89%,
+    #ffffff 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    #ffffff 0%,
+    #32475c 7%,
+    #32475c 89%,
+    #ffffff 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    #ffffff 0%,
+    #32475c 7%,
+    #32475c 89%,
+    #ffffff 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #32475c 7%,
+    #32475c 89%,
+    #ffffff 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+#awards li,
+#education li {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  float: left;
+}
+#awards .year,
+#education .year {
+  width: 14%;
+  background: #fff;
+  padding: 10px;
+  font-weight: 700;
+  display: inline-block;
+}
+#awards .description,
+#education .description {
+  width: 83%;
+  display: inline-block;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#awards .description:after,
+#education .description:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: -16px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #eee;
+  border-width: 8px;
+  pointer-events: none;
+}
+#awards .description h3,
+#education .description h3 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+#awards .description p,
+#education .description p {
+  margin-top: 5px;
+  padding: 0;
+}
 
-      .job {
-        margin-bottom: 15px;
-      }
-      .job .details {
-        margin-left: 3%;
-        width: 95%;
-        padding: 10px;
-        margin-bottom: 10px;
-        background: #eee;
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-      }
-      .job .where {
-        font-size: 1.2em;
-        font-weight: bold;
-      }
-      .job .year {
-        opacity: 0.7;
-      }
-      .job .profession {
-        font-size: 1.2em;
-        font-weight: bold;
-      }
-      .job .description {
-        line-height: 1.5em;
-      }
-      .job .highlights {
-        padding: 5px 0;
-        font-weight: bold;
-      }
-      .job .job-details {
-        padding-left: 5%;
-        width: 100%;
-      }
-      .publication {
-        margin-bottom: 0;
-      }
-      .publication .name {
-        font-size: 1em;
-        font-weight: bold;
-      }
-      .publication .year {
-        opacity: 0.7;
-      }
-      .publication p {
-        margin: 0;
-        padding-top: 10px;
-      }
+.job {
+  margin-bottom: 15px;
+}
+.job .details {
+  margin-left: 3%;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.job .where {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.job .year {
+  opacity: 0.7;
+}
+.job .profession {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.job .description {
+  line-height: 1.5em;
+}
+.job .highlights {
+  padding: 5px 0;
+  font-weight: bold;
+}
+.job .job-details {
+  padding-left: 5%;
+  width: 100%;
+}
+.publication {
+  margin-bottom: 0;
+}
+.publication .name {
+  font-size: 1em;
+  font-weight: bold;
+}
+.publication .year {
+  opacity: 0.7;
+}
+.publication p {
+  margin: 0;
+  padding-top: 10px;
+}
 
-      .contact-item {
-        width: 100%;
-        float: left;
-      }
-      .contact-item .icon {
-        padding: 10px;
-        border-right: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        color: #32475c;
-        background: #eee;
-      }
-      .contact-item:last-child .icon {
-        border-bottom: none;
-      }
-      .contact-item .title {
-        width: 80%;
-        width: calc(100% - 55px);
-        font-weight: 700;
-        opacity: 0.9;
-      }
-      .contact-item .title.only {
-        margin-top: 10px;
-      }
-      .contact-item .description {
-        width: 80%;
-        width: calc(100% - 55px);
-        color: var(--main-resume-color);
-      }
+.contact-item {
+  width: 100%;
+  float: left;
+}
+.contact-item .icon {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #32475c;
+  background: #eee;
+}
+.contact-item:last-child .icon {
+  border-bottom: none;
+}
+.contact-item .title {
+  width: 80%;
+  width: calc(100% - 55px);
+  font-weight: 700;
+  opacity: 0.9;
+}
+.contact-item .title.only {
+  margin-top: 10px;
+}
+.contact-item .description {
+  width: 80%;
+  width: calc(100% - 55px);
+  color: var(--main-resume-color);
+}
 
-      .item-interests,
-      .item-skills {
-        height: 30px;
-        color: var(--main-resume-color);
-        padding: 5px 10px;
-        margin-bottom: 5px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 1.1em;
-        font-weight: 600;
-      }
-      .interest,
-      .skill {
-        color: var(--main-resume-color);
-        display: inline-block;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        padding: 5px 10px;
-        background: var(--main-resume-badge-color);
-        position: relative;
-        font-size: 0.85em;
-        border: 0.5px solid var(--main-resume-color);
-        border-radius: 0%;
-      }
-      .skill-level {
-        background-color: var(--main-resume-color);
-        border-radius: 4px;
-        color: #fff;
-        padding: 1px 8px;
-        font-size: 0.75em;
-        position: absolute;
-        margin: 1px 10px;
-      }
+.item-interests,
+.item-skills {
+  height: 30px;
+  color: var(--main-resume-color);
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.interest,
+.skill {
+  color: var(--main-resume-color);
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: var(--main-resume-badge-color);
+  position: relative;
+  font-size: 0.85em;
+  border: 0.5px solid var(--main-resume-color);
+  border-radius: 0%;
+}
+.skill-level {
+  background-color: var(--main-resume-color);
+  border-radius: 4px;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 0.75em;
+  position: absolute;
+  margin: 1px 10px;
+}
 
-      #language-skills .skill {
-        margin: 10px 0;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #eee;
-      }
+#language-skills .skill {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
 
-      .header-profiles:after {
-        width: 100%;
-        height: 3px;
-        border-bottom: 1px solid #ddd;
-        content: "";
-        display: block;
-      }
+.header-profiles:after {
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px solid #ddd;
+  content: "";
+  display: block;
+}
 
-      .header-profile-badge {
-        display: inline-block;
-        margin: 10px;
-      }
+.header-profile-badge {
+  display: inline-block;
+  margin: 10px;
+}
+
     </style>
     <style type="text/css" media="print">
       body {
-        font-size: 0.95em;
-        -webkit-print-color-adjust: exact;
-      }
+  font-size: 0.95em;
+  -webkit-print-color-adjust: exact;
+}
 
-      a[href]:after {
-        content: none !important;
-      }
+a[href]:after {
+  content: none !important;
+}
 
-      #photo {
-        display: none;
-      }
+#photo {
+  display: none;
+}
 
-      .box {
-        margin-bottom: -10px;
-      }
+.box {
+  margin-bottom: -10px;
+}
 
-      blockquote,
-      #education,
-      #awards,
-      .contact-item,
-      .publication,
-      .skills,
-      .interests {
-        page-break-inside: avoid;
-      }
+blockquote,
+#education,
+#awards,
+.contact-item,
+.publication,
+.skills,
+.interests {
+  page-break-inside: avoid;
+}
 
-      .col-sm-5 {
-        width: 40%;
-        padding: 0 15px;
-      }
+.col-sm-5 {
+  width: 40%;
+  padding: 0 15px;
+}
 
-      .col-sm-7 {
-        width: 60%;
-        padding: 0 15px;
-      }
+.col-sm-7 {
+  width: 60%;
+  padding: 0 15px;
+}
 
-      .skills .col-sm-offset-1,
-      .interests .col-sm-offset-1 {
-        margin-top: -10px;
-        margin-bottom: 5px;
-      }
+.skills .col-sm-offset-1,
+.interests .col-sm-offset-1 {
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
 
-      #education {
-        margin: 0;
-        margin-bottom: -20px;
-      }
-      #awards:before,
-      #education:before {
-        background: none;
-      }
+#education {
+  margin: 0;
+  margin-bottom: -20px;
+}
+#awards:before,
+#education:before {
+  background: none;
+}
 
-      #awards .description,
-      #education .description,
-      .job .details {
-        border: 1px solid #eee;
-      }
-      .publication,
-      .publication .panel-heading,
-      .publication .name {
-        margin: 0;
-        padding: 0 5px;
-        border: none;
-      }
-      .publication .panel-body {
-        padding: 0 10px;
-        margin: 0;
-      }
+#awards .description,
+#education .description,
+.job .details {
+  border: 1px solid #eee;
+}
+.publication,
+.publication .panel-heading,
+.publication .name {
+  margin: 0;
+  padding: 0 5px;
+  border: none;
+}
+.publication .panel-body {
+  padding: 0 10px;
+  margin: 0;
+}
 
-      .badge {
-        margin: 0;
-      }
+.badge {
+  margin: 0;
+}
 
-      .list-group-item {
-        border: none;
-        margin: 0;
-        padding: 5px 15px;
-      }
-      .list-group-item:after {
-        content: "";
-        position: absolute;
-        top: 8px;
-        right: 0;
-        left: -1px;
-        height: 0;
-        width: 0;
-        border: solid transparent;
-        border-right-color: #999;
-        border-width: 4px;
-        pointer-events: none;
-      }
+.list-group-item {
+  border: none;
+  margin: 0;
+  padding: 5px 15px;
+}
+.list-group-item:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  left: -1px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #999;
+  border-width: 4px;
+  pointer-events: none;
+}
 
-      .skill-badge .badge {
-        border: 0.5px solid;
-        border-radius: 0;
-        margin-top: 5px;
-      }
+.skill-badge .badge {
+  border: 0.5px solid;
+  border-radius: 0;
+  margin-top: 5px;
+}
+
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container ">
       <div class="row">
         <div class="col-xs-12">
           <div id="photo-header" class="text-center">
             <!-- PHOTO (AVATAR) -->
             <div id="photo">
-              <img
-                src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;14287645?v&#x3D;4"
-                alt="avatar"
-              />
+              <img src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;14287645?v&#x3D;4" alt="avatar" />
             </div>
-            <div id="text-header">
+            <div id="text-header" >
               <h1>
-                Vatsal Trivedi<br /><span style="text-transform: none"
-                  >Full Spectrum Engineer | Integration Specialist | UI&#x2F;UX
-                  Enthusiast</span
+                Vatsal Trivedi<br /><span style="text-transform: none">Full Spectrum Engineer | Integration Specialist | UI&#x2F;UX Enthusiast</span
                 >
               </h1>
             </div>
             <div class="header-profiles contact-item">
               <div class="header-profile-badge">
                 <span class="fas fa-map-marker fa-fw"></span>
-                <span class="title"> Benguluru, India IN</span>
-              </div>
-              <div class="header-profile-badge">
-                <span class="fas fa-phone fa-fw"></span>
-                <span class="title">(+91) 7600 635 053 </span>
-              </div>
-              <div class="header-profile-badge">
-                <span class="fas fa-envelope fa-fw"></span>
                 <span class="title">
-                  <a href="mailto:trivedivatsal005@gmail.com" target="_blank"
-                    >trivedivatsal005@gmail.com</a
-                  >
+                  Bengaluru,
+                India
+                IN</span>
+              </div>
+               <div class="header-profile-badge">
+                <span class="fas fa-phone fa-fw"></span>
+                <span class="title">(+91) 7600 635 053
+                </span>
+              </div>
+                <div class="header-profile-badge">
+                 <span class="fas fa-envelope fa-fw"></span>
+                <span class="title">  <a href="mailto:trivedivatsal005@gmail.com" target="_blank">trivedivatsal005@gmail.com</a>
                 </span>
               </div>
             </div>
             <div class="header-profiles contact-item">
               <div class="header-profile-badge">
-                <span class="fab fa-github fa-fw"></span>
+                <span class="fab fa-github fa-fw"></span> 
                 <span class="title">Github</span>
-                <a
-                  href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal"
-                  target="_blank"
-                  >trivedi-vatsal</a
-                >
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal" target="_blank">trivedi-vatsal</a>
               </div>
               <div class="header-profile-badge">
-                <span class="fab fa-linkedin fa-fw"></span>
+                <span class="fab fa-linkedin fa-fw"></span> 
                 <span class="title">LinkedIn</span>
-                <a
-                  href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal"
-                  target="_blank"
-                  >trivedi-vatsal</a
-                >
+                <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal" target="_blank">trivedi-vatsal</a>
               </div>
               <div class="header-profile-badge">
-                <span class="fab fa-behance fa-fw"></span>
+                <span class="fab fa-behance fa-fw"></span> 
                 <span class="title">Behance</span>
-                <a
-                  href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal"
-                  target="_blank"
-                  >trivedivatsal</a
-                >
+                <a href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
               </div>
               <div class="header-profile-badge">
-                <span class="fab fa-dribbble fa-fw"></span>
+                <span class="fab fa-dribbble fa-fw"></span> 
                 <span class="title">Dribbble</span>
-                <a
-                  href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal"
-                  target="_blank"
-                  >trivedivatsal</a
-                >
+                <a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
               </div>
             </div>
           </div>
@@ -552,17 +531,7 @@
           <!-- ABOUT ME -->
           <div class="box">
             <h2><i class="fas fa-user ico"></i> About</h2>
-            <p style="margin-left: 3%">
-              With 6+ years of experience in developing innovative web
-              applications, I am skilled in solving integration challenges and
-              using data visualization tools. My expertise spans modern
-              development frameworks, ensuring robust, data-driven solutions
-              that exceed client expectations. I am proficient in UI/UX design
-              tools for enhanced user experiences and have extensive experience
-              in SaaS product development. My stack-agnostic approach allows me
-              to adapt and leverage the best technologies to deliver optimal
-              solutions.
-            </p>
+            <p style="margin-left: 3%">With 6+ years of experience in developing innovative web applications, I am skilled in solving integration challenges and using data visualization tools. My expertise spans modern development frameworks, ensuring robust, data-driven solutions that exceed client expectations. I am proficient in UI/UX design tools for enhanced user experiences and have extensive experience in SaaS product development. My stack-agnostic approach allows me to adapt and leverage the best technologies to deliver optimal solutions.</p>
           </div>
           <!-- WORK EXPERIENCE -->
           <div class="box">
@@ -572,43 +541,31 @@
                 <div class="details">
                   <div class="where">
                     Comviva
-                    <div class="pull-right">Benguluru, India</div>
+                    <div class="pull-right">
+                      Benguluru, India
+                    </div>
                   </div>
                   <div class="description">
-                    MobiLytix™ Rewards &amp; MobiLytix™ Digital Marketing
-                    Product
+                    MobiLytix™ Rewards &amp; MobiLytix™ Digital Marketing Product
                   </div>
                   <div class="address">
-                    <a
-                      href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-rewards&#x2F;"
-                      target="_blank"
-                      ><i class="fas fa-globe ico"></i>
-                      https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-rewards&#x2F;</a
+                    <a href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-rewards&#x2F;" target="_blank"
+                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-rewards&#x2F;</a
                     >
                   </div>
-                  <div class="year">December 2021 – Present</div>
+                  <div class="year">
+                    December2021 – Present
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="job-details col-xs-11">
                   <div class="profession">Technical Lead</div>
                   <div class="description">
-                    MobiLytix™ Rewards (MR) platform is an end-to-end engagement
-                    marketing solution designed to create reward-based
-                    promotional campaigns and loyalty programs. These, in turn,
-                    are aimed at enabling enterprises to achieve their business
-                    KPIs throughout the consumer's lifecycle journey.
+                    MobiLytix™ Rewards (MR) platform is an end-to-end engagement marketing solution designed to create reward-based promotional campaigns and loyalty programs. These, in turn, are aimed at enabling enterprises to achieve their business KPIs throughout the consumer's lifecycle journey.
                     <div class="highlights">Highlights</div>
                     <ul class="list-group">
-                      <li class="list-group-item">
-                        Leading the transformation of the MR platform into a
-                        state-of-the-art, cloud-agnostic SaaS solution. This
-                        project integrates advanced AI/ML features and employs a
-                        cutting-edge technology stack, including TypeScript,
-                        React, FeatherJS, Delta Lake, Postgres, and vector
-                        databases, to enhance performance, scalability, and user
-                        engagement.
-                      </li>
+                      <li class="list-group-item">Leading the transformation of the MR platform into a state-of-the-art, cloud-agnostic SaaS solution. This project integrates advanced AI/ML features and employs a cutting-edge technology stack, including TypeScript, React, FeatherJS, Delta Lake, Postgres, and vector databases, to enhance performance, scalability, and user engagement.</li>
                     </ul>
                   </div>
                 </div>
@@ -619,60 +576,35 @@
                 <div class="details">
                   <div class="where">
                     Comviva
-                    <div class="pull-right">Benguluru, India</div>
+                    <div class="pull-right">
+                      Benguluru, India
+                    </div>
                   </div>
                   <div class="description">
                     MobiLytix™ Digital Marketing Product
                   </div>
                   <div class="address">
-                    <a
-                      href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-digital-marketing&#x2F;"
-                      target="_blank"
-                      ><i class="fas fa-globe ico"></i>
-                      https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-digital-marketing&#x2F;</a
+                    <a href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-digital-marketing&#x2F;" target="_blank"
+                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-digital-marketing&#x2F;</a
                     >
                   </div>
-                  <div class="year">June 2020 – November 2021</div>
+                  <div class="year">
+                    June2020 – November2021
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="job-details col-xs-11">
                   <div class="profession">Senior Engineer</div>
                   <div class="description">
-                    MobiLytix™ Digital Marketing is an Omni Channel Marketing
-                    Automation SaaS Platform incubated by TechMahindra's
-                    Comviva. As a Full Stack Developer, I delivered
-                    comprehensive solutions enhancing scalability, performance,
-                    and security, and tackled integrations.
+                    MobiLytix™ Digital Marketing is an Omni Channel Marketing Automation SaaS Platform incubated by TechMahindra's Comviva. As a Full Stack Developer, I delivered comprehensive solutions enhancing scalability, performance, and security, and tackled integrations.
                     <div class="highlights">Highlights</div>
                     <ul class="list-group">
-                      <li class="list-group-item">
-                        Notable Integrations: Shopify Public App, Seatgeek,
-                        GoodData, Data Studio, AWS QuickSight, Matomo, HubSpot,
-                        WooCommerce, WordPress, Batch (Mobile Push), Web Push
-                        Notifications, Social Media Stats (Facebook, Instagram,
-                        LinkedIn, Twitter), Glitnir's Ticketing, and Unlayer
-                        Editor. (Integration Count: 14)
-                      </li>
-                      <li class="list-group-item">
-                        Technical Solutions: Developed and maintained services
-                        using React, Strapi, Nifi, Postgres, BigQuery, and
-                        GoodData.
-                      </li>
-                      <li class="list-group-item">
-                        ML-driven Insights: Created solutions using Google
-                        BigQuery and GoodData for customer understanding and
-                        marketing optimization.
-                      </li>
-                      <li class="list-group-item">
-                        Performance Optimization: Improved application
-                        performance through optimized database queries, caching,
-                        and leveraging CDNs.
-                      </li>
-                      <li class="list-group-item">
-                        Integration Challenges: Proven ability to solve issues
-                        related to scalability, performance, and security.
-                      </li>
+                      <li class="list-group-item">Notable Integrations: Shopify Public App, Seatgeek, GoodData, Data Studio, AWS QuickSight, Matomo, HubSpot, WooCommerce, WordPress, Batch (Mobile Push), Web Push Notifications, Social Media Stats (Facebook, Instagram, LinkedIn, Twitter), Glitnir's Ticketing, and Unlayer Editor. (Integration Count: 14)</li>
+                      <li class="list-group-item">Technical Solutions: Developed and maintained services using React, Strapi, Nifi, Postgres, BigQuery, and GoodData.</li>
+                      <li class="list-group-item">ML-driven Insights: Created solutions using Google BigQuery and GoodData for customer understanding and marketing optimization.</li>
+                      <li class="list-group-item">Performance Optimization: Improved application performance through optimized database queries, caching, and leveraging CDNs.</li>
+                      <li class="list-group-item">Integration Challenges: Proven ability to solve issues related to scalability, performance, and security.</li>
                     </ul>
                   </div>
                 </div>
@@ -683,47 +615,34 @@
                 <div class="details">
                   <div class="where">
                     Tata Consultancy Services (TCS)
-                    <div class="pull-right">Gandhinagar, India</div>
+                    <div class="pull-right">
+                      Gandhinagar, India
+                    </div>
                   </div>
-                  <div class="description">Worked in the Lifescience space</div>
+                  <div class="description">
+                    Worked in the Lifescience space
+                  </div>
                   <div class="address">
-                    <a
-                      href="https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive"
-                      target="_blank"
-                      ><i class="fas fa-globe ico"></i>
-                      https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive</a
+                    <a href="https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive" target="_blank"
+                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive</a
                     >
                   </div>
-                  <div class="year">September 2018 – May 2020</div>
+                  <div class="year">
+                    September2018 – May2020
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="job-details col-xs-11">
                   <div class="profession">Assistant System Engineer</div>
                   <div class="description">
+                    
                     <div class="highlights">Highlights</div>
                     <ul class="list-group">
-                      <li class="list-group-item">
-                        Provided business solutions and achieved deliverables
-                        using various technology, frameworks, and services.
-                      </li>
-                      <li class="list-group-item">
-                        Delivered end-to-end solutions using JavaScript
-                        libraries like ReactJS, Angular, NodeJS, and Express,
-                        ensuring the successful delivery of projects.
-                      </li>
-                      <li class="list-group-item">
-                        Helped businesses deliver solutions with Microsoft 365
-                        applications and services like SharePoint Online,
-                        Microsoft Teams, Power Automate, Power BI, Graph API,
-                        and more.
-                      </li>
-                      <li class="list-group-item">
-                        Worked with GA360 custom solutions using Google
-                        Analytics, Tag Manager, and Data Studio, enabling
-                        businesses to gain actionable insights and make
-                        data-driven decisions.
-                      </li>
+                      <li class="list-group-item">Provided business solutions and achieved deliverables using various technology, frameworks, and services.</li>
+                      <li class="list-group-item">Delivered end-to-end solutions using JavaScript libraries like ReactJS, Angular, NodeJS, and Express, ensuring the successful delivery of projects.</li>
+                      <li class="list-group-item">Helped businesses deliver solutions with Microsoft 365 applications and services like SharePoint Online, Microsoft Teams, Power Automate, Power BI, Graph API, and more.</li>
+                      <li class="list-group-item">Worked with GA360 custom solutions using Google Analytics, Tag Manager, and Data Studio, enabling businesses to gain actionable insights and make data-driven decisions.</li>
                     </ul>
                   </div>
                 </div>
@@ -738,23 +657,23 @@
                 <div class="details">
                   <div class="where">Google Developer Groups Ahmedabad</div>
                   <div class="address">
-                    <a
-                      href="https:&#x2F;&#x2F;devfest.gdgahmedabad.com&#x2F;"
-                      target="_blank"
-                      ><i class="fas fa-globe ico"></i>
-                      https:&#x2F;&#x2F;devfest.gdgahmedabad.com&#x2F;</a
+                    <a href="https:&#x2F;&#x2F;devfest.gdgahmedabad.com&#x2F;" target="_blank"
+                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;devfest.gdgahmedabad.com&#x2F;</a
                     >
                   </div>
-                  <div class="year">September 2018 – Present</div>
+                  <div class="year">
+                    September2018 – Present
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="job-details col-xs-11">
                   <div class="profession">Creative Designer</div>
                   <div class="description">
-                    Lead the design team at the Google Developers Group
-                    Ahmedabad Chapter, contributing to the creation of banners,
-                    graphics, and social media posts for events.
+                    Lead the design team at the Google Developers Group Ahmedabad Chapter, contributing to the creation of banners, graphics, and social media posts for events.
+                    <div class="highlights">Highlights</div>
+                    <ul class="list-group">
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -764,24 +683,23 @@
                 <div class="details">
                   <div class="where">GirlScript</div>
                   <div class="address">
-                    <a
-                      href="https:&#x2F;&#x2F;gssoc.girlscript.tech&#x2F;"
-                      target="_blank"
-                      ><i class="fas fa-globe ico"></i>
-                      https:&#x2F;&#x2F;gssoc.girlscript.tech&#x2F;</a
+                    <a href="https:&#x2F;&#x2F;gssoc.girlscript.tech&#x2F;" target="_blank"
+                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;gssoc.girlscript.tech&#x2F;</a
                     >
                   </div>
-                  <div class="year">February 2020 – May 2020</div>
+                  <div class="year">
+                    February2020 – May2020
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="job-details col-xs-11">
-                  <div class="profession">
-                    GirlScript Summer of Code&#39;20 Mentor
-                  </div>
+                  <div class="profession">GirlScript Summer of Code&#39;20 Mentor</div>
                   <div class="description">
-                    Contributed being a mentor for the project during the summer
-                    of code challenge
+                    Contributed being a mentor for the project during the summer of code challenge
+                    <div class="highlights">Highlights</div>
+                    <ul class="list-group">
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -799,7 +717,7 @@
               <div
                 class="title only  pull-right"
               >
-                Benguluru,
+                Bengaluru,
                 India
                 IN
               </div>
@@ -816,6 +734,14 @@
               </div>
               <div class="title only pull-right">
                 <a href="mailto:trivedivatsal005@gmail.com" target="_blank">trivedivatsal005@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center">
+                <span class="fas fa-globe fa-fw"></span>
+              </div>
+              <div class="title only pull-right">
+                <a href="https:&#x2F;&#x2F;vatsal.xyz" target="_blank">https:&#x2F;&#x2F;vatsal.xyz</a>
               </div>
             </div>
           </div>
@@ -878,99 +804,6 @@
               </div>
             </div>
           </div> -->
-          <!-- EDUCATION -->
-          <div class="box">
-            <h2><i class="fas fa-university ico"></i> Education</h2>
-            <ul id="education" class="clearfix">
-              <li>
-                <div class="year pull-left">2014 2018</div>
-                <div class="description pull-right">
-                  <h3>
-                    Birla Vishvakarma Mahavidyalaya Engg. College, Vallabh
-                    Vidyanagar
-                  </h3>
-                  <div class="where"></div>
-                  <div class="address">
-                    <a
-                      href="https:&#x2F;&#x2F;bvmengineering.ac.in&#x2F;"
-                      target="_blank"
-                      ><i class="fas fa-globe ico"></i>
-                      https:&#x2F;&#x2F;bvmengineering.ac.in&#x2F;</a
-                    >
-                  </div>
-                  <p><i class="fas fa-graduation-cap ico"></i> Bachelor</p>
-                  <p>Computer Engineering</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- SKILLS -->
-          <div class="box skill-badge">
-            <h2><i class="fas fa-tasks ico"></i> Skills</h2>
-            <div class="skills clearfix">
-              <div class="item-skills">Programming Languages</div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">JavaScript</span>
-                <span class="skill badge">TypeScript</span>
-                <span class="skill badge">HTML</span>
-                <span class="skill badge">CSS</span>
-                <span class="skill badge">Python</span>
-                <span class="skill badge">SQL</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">Frameworks &amp; Tools</div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">ReactJS</span>
-                <span class="skill badge">NodeJS</span>
-                <span class="skill badge">Express</span>
-                <span class="skill badge">Strapi</span>
-                <span class="skill badge">FeathersJS</span>
-                <span class="skill badge">Kafka</span>
-                <span class="skill badge">Nifi</span>
-                <span class="skill badge">Contentful</span>
-                <span class="skill badge">Bootstrap</span>
-                <span class="skill badge">Redux</span>
-                <span class="skill badge">Shopify</span>
-                <span class="skill badge">GA 360</span>
-                <span class="skill badge">GraphQL</span>
-                <span class="skill badge">Rest API</span>
-                <span class="skill badge">Git</span>
-                <span class="skill badge">OpenAI</span>
-                <span class="skill badge">LLM</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">Database</div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">Postgres</span>
-                <span class="skill badge">Big Query</span>
-                <span class="skill badge">MongoDB</span>
-                <span class="skill badge">Cassandra</span>
-                <span class="skill badge">Redis</span>
-                <span class="skill badge">IndexDB</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">Data Visualization</div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">Data Studio</span>
-                <span class="skill badge">Power BI</span>
-                <span class="skill badge">Quicksight</span>
-                <span class="skill badge">Metabase</span>
-                <span class="skill badge">GoodData</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">Designing Tools</div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">CorelDraw</span>
-                <span class="skill badge">Figma</span>
-                <span class="skill badge">Affinity suite</span>
-                <span class="skill badge">Procreate</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
