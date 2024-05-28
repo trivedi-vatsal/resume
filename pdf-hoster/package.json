@@ -1,0 +1,14 @@
+{
+  "name": "jsonresume-pdf-hoster",
+  "version": "1.0.0",
+  "description": "A helper to create PDF hosting html file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "author": "Vatsal Trivedi",
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^2.2.1"
+  }
+}

@@ -5,7 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <meta name="description" content="{{ basics.name }}" />
+    <meta name="description" content="{{ basics.name }}" />
+    <meta name="author" content="{{ basics.name }}">
+    <meta property="og:title" content="{{ basics.name }}">
+    <meta property="og:description" content="{{ basics.name }}">
+    <meta name="keywords" content="Resume, {{ basics.name }}">
+    <meta property="og:image" content="./favicon.ico">
+    <meta property="og:url" content="{{ basics.url }}">
+    <meta property="og:type" content="website">
     <title>{{ basics.name }}</title>
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -72,6 +79,13 @@
                 </span>
               </div>
               {{/basics.email}}
+               {{#basics.url}}
+                <div class="header-profile-badge">
+                 <span class="fas fa-globe fa-fw"></span>
+                <span class="title">  <a href="{{ basics.url }}" target="_blank">{{ basics.url }}</a>
+                </span>
+              </div>
+              {{/basics.url}}
             </div>
             <div class="header-profiles contact-item">
              {{#basics.profiles}}
