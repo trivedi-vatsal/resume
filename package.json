@@ -9,7 +9,8 @@
     "start": "resumed --theme jsonresume-theme-local",
     "generate:pdf": "node generatePDF.js",
     "generate:html": "node generateHTML.js",
-    "build": "rimraf build && ncp public build && npm run generate:html && npm run generate:pdf"
+    "generate:buildReadme": "node generateBuildReadme.js",
+    "build": "rimraf build && ncp public build && npm run generate:html && npm run generate:pdf && npm run generate:buildReadme"
   },
   "dependencies": {
     "jsonresume-theme-local": "file:./theme",
