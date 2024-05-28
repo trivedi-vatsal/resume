@@ -29,7 +29,7 @@ jobs:
         run: mkdir pdf
 
       - name: Move resume.pdf to pdf folder
-        run: mv resume.pdf pdf/resume.pdf
+        run: mv build/resume.pdf pdf/resume.pdf
 
       - name: Copy resume.json to root
         run: cp -f resume.json resume.json
