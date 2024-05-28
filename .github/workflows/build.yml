@@ -32,7 +32,7 @@ jobs:
         run: mv build/resume.pdf pdf/resume.pdf
 
       - name: Copy resume.json to root
-        run: cp -f resume.json resume.json
+        run: cp resume.json temp_resume.json && mv -f temp_resume.json resume.json
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
