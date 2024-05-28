@@ -1,10 +1,10 @@
 {
   "name": "jsonresume-theme-local",
   "version": "1.0.0",
-  "description": "A JSON Resume theme built with bootstrap modified from jsonresume-theme-kendal",
+  "description": "A JSON Resume theme built with Bootstrap, modified from jsonresume-theme-kendal.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests specified\""
   },
   "author": "Vatsal Trivedi",
   "license": "MIT",

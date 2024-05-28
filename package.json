@@ -1,13 +1,28 @@
 {
+  "name": "resume-generator",
+  "version": "1.0.0",
+  "description": "A project to generate HTML and PDF versions of a resume using JSON Resume theme and Puppeteer.",
   "private": true,
   "type": "module",
   "scripts": {
     "init": "resumed init",
     "start": "resumed --theme jsonresume-theme-local",
-    "pdf": "node pdf.js"
+    "generate:pdf": "node generatePDF.js",
+    "generate:html": "node generateHTML.js",
+    "build": "npm run generate:html && npm run generate:pdf"
   },
   "dependencies": {
     "jsonresume-theme-local": "file:./theme",
+    "puppeteer": "^22.10.0",
     "resumed": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trivedi-vatsal/resume.git"
+  },
+  "author": "Vatsal Trivedi <trivedivatsal005@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
