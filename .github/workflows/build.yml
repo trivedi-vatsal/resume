@@ -22,20 +22,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Move index.html to root
-        run: mv build/index.html index.html
-
-      - name: Create pdf folder
-        run: mkdir pdf
-
-      - name: Move resume.pdf to pdf folder
-        run: mv build/resume.pdf pdf/resume.pdf
-
-      - name: Copy resume.json to root
-        run: cp resume.json temp_resume.json && mv -f temp_resume.json resume.json
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./build
