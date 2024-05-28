@@ -117,7 +117,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Built using [resumed](https://www.npmjs.com/package/resumed)
 - Based on the [JSON Resume](https://jsonresume.org) schema
 - PDF generation powered by [Puppeteer](https://pptr.dev/)
-- Custom theme inspired by [jsonresume-theme-kendall](https://github.com/typpo/jsonresume-theme-kendall)
+- Custom theme inspired by [jsonresume-theme-kendall](https://github.com/LinuxBozo/jsonresume-theme-kendall)
 
 ---
 
