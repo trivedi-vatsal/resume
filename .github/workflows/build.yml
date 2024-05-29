@@ -30,3 +30,4 @@ jobs:
           publish_branch: gh-pages
           force_orphan: false
           clean: false
+          keep_files: true
