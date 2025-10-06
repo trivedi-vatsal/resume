@@ -1,0 +1,255 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Vatsal Trivedi",
+    "label": "Full Spectrum Engineer | Integration Specialist | UI/UX Enthusiast",
+    "image": "https://avatars.githubusercontent.com/u/14287645?v=4",
+    "email": "trivedivatsal005@gmail.com",
+    "url": "https://vatsal.xyz",
+    "summary": "With over 8 years of experience building innovative web applications and scalable SaaS platforms, I specialize in solving complex integration challenges and crafting data-driven solutions. My expertise spans modern full-stack development, AI integration, and data visualization. I bring a design-focused mindset with strong UI/UX sensibilities and a stack-agnostic approach, ensuring each solution is both technically robust and user-centered.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Bengaluru",
+      "countryCode": "IN",
+      "region": "India"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "trivedi-vatsal",
+        "url": "https://github.com/trivedi-vatsal"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "trivedi-vatsal",
+        "url": "https://linkedin.com/in/trivedi-vatsal"
+      },
+      {
+        "network": "Behance",
+        "username": "trivedivatsal",
+        "url": "https://behance.net/trivedivatsal"
+      },
+      {
+        "network": "Dribbble",
+        "username": "trivedivatsal",
+        "url": "https://dribbble.com/trivedivatsal"
+      },
+      {
+        "network": "Dev.to",
+        "username": "trivedivatsal",
+        "url": "https://dev.to/trivedivatsal"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "AI Platform for Pharma",
+      "location": "Bengaluru, India",
+      "description": "AI platform streamlining content generation, research, analytics, and engagement for the pharmaceutical industry.",
+      "position": "Principal Engineer",
+      "startDate": "2025-05-08",
+      "summary": "Leading the development of an AI-powered platform that transforms pharmaceutical content creation and workflow automation. The system integrates generative AI with enterprise CRM systems, enabling compliant content generation while streamlining regulatory processes across the pharmaceutical lifecycle.",
+      "highlights": [
+        "Architecting an AI Content Wizard integrated with Veeva CRM for end-to-end pharmaceutical workflow automation and brand-compliant content creation.",
+        "Implementing automated content generation and repurposing pipelines that reduce production timelines while ensuring regulatory compliance.",
+        "Establishing cross-functional engineering best practices and centralized content lifecycle management covering creation, approval, and distribution."
+      ]
+    },
+    {
+      "name": "Comviva",
+      "location": "Bengaluru, India",
+      "description": "MobiLytix™ Rewards & MobiLytix™ Digital Marketing Product",
+      "position": "Technical Lead",
+      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
+      "startDate": "2021-12-01",
+      "endDate": "2025-03-24",
+      "summary": "MobiLytix™ Rewards is a next-generation engagement marketing solution designed to power loyalty programs and promotional campaigns across industries.",
+      "highlights": [
+        "Leading the modernization of the MR platform into a cloud-agnostic SaaS product with AI/ML integration.",
+        "Driving architecture and feature development using TypeScript, React, FeatherJS, Delta Lake, Postgres, and vector databases.",
+        "Delivering major improvements in scalability, performance, and user engagement through data-driven personalization."
+      ]
+    },
+    {
+      "name": "Comviva",
+      "location": "Bengaluru, India",
+      "description": "MobiLytix™ Digital Marketing Product",
+      "position": "Senior Engineer",
+      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-digital-marketing/",
+      "startDate": "2020-06-01",
+      "endDate": "2021-11-01",
+      "summary": "Contributed to the development of an omni-channel marketing automation platform designed to help enterprises engage customers across digital touchpoints.",
+      "highlights": [
+        "Delivered 14+ integrations including Shopify Public App, Seatgeek, HubSpot, AWS QuickSight, GoodData, Matomo, WooCommerce, WordPress, Batch Push, and Unlayer Editor.",
+        "Implemented ML-driven insights using Google BigQuery and GoodData for personalized campaign optimization.",
+        "Enhanced performance through query optimization, caching, and CDN strategies.",
+        "Addressed complex integration challenges related to scalability, data security, and performance optimization."
+      ]
+    },
+    {
+      "name": "Tata Consultancy Services (TCS)",
+      "location": "Gandhinagar, India",
+      "description": "Worked in the Lifesciences domain, delivering digital transformation solutions for global clients.",
+      "position": "Assistant System Engineer",
+      "url": "https://www.tcs.com/what-we-do/industries/life-sciences/solution/tcs-lifesciences-interactive",
+      "startDate": "2018-09-01",
+      "endDate": "2020-05-01",
+      "summary": "",
+      "highlights": [
+        "Developed and delivered full-stack applications using ReactJS, Angular, NodeJS, and ExpressJS.",
+        "Enabled business collaboration using Microsoft 365 suite including SharePoint, Teams, Power Automate, and Power BI.",
+        "Implemented GA360-based analytics solutions using Google Analytics, Tag Manager, and Data Studio.",
+        "Contributed to scalable, data-driven decision-making through end-to-end digital solutions."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Google Developer Groups Ahmedabad",
+      "position": "Creative Designer",
+      "url": "https://devfest.gdgahmedabad.com/",
+      "startDate": "2018-09-01",
+      "endDate": "",
+      "summary": "Lead the design team for the GDG Ahmedabad chapter, creating event visuals, branding assets, and social media graphics for community events.",
+      "highlights": []
+    },
+    {
+      "organization": "GirlScript",
+      "position": "GirlScript Summer of Code 2020 Mentor",
+      "url": "https://gssoc.girlscript.tech/",
+      "startDate": "2020-02-01",
+      "endDate": "2020-05-01",
+      "summary": "Mentored open-source contributors during the GirlScript Summer of Code 2020 program, guiding them in project architecture, code reviews, and development best practices.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Birla Vishvakarma Mahavidyalaya Engineering College, Vallabh Vidyanagar",
+      "url": "https://bvmengineering.ac.in/",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2014-06-01",
+      "endDate": "2018-05-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Platform Engineering & DevOps",
+      "level": "",
+      "keywords": [
+        "Source Control Governance",
+        "CI/CD Pipeline Architecture",
+        "Automated Deployments",
+        "Infrastructure as Code (IaC)",
+        "Code Quality & Testing Standards",
+        "Security and Compliance Automation",
+        "Observability & Monitoring"
+      ]
+    },
+    {
+      "name": "Artificial Intelligence",
+      "keywords": [
+        "Large Language Models (LLMs)",
+        "Generative AI Systems",
+        "Context Engineering",
+        "Prompt Optimization",
+        "AI-Augmented Workflows",
+        "Vector Search & Databases",
+        "AI Content Generation Pipelines"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "SQL",
+        "Go",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "level": "",
+      "keywords": [
+        "ReactJS",
+        "NodeJS",
+        "ExpressJS",
+        "FeathersJS",
+        "Strapi",
+        "Kafka",
+        "Nifi",
+        "Contentful",
+        "Redux",
+        "Shopify SDK",
+        "GraphQL & REST APIs",
+        "Git & GitHub Actions",
+        "OpenAI API & LLM Integrations",
+        "Storybook",
+        "Zustand",
+        "ShadCN/UI",
+        "Turborepo"
+      ]
+    },
+    {
+      "name": "Databases",
+      "level": "",
+      "keywords": [
+        "PostgreSQL",
+        "MongoDB",
+        "BigQuery",
+        "Redis",
+        "Cassandra",
+        "IndexedDB"
+      ]
+    },
+    {
+      "name": "Data Visualization & Analytics",
+      "level": "",
+      "keywords": [
+        "Google Data Studio",
+        "Power BI",
+        "AWS QuickSight",
+        "Metabase",
+        "GoodData"
+      ]
+    },
+    {
+      "name": "Design & Prototyping Tools",
+      "level": "",
+      "keywords": ["Figma", "CorelDRAW", "Affinity Designer Suite", "Procreate"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "Gujarati",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2025-10-06T00:00:00",
+    "theme": "jsonresume-theme-local"
+  }
+}

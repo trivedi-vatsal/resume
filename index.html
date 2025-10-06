@@ -44,16 +44,20 @@
 }
 
 :root {
-  --main-resume-color: #1833f6;
-  --main-resume-background-color: #5d79f6;
-  --main-resume-container-color: #ededed;
+  --main-resume-color: #2563eb;
+  --main-resume-background-color: #f1f5f9;
+  --main-resume-container-color: #ffffff;
   --main-resume-badge-color: #fff;
+  --main-resume-accent-color: #1e40af;
+  --main-resume-text-color: #334155;
+  --main-resume-border-color: #e2e8f0;
+  --main-resume-highlight-color: #3b82f6;
 }
 
 body {
   font-family: "Open Sans", Arial, Tahoma;
   font-weight: 400;
-  color: #363636;
+  color: var(--main-resume-text-color);
   background: var(--main-resume-background-color);
 }
 blockquote {
@@ -106,7 +110,7 @@ blockquote {
 #text-header:after {
   width: 100%;
   height: 3px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--main-resume-border-color);
   margin-top: 15px;
   content: "";
   display: block;
@@ -140,12 +144,12 @@ blockquote {
   top: 0;
   content: " ";
   display: block;
-  background: #32475c;
+  background: var(--main-resume-accent-color);
   background: -moz-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: -webkit-gradient(
@@ -153,36 +157,36 @@ blockquote {
     left top,
     left bottom,
     color-stop(0%, #ffffff),
-    color-stop(7%, #32475c),
-    color-stop(89%, #32475c),
+    color-stop(7%, var(--main-resume-accent-color)),
+    color-stop(89%, var(--main-resume-accent-color)),
     color-stop(100%, #ffffff)
   );
   background: -webkit-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: -o-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: -ms-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
@@ -206,12 +210,12 @@ blockquote {
 #education .description {
   width: 83%;
   display: inline-block;
-  background: #eee;
+  background: var(--main-resume-container-color);
   margin-bottom: 10px;
   position: relative;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-bottom: 1px solid var(--main-resume-border-color);
+  border-right: 1px solid var(--main-resume-border-color);
 }
 #awards .description:after,
 #education .description:after {
@@ -223,7 +227,7 @@ blockquote {
   height: 0;
   width: 0;
   border: solid transparent;
-  border-right-color: #eee;
+  border-right-color: var(--main-resume-container-color);
   border-width: 8px;
   pointer-events: none;
 }
@@ -497,11 +501,6 @@ blockquote,
                 India
                 IN</span>
               </div>
-               <div class="header-profile-badge">
-                <span class="fas fa-phone fa-fw"></span>
-                <span class="title">(+91)7600635053
-                </span>
-              </div>
                 <div class="header-profile-badge">
                  <span class="fas fa-envelope fa-fw"></span>
                 <span class="title">  <a href="mailto:trivedivatsal005@gmail.com" target="_blank">trivedivatsal005@gmail.com</a>
@@ -534,6 +533,11 @@ blockquote,
                 <span class="title">Dribbble</span>
                 <a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
               </div>
+              <div class="header-profile-badge">
+                <span class="fab fa-dev fa-fw"></span> 
+                <span class="title">Dev.to</span>
+                <a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
+              </div>
             </div>
           </div>
         </div>
@@ -543,11 +547,43 @@ blockquote,
           <!-- ABOUT ME -->
           <div class="box">
             <h2><i class="fas fa-user ico"></i> About</h2>
-            <p style="margin-left: 3%">With 6+ years of experience in developing innovative web applications, I am skilled in solving integration challenges and using data visualization tools. My expertise spans modern development frameworks, ensuring robust, data-driven solutions that exceed client expectations. I am proficient in UI/UX design tools for enhanced user experiences and have extensive experience in SaaS product development. My stack-agnostic approach allows me to adapt and leverage the best technologies to deliver optimal solutions.</p>
+            <p style="margin-left: 3%">With over 8 years of experience building innovative web applications and scalable SaaS platforms, I specialize in solving complex integration challenges and crafting data-driven solutions. My expertise spans modern full-stack development, AI integration, and data visualization. I bring a design-focused mindset with strong UI/UX sensibilities and a stack-agnostic approach, ensuring each solution is both technically robust and user-centered.</p>
           </div>
           <!-- WORK EXPERIENCE -->
           <div class="box">
             <h2><i class="fas fa-suitcase ico"></i> Work Experience</h2>
+            <div class="job clearfix">
+              <div class="row">
+                <div class="details">
+                  <div class="where">
+                    AI Platform for Pharma
+                    <div class="pull-right">
+                      Bengaluru, India
+                    </div>
+                  </div>
+                  <div class="description">
+                    AI platform streamlining content generation, research, analytics, and engagement for the pharmaceutical industry.
+                  </div>
+                  <div class="year">
+                    May 2025 – Present
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="job-details col-xs-11">
+                  <div class="profession">Principal Engineer</div>
+                  <div class="description">
+                    Leading the development of an AI-powered platform that transforms pharmaceutical content creation and workflow automation. The system integrates generative AI with enterprise CRM systems, enabling compliant content generation while streamlining regulatory processes across the pharmaceutical lifecycle.
+                    <div class="highlights">Highlights</div>
+                    <ul class="list-group">
+                      <li class="list-group-item">Architecting an AI Content Wizard integrated with Veeva CRM for end-to-end pharmaceutical workflow automation and brand-compliant content creation.</li>
+                      <li class="list-group-item">Implementing automated content generation and repurposing pipelines that reduce production timelines while ensuring regulatory compliance.</li>
+                      <li class="list-group-item">Establishing cross-functional engineering best practices and centralized content lifecycle management covering creation, approval, and distribution.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="job clearfix">
               <div class="row">
                 <div class="details">
@@ -566,7 +602,7 @@ blockquote,
                     >
                   </div>
                   <div class="year">
-                    December 2021 – Present
+                    December 2021 – March 2025
                   </div>
                 </div>
               </div>
@@ -574,10 +610,12 @@ blockquote,
                 <div class="job-details col-xs-11">
                   <div class="profession">Technical Lead</div>
                   <div class="description">
-                    MobiLytix™ Rewards (MR) platform is an end-to-end engagement marketing solution designed to create reward-based promotional campaigns and loyalty programs. These, in turn, are aimed at enabling enterprises to achieve their business KPIs throughout the consumer's lifecycle journey.
+                    MobiLytix™ Rewards is a next-generation engagement marketing solution designed to power loyalty programs and promotional campaigns across industries.
                     <div class="highlights">Highlights</div>
                     <ul class="list-group">
-                      <li class="list-group-item">Leading the transformation of the MR platform into a state-of-the-art, cloud-agnostic SaaS solution. This project integrates advanced AI/ML features and employs a cutting-edge technology stack, including TypeScript, React, FeatherJS, Delta Lake, Postgres, and vector databases, to enhance performance, scalability, and user engagement.</li>
+                      <li class="list-group-item">Leading the modernization of the MR platform into a cloud-agnostic SaaS product with AI/ML integration.</li>
+                      <li class="list-group-item">Driving architecture and feature development using TypeScript, React, FeatherJS, Delta Lake, Postgres, and vector databases.</li>
+                      <li class="list-group-item">Delivering major improvements in scalability, performance, and user engagement through data-driven personalization.</li>
                     </ul>
                   </div>
                 </div>
@@ -589,7 +627,7 @@ blockquote,
                   <div class="where">
                     Comviva
                     <div class="pull-right">
-                      Benguluru, India
+                      Bengaluru, India
                     </div>
                   </div>
                   <div class="description">
@@ -609,14 +647,13 @@ blockquote,
                 <div class="job-details col-xs-11">
                   <div class="profession">Senior Engineer</div>
                   <div class="description">
-                    MobiLytix™ Digital Marketing is an Omni Channel Marketing Automation SaaS Platform incubated by TechMahindra's Comviva. As a Full Stack Developer, I delivered comprehensive solutions enhancing scalability, performance, and security, and tackled integrations.
+                    Contributed to the development of an omni-channel marketing automation platform designed to help enterprises engage customers across digital touchpoints.
                     <div class="highlights">Highlights</div>
                     <ul class="list-group">
-                      <li class="list-group-item">Notable Integrations: Shopify Public App, Seatgeek, GoodData, Data Studio, AWS QuickSight, Matomo, HubSpot, WooCommerce, WordPress, Batch (Mobile Push), Web Push Notifications, Social Media Stats (Facebook, Instagram, LinkedIn, Twitter), Glitnir's Ticketing, and Unlayer Editor. (Integration Count: 14)</li>
-                      <li class="list-group-item">Technical Solutions: Developed and maintained services using React, Strapi, Nifi, Postgres, BigQuery, and GoodData.</li>
-                      <li class="list-group-item">ML-driven Insights: Created solutions using Google BigQuery and GoodData for customer understanding and marketing optimization.</li>
-                      <li class="list-group-item">Performance Optimization: Improved application performance through optimized database queries, caching, and leveraging CDNs.</li>
-                      <li class="list-group-item">Integration Challenges: Proven ability to solve issues related to scalability, performance, and security.</li>
+                      <li class="list-group-item">Delivered 14+ integrations including Shopify Public App, Seatgeek, HubSpot, AWS QuickSight, GoodData, Matomo, WooCommerce, WordPress, Batch Push, and Unlayer Editor.</li>
+                      <li class="list-group-item">Implemented ML-driven insights using Google BigQuery and GoodData for personalized campaign optimization.</li>
+                      <li class="list-group-item">Enhanced performance through query optimization, caching, and CDN strategies.</li>
+                      <li class="list-group-item">Addressed complex integration challenges related to scalability, data security, and performance optimization.</li>
                     </ul>
                   </div>
                 </div>
@@ -632,7 +669,7 @@ blockquote,
                     </div>
                   </div>
                   <div class="description">
-                    Worked in the Lifescience space
+                    Worked in the Lifesciences domain, delivering digital transformation solutions for global clients.
                   </div>
                   <div class="address">
                     <a href="https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive" target="_blank"
@@ -651,10 +688,10 @@ blockquote,
                     
                     <div class="highlights">Highlights</div>
                     <ul class="list-group">
-                      <li class="list-group-item">Provided business solutions and achieved deliverables using various technology, frameworks, and services.</li>
-                      <li class="list-group-item">Delivered end-to-end solutions using JavaScript libraries like ReactJS, Angular, NodeJS, and Express, ensuring the successful delivery of projects.</li>
-                      <li class="list-group-item">Helped businesses deliver solutions with Microsoft 365 applications and services like SharePoint Online, Microsoft Teams, Power Automate, Power BI, Graph API, and more.</li>
-                      <li class="list-group-item">Worked with GA360 custom solutions using Google Analytics, Tag Manager, and Data Studio, enabling businesses to gain actionable insights and make data-driven decisions.</li>
+                      <li class="list-group-item">Developed and delivered full-stack applications using ReactJS, Angular, NodeJS, and ExpressJS.</li>
+                      <li class="list-group-item">Enabled business collaboration using Microsoft 365 suite including SharePoint, Teams, Power Automate, and Power BI.</li>
+                      <li class="list-group-item">Implemented GA360-based analytics solutions using Google Analytics, Tag Manager, and Data Studio.</li>
+                      <li class="list-group-item">Contributed to scalable, data-driven decision-making through end-to-end digital solutions.</li>
                     </ul>
                   </div>
                 </div>
@@ -682,7 +719,7 @@ blockquote,
                 <div class="job-details col-xs-11">
                   <div class="profession">Creative Designer</div>
                   <div class="description">
-                    Lead the design team at the Google Developers Group Ahmedabad Chapter, contributing to the creation of banners, graphics, and social media posts for events.
+                    Lead the design team for the GDG Ahmedabad chapter, creating event visuals, branding assets, and social media graphics for community events.
                   </div>
                 </div>
               </div>
@@ -703,9 +740,9 @@ blockquote,
               </div>
               <div class="row">
                 <div class="job-details col-xs-11">
-                  <div class="profession">GirlScript Summer of Code&#39;20 Mentor</div>
+                  <div class="profession">GirlScript Summer of Code 2020 Mentor</div>
                   <div class="description">
-                    Contributed being a mentor for the project during the summer of code challenge
+                    Mentored open-source contributors during the GirlScript Summer of Code 2020 program, guiding them in project architecture, code reviews, and development best practices.
                   </div>
                 </div>
               </div>
@@ -727,12 +764,6 @@ blockquote,
                 India
                 IN
               </div>
-            </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-phone fa-fw"></span>
-              </div>
-              <div class="title only pull-right">(+91)7600635053</div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center">
@@ -808,6 +839,19 @@ blockquote,
                   </div>
                 </div>
               </div>
+              <div class="col-sm-6">
+                <div class="contact-item">
+                  <div class="icon pull-left text-center">
+                    <span class="fab fa-dev fa-fw"></span>
+                  </div>
+                  <div class="title pull-right">Dev.to</div>
+                  <div class="description pull-right">
+                    <a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" target="_blank"
+                      >trivedivatsal</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div> -->
           <!-- EDUCATION -->
@@ -819,7 +863,7 @@ blockquote,
                   2014 2018
                 </div>
                 <div class="description pull-right">
-                  <h3>Birla Vishvakarma Mahavidyalaya Engg. College, Vallabh Vidyanagar</h3>
+                  <h3>Birla Vishvakarma Mahavidyalaya Engineering College, Vallabh Vidyanagar</h3>
                   <div class="where"></div>
                   <div class="address">
                     <a href="https:&#x2F;&#x2F;bvmengineering.ac.in&#x2F;" target="_blank"
@@ -827,7 +871,7 @@ blockquote,
                     >
                   </div>
                   <p>
-                    <i class="fas fa-graduation-cap ico"></i> Bachelor
+                    <i class="fas fa-graduation-cap ico"></i> Bachelor of Engineering
                   </p>
                   <p>Computer Engineering</p>
                 </div>
@@ -839,16 +883,47 @@ blockquote,
             <h2><i class="fas fa-tasks ico"></i> Skills</h2>
             <div class="skills clearfix">
               <div class="item-skills">
+                Platform Engineering &amp; DevOps
+                
+              </div>
+              <div class="col-sm-offset-1 col-sm-11 clearfix">
+                <span class="skill badge">Source Control Governance</span>
+                <span class="skill badge">CI/CD Pipeline Architecture</span>
+                <span class="skill badge">Automated Deployments</span>
+                <span class="skill badge">Infrastructure as Code (IaC)</span>
+                <span class="skill badge">Code Quality & Testing Standards</span>
+                <span class="skill badge">Security and Compliance Automation</span>
+                <span class="skill badge">Observability & Monitoring</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                Artificial Intelligence
+                
+              </div>
+              <div class="col-sm-offset-1 col-sm-11 clearfix">
+                <span class="skill badge">Large Language Models (LLMs)</span>
+                <span class="skill badge">Generative AI Systems</span>
+                <span class="skill badge">Context Engineering</span>
+                <span class="skill badge">Prompt Optimization</span>
+                <span class="skill badge">AI-Augmented Workflows</span>
+                <span class="skill badge">Vector Search & Databases</span>
+                <span class="skill badge">AI Content Generation Pipelines</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
                 Programming Languages
                 
               </div>
               <div class="col-sm-offset-1 col-sm-11 clearfix">
                 <span class="skill badge">JavaScript</span>
                 <span class="skill badge">TypeScript</span>
-                <span class="skill badge">HTML</span>
-                <span class="skill badge">CSS</span>
                 <span class="skill badge">Python</span>
                 <span class="skill badge">SQL</span>
+                <span class="skill badge">Go</span>
+                <span class="skill badge">HTML5</span>
+                <span class="skill badge">CSS3</span>
               </div>
             </div>
             <div class="skills clearfix">
@@ -859,59 +934,59 @@ blockquote,
               <div class="col-sm-offset-1 col-sm-11 clearfix">
                 <span class="skill badge">ReactJS</span>
                 <span class="skill badge">NodeJS</span>
-                <span class="skill badge">Express</span>
-                <span class="skill badge">Strapi</span>
+                <span class="skill badge">ExpressJS</span>
                 <span class="skill badge">FeathersJS</span>
+                <span class="skill badge">Strapi</span>
                 <span class="skill badge">Kafka</span>
                 <span class="skill badge">Nifi</span>
                 <span class="skill badge">Contentful</span>
-                <span class="skill badge">Bootstrap</span>
                 <span class="skill badge">Redux</span>
-                <span class="skill badge">Shopify</span>
-                <span class="skill badge">GA 360</span>
-                <span class="skill badge">GraphQL</span>
-                <span class="skill badge">Rest API</span>
-                <span class="skill badge">Git</span>
-                <span class="skill badge">OpenAI</span>
-                <span class="skill badge">LLM</span>
+                <span class="skill badge">Shopify SDK</span>
+                <span class="skill badge">GraphQL & REST APIs</span>
+                <span class="skill badge">Git & GitHub Actions</span>
+                <span class="skill badge">OpenAI API & LLM Integrations</span>
+                <span class="skill badge">Storybook</span>
+                <span class="skill badge">Zustand</span>
+                <span class="skill badge">ShadCN/UI</span>
+                <span class="skill badge">Turborepo</span>
               </div>
             </div>
             <div class="skills clearfix">
               <div class="item-skills">
-                Database
+                Databases
                 
               </div>
               <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">Postgres</span>
-                <span class="skill badge">Big Query</span>
+                <span class="skill badge">PostgreSQL</span>
                 <span class="skill badge">MongoDB</span>
-                <span class="skill badge">Cassandra</span>
+                <span class="skill badge">BigQuery</span>
                 <span class="skill badge">Redis</span>
-                <span class="skill badge">IndexDB</span>
+                <span class="skill badge">Cassandra</span>
+                <span class="skill badge">IndexedDB</span>
               </div>
             </div>
             <div class="skills clearfix">
               <div class="item-skills">
-                Data Visualization
+                Data Visualization &amp; Analytics
                 
               </div>
               <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">Data Studio</span>
+                <span class="skill badge">Google Data Studio</span>
                 <span class="skill badge">Power BI</span>
-                <span class="skill badge">Quicksight</span>
+                <span class="skill badge">AWS QuickSight</span>
                 <span class="skill badge">Metabase</span>
                 <span class="skill badge">GoodData</span>
               </div>
             </div>
             <div class="skills clearfix">
               <div class="item-skills">
-                Designing Tools
+                Design &amp; Prototyping Tools
                 
               </div>
               <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">CorelDraw</span>
                 <span class="skill badge">Figma</span>
-                <span class="skill badge">Affinity suite</span>
+                <span class="skill badge">CorelDRAW</span>
+                <span class="skill badge">Affinity Designer Suite</span>
                 <span class="skill badge">Procreate</span>
               </div>
             </div>
