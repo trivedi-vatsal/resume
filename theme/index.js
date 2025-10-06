@@ -92,6 +92,10 @@ function render(resumeObject) {
       case "keybase":
         p.iconClass = "fas fa-key";
         break;
+      case "dev.to":
+      case "dev":
+        p.iconClass = "fab fa-dev";
+        break;
       default:
         // try to automatically select the icon based on the name
         p.iconClass = "fab fa-" + p.network.toLowerCase();

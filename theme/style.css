@@ -17,16 +17,20 @@
 }
 
 :root {
-  --main-resume-color: #1833f6;
-  --main-resume-background-color: #5d79f6;
-  --main-resume-container-color: #ededed;
+  --main-resume-color: #2563eb;
+  --main-resume-background-color: #f1f5f9;
+  --main-resume-container-color: #ffffff;
   --main-resume-badge-color: #fff;
+  --main-resume-accent-color: #1e40af;
+  --main-resume-text-color: #334155;
+  --main-resume-border-color: #e2e8f0;
+  --main-resume-highlight-color: #3b82f6;
 }
 
 body {
   font-family: "Open Sans", Arial, Tahoma;
   font-weight: 400;
-  color: #363636;
+  color: var(--main-resume-text-color);
   background: var(--main-resume-background-color);
 }
 blockquote {
@@ -79,7 +83,7 @@ blockquote {
 #text-header:after {
   width: 100%;
   height: 3px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--main-resume-border-color);
   margin-top: 15px;
   content: "";
   display: block;
@@ -113,12 +117,12 @@ blockquote {
   top: 0;
   content: " ";
   display: block;
-  background: #32475c;
+  background: var(--main-resume-accent-color);
   background: -moz-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: -webkit-gradient(
@@ -126,36 +130,36 @@ blockquote {
     left top,
     left bottom,
     color-stop(0%, #ffffff),
-    color-stop(7%, #32475c),
-    color-stop(89%, #32475c),
+    color-stop(7%, var(--main-resume-accent-color)),
+    color-stop(89%, var(--main-resume-accent-color)),
     color-stop(100%, #ffffff)
   );
   background: -webkit-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: -o-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: -ms-linear-gradient(
     top,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
-    #32475c 7%,
-    #32475c 89%,
+    var(--main-resume-accent-color) 7%,
+    var(--main-resume-accent-color) 89%,
     #ffffff 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
@@ -179,12 +183,12 @@ blockquote {
 #education .description {
   width: 83%;
   display: inline-block;
-  background: #eee;
+  background: var(--main-resume-container-color);
   margin-bottom: 10px;
   position: relative;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-bottom: 1px solid var(--main-resume-border-color);
+  border-right: 1px solid var(--main-resume-border-color);
 }
 #awards .description:after,
 #education .description:after {
@@ -196,7 +200,7 @@ blockquote {
   height: 0;
   width: 0;
   border: solid transparent;
-  border-right-color: #eee;
+  border-right-color: var(--main-resume-container-color);
   border-width: 8px;
   pointer-events: none;
 }
