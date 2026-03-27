@@ -50,17 +50,14 @@
   "position": "Principal Engineer (Ariya Platform)",
   "startDate": "2025-05-08",
   "summary": "Leading engineering for Ariya, an AI-powered platform transforming pharmaceutical content workflows, research, analytics, and engagement. Driving the design and delivery of scalable, compliant, and intelligent systems integrating generative AI with enterprise ecosystems.",
-  "highlights": [
-    "Architecting core systems for Ariya, an AI platform enabling end-to-end pharmaceutical workflows across content creation, research, analytics, and engagement.",
-    "Built the AI Content Wizard for modular, brand-compliant content generation integrated with Veeva CRM and downstream engagement platforms.",
-    "Designed and implemented content lifecycle management covering authoring, approval workflows, compliance validation, and omnichannel distribution.",
-    "Developed advanced LLM orchestration frameworks including prompt engineering, context injection, and retrieval-based augmentation (RAG).",
-    "Integrated Ariya with enterprise ecosystems including Salesforce Marketing Cloud (SFMC), CRM systems, and external data providers.",
-    "Led development of a centralized Data Catalog enabling metadata-driven discovery and self-serve data access across teams.",
-    "Implemented governance, auditability, and traceability mechanisms aligned with pharmaceutical regulatory standards.",
-    "Drove frontend architecture for complex workflows using scalable design systems, component libraries, and state management patterns.",
-    "Optimized AI and data pipelines for performance, cost efficiency, and scalability using caching and vector databases."
-  ]
+ "highlights": [
+  "Architecting core systems for Ariya, an AI platform enabling end-to-end pharmaceutical workflows across content creation, research, analytics, and engagement.",
+  "Built the AI Content Wizard and end-to-end content lifecycle management system covering authoring, approval workflows, compliance validation, and omnichannel distribution.",
+  "Developed advanced LLM orchestration frameworks including prompt engineering, context injection, and retrieval-based augmentation (RAG) for high-quality, compliant content generation.",
+  "Integrated Ariya with enterprise ecosystems including Veeva CRM, Salesforce Marketing Cloud (SFMC), and external data platforms for seamless data and engagement workflows.",
+  "Led development of a centralized Data Catalog enabling metadata-driven discovery and self-serve data access across business and engineering teams.",
+  "Implemented scalable, governed architecture with auditability, traceability, and optimized AI/data pipelines using caching and vector databases for performance and cost efficiency."
+]
 },
     {
       "name": "Comviva",
