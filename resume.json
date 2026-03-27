@@ -43,19 +43,25 @@
     ]
   },
   "work": [
-    {
-      "name": "AI Platform for Pharma",
-      "location": "Bengaluru, India",
-      "description": "AI platform streamlining content generation, research, analytics, and engagement for the pharmaceutical industry.",
-      "position": "Principal Engineer",
-      "startDate": "2025-05-08",
-      "summary": "Leading the development of an AI-powered platform that transforms pharmaceutical content creation and workflow automation. The system integrates generative AI with enterprise CRM systems, enabling compliant content generation while streamlining regulatory processes across the pharmaceutical lifecycle.",
-      "highlights": [
-        "Architecting an AI Content Wizard integrated with Veeva CRM for end-to-end pharmaceutical workflow automation and brand-compliant content creation.",
-        "Implementing automated content generation and repurposing pipelines that reduce production timelines while ensuring regulatory compliance.",
-        "Establishing cross-functional engineering best practices and centralized content lifecycle management covering creation, approval, and distribution."
-      ]
-    },
+   {
+  "name": "Phamax",
+  "location": "Bengaluru, India",
+  "description": "Ariya — AI platform for pharma that streamlines content generation, information research, analytics, and engagement.",
+  "position": "Principal Engineer (Ariya Platform)",
+  "startDate": "2025-05-08",
+  "summary": "Leading engineering for Ariya, an AI-powered platform transforming pharmaceutical content workflows, research, analytics, and engagement. Driving the design and delivery of scalable, compliant, and intelligent systems integrating generative AI with enterprise ecosystems.",
+  "highlights": [
+    "Architecting core systems for Ariya, an AI platform enabling end-to-end pharmaceutical workflows across content creation, research, analytics, and engagement.",
+    "Built the AI Content Wizard for modular, brand-compliant content generation integrated with Veeva CRM and downstream engagement platforms.",
+    "Designed and implemented content lifecycle management covering authoring, approval workflows, compliance validation, and omnichannel distribution.",
+    "Developed advanced LLM orchestration frameworks including prompt engineering, context injection, and retrieval-based augmentation (RAG).",
+    "Integrated Ariya with enterprise ecosystems including Salesforce Marketing Cloud (SFMC), CRM systems, and external data providers.",
+    "Led development of a centralized Data Catalog enabling metadata-driven discovery and self-serve data access across teams.",
+    "Implemented governance, auditability, and traceability mechanisms aligned with pharmaceutical regulatory standards.",
+    "Drove frontend architecture for complex workflows using scalable design systems, component libraries, and state management patterns.",
+    "Optimized AI and data pipelines for performance, cost efficiency, and scalability using caching and vector databases."
+  ]
+},
     {
       "name": "Comviva",
       "location": "Bengaluru, India",
