@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Vatsal Trivedi",
-    "label": "Agentic AI Engineer | Full Spectrum Developer | Integration Specialist | UI/UX Enthusiast",
+    "label": "Forward Deployed Engineer · AI Platforms · Enterprise Integrations",
     "image": "https://avatars.githubusercontent.com/u/14287645?v=4",
     "email": "trivedivatsal005@gmail.com",
     "url": "https://vatsal.xyz",
-    "phone": "(+91)7600635053",
-    "summary": "With over 8 years of experience building innovative web applications and scalable SaaS platforms, I specialize in solving complex integration challenges and crafting data-driven solutions. My expertise spans modern full-stack development, AI integration, and data visualization. I bring a design-focused mindset with strong UI/UX sensibilities and a stack-agnostic approach, ensuring each solution is both technically robust and user-centered.",
+    "phone": "+91 760-063-5053",
+    "summary": "I embed with the problem, ship into production, and own the integrations that make AI systems actually useful inside real enterprises. My work spans LLM orchestration, multi-tenant SaaS architecture, compliance-aware pipelines, and deep enterprise integrations; the kind of engineering where production uptime, audit trails, and regulated workflows are the bar. Strong full-stack delivery across the entire lifecycle, with a forward deployed mindset that prioritizes working software over polished demos.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -44,41 +44,43 @@
     ]
   },
   "work": [
-   {
-  "name": "Phamax",
-  "location": "Bengaluru, India",
-  "description": "Ariya — AI platform for pharma that streamlines content generation, information research, analytics, and engagement.",
-  "position": "Principal Engineer (Ariya Platform)",
-  "startDate": "2025-05-08",
-  "summary": "Leading engineering for Ariya, an AI-powered platform transforming pharmaceutical content workflows, research, analytics, and engagement. Driving the design and delivery of scalable, compliant, and intelligent systems integrating generative AI with enterprise ecosystems.",
- "highlights": [
-  "Architecting core systems for Ariya, an AI platform enabling end-to-end pharmaceutical workflows across content creation, research, analytics, and engagement.",
-  "Built the AI Content Wizard and end-to-end content lifecycle management system covering authoring, approval workflows, compliance validation, and omnichannel distribution.",
-  "Developed advanced LLM orchestration frameworks including prompt engineering, context injection, and retrieval-based augmentation (RAG) for high-quality, compliant content generation.",
-  "Integrated Ariya with enterprise ecosystems including Veeva CRM, Salesforce Marketing Cloud (SFMC), and external data platforms for seamless data and engagement workflows.",
-  "Led development of a centralized Data Catalog enabling metadata-driven discovery and self-serve data access across business and engineering teams.",
-  "Implemented scalable, governed architecture with auditability, traceability, and optimized AI/data pipelines using caching and vector databases for performance and cost efficiency."
-]
-},
     {
-      "name": "Comviva",
+      "name": "Phamax",
       "location": "Bengaluru, India",
-      "description": "MobiLytix™ Rewards & MobiLytix™ Digital Marketing Product",
-      "position": "Technical Lead",
-      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
-      "startDate": "2021-12-01",
-      "endDate": "2025-03-24",
-      "summary": "MobiLytix™ Rewards is a next-generation engagement marketing solution designed to power loyalty programs and promotional campaigns across industries.",
+      "description": "Ariya - AI platform for pharma that streamlines content generation, information research, analytics, and engagement.",
+      "position": "Principal Engineer (Ariya Platform)",
+      "startDate": "2025-05-08",
+      "summary": "Leading engineering for Ariya, an AI-powered platform transforming pharmaceutical content workflows, research, analytics, and engagement. Driving the design and delivery of scalable, compliant, and intelligent systems integrating generative AI with enterprise ecosystems.",
       "highlights": [
-        "Leading the modernization of the MR platform into a cloud-agnostic SaaS product with AI/ML integration.",
-        "Driving architecture and feature development using TypeScript, React, FeatherJS, Delta Lake, Postgres, and vector databases.",
-        "Delivering major improvements in scalability, performance, and user engagement through data-driven personalization."
+        "Architecting core systems for an AI platform serving global pharmaceutical clients, enabling end-to-end content workflows across content creation, research, analytics, and engagement.",
+        "Built the AI Content Wizard and content lifecycle management system covering authoring, multi-stage approval workflows, compliance validation, and omnichannel distribution across regulated markets.",
+        "Designed and deployed LLM orchestration frameworks covering prompt engineering, context injection, RAG pipelines, embedding retrieval, and tool calling — enabling compliant, traceable content generation across multiple content types and markets.",
+        "Integrated with enterprise ecosystems including Veeva CRM and Salesforce Marketing Cloud (SFMC) to support compliant omnichannel workflows across multiple client tenants.",
+        "Led development of a centralized Data Catalog enabling metadata-driven discovery, observability, and self-serve data access across business and engineering teams.",
+        "Implemented production-grade architecture with full auditability, deployment pipelines, monitoring, and optimized AI/data workflows using caching and vector databases."
       ]
     },
     {
       "name": "Comviva",
       "location": "Bengaluru, India",
-      "description": "MobiLytix™ Digital Marketing Product",
+      "description": "MobiLytix Rewards & MobiLytix Digital Marketing Product",
+      "position": "Technical Lead",
+      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
+      "startDate": "2021-12-01",
+      "endDate": "2025-03-24",
+      "summary": "MobiLytix Rewards is a next-generation engagement marketing solution designed to power loyalty programs and promotional campaigns across industries.",
+      "highlights": [
+        "Led the modernization of MobiLytix Rewards into a cloud-agnostic, multi-tenant SaaS product with AI/ML-driven personalization, serving enterprise clients across telecom and retail.",
+        "Drove full-stack architecture and feature development using TypeScript, React, FeathersJS, Delta Lake, Postgres, and vector databases across a distributed microservices system.",
+        "Owned event-driven campaign execution pipeline using Kafka, handling high-throughput reward and loyalty workflows at scale with asynchronous processing and caching.",
+        "Introduced observability and monitoring standards across the platform — improving deployment reliability and reducing mean time to resolution for production incidents.",
+        "Delivered major improvements in user engagement and campaign performance through data-driven personalization and ML-driven segmentation."
+      ]
+    },
+    {
+      "name": "Comviva",
+      "location": "Bengaluru, India",
+      "description": "MobiLytix Digital Marketing Product",
       "position": "Senior Engineer",
       "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-digital-marketing/",
       "startDate": "2020-06-01",
@@ -88,7 +90,7 @@
         "Delivered 14+ integrations including Shopify Public App, Seatgeek, HubSpot, AWS QuickSight, GoodData, Matomo, WooCommerce, WordPress, Batch Push, and Unlayer Editor.",
         "Implemented ML-driven insights using Google BigQuery and GoodData for personalized campaign optimization.",
         "Enhanced performance through query optimization, caching, and CDN strategies.",
-        "Addressed complex integration challenges related to scalability, data security, and performance optimization."
+        "Resolved deep integration challenges around multi-tenant data isolation, API rate limiting, and secure credential handling across third-party platforms."
       ]
     },
     {
@@ -99,12 +101,11 @@
       "url": "https://www.tcs.com/what-we-do/industries/life-sciences/solution/tcs-lifesciences-interactive",
       "startDate": "2018-09-01",
       "endDate": "2020-05-01",
-      "summary": "",
+      "summary": "Delivered digital transformation solutions for global life sciences clients, building full-stack applications and data-driven tools in a regulated enterprise environment.",
       "highlights": [
         "Developed and delivered full-stack applications using ReactJS, Angular, NodeJS, and ExpressJS.",
         "Enabled business collaboration using Microsoft 365 suite including SharePoint, Teams, Power Automate, and Power BI.",
-        "Implemented GA360-based analytics solutions using Google Analytics, Tag Manager, and Data Studio.",
-        "Contributed to scalable, data-driven decision-making through end-to-end digital solutions."
+        "Built analytics and reporting workflows using GA360, Google Tag Manager, and Data Studio for enterprise life sciences teams."
       ]
     }
   ],
@@ -144,41 +145,62 @@
   "publications": [],
   "skills": [
     {
-      "name": "Platform Engineering & DevOps",
+      "name": "Core Areas",
       "level": "",
       "keywords": [
-        "Source Control Governance",
-        "CI/CD Pipeline Architecture",
-        "Automated Deployments",
-        "Infrastructure as Code (IaC)",
-        "Code Quality & Testing Standards",
-        "Security and Compliance Automation",
-        "Observability & Monitoring"
+        "AI Platforms",
+        "Enterprise Integrations",
+        "Multi-Tenant SaaS",
+        "LLM Systems",
+        "Distributed Systems",
+        "Event-Driven Architecture",
+        "Developer Tooling",
+        "Workflow Orchestration",
+        "API Integrations",
+        "Regulated Environments"
       ]
     },
     {
-      "name": "Artificial Intelligence",
+      "name": "AI & LLM Engineering",
+      "level": "",
       "keywords": [
-        "Large Language Models (LLMs)",
-        "Generative AI Systems",
-        "Context Engineering",
-        "Prompt Optimization",
-        "AI-Augmented Workflows",
-        "Vector Search & Databases",
-        "AI Content Generation Pipelines"
+        "LLM Orchestration",
+        "RAG Pipelines",
+        "Prompt Engineering",
+        "Semantic Retrieval",
+        "Embedding Pipelines",
+        "Hybrid Retrieval",
+        "Tool Calling",
+        "AI Evaluations",
+        "OpenAI API",
+        "Claude",
+        "LangGraph",
+        "Vector Databases",
+        "MCP"
+      ]
+    },
+    {
+      "name": "Platform Engineering & DevOps",
+      "level": "",
+      "keywords": [
+        "CI/CD Pipeline Architecture",
+        "Infrastructure as Code (IaC)",
+        "Observability & Monitoring",
+        "Security and Compliance Automation",
+        "Automated Deployments",
+        "Asynchronous Workflows",
+        "Caching Strategies"
       ]
     },
     {
       "name": "Programming Languages",
       "level": "",
       "keywords": [
-        "JavaScript",
         "TypeScript",
+        "JavaScript",
         "Python",
         "SQL",
-        "Go",
-        "HTML5",
-        "CSS3"
+        "Go"
       ]
     },
     {
@@ -187,21 +209,15 @@
       "keywords": [
         "ReactJS",
         "NodeJS",
-        "ExpressJS",
         "FeathersJS",
-        "Strapi",
         "Kafka",
-        "Nifi",
-        "Contentful",
-        "Redux",
-        "Shopify SDK",
         "GraphQL & REST APIs",
-        "Git & GitHub Actions",
-        "OpenAI API & LLM Integrations",
-        "Storybook",
-        "Zustand",
+        "Vercel AI SDK",
+        "Shopify SDK",
+        "GitHub Actions",
+        "Turborepo",
         "ShadCN/UI",
-        "Turborepo"
+        "Strapi"
       ]
     },
     {
@@ -212,25 +228,23 @@
         "MongoDB",
         "BigQuery",
         "Redis",
-        "Cassandra",
-        "IndexedDB"
+        "Cassandra"
       ]
     },
     {
-      "name": "Data Visualization & Analytics",
+      "name": "Design & Prototyping",
       "level": "",
-      "keywords": [
-        "Google Data Studio",
-        "Power BI",
-        "AWS QuickSight",
-        "Metabase",
-        "GoodData"
-      ]
+      "keywords": ["Figma", "Affinity Designer Suite", "Procreate"]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Databricks Fundamentals",
+      "issuer": "Databricks"
     },
     {
-      "name": "Design & Prototyping Tools",
-      "level": "",
-      "keywords": ["Figma", "CorelDRAW", "Affinity Designer Suite", "Procreate"]
+      "name": "Data Science on Google Cloud Platform: Designing Data Warehouses",
+      "issuer": "Google Cloud"
     }
   ],
   "languages": [
@@ -249,11 +263,103 @@
   ],
   "interests": [],
   "references": [],
-  "projects": [],
+  "projects": [
+    {
+      "name": "InboxCraft",
+      "description": "Client-side tool that generates PowerShell scripts to automate Microsoft 365 Outlook inbox rules - no sign-up, no backend, fully transparent script execution.",
+      "highlights": [
+        "Built Quick Mode and Advanced Mode workflows for inbox rule generation with a pre-built template library for services like GitHub, Slack, and Jira.",
+        "AST-based PowerShell code generation with syntax highlighting; entirely client-side for security and transparency.",
+        "Published as an official Agent Skills package — compatible with Claude Code, Cursor, and AI assistants following the Vercel Labs skills spec; available via npx skills."
+      ],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "PowerShell",
+        "Microsoft 365",
+        "Agent Skills",
+        "Agentic AI"
+      ],
+      "url": "https://github.com/trivedi-vatsal/inboxcraft",
+      "type": "application"
+    },
+    {
+      "name": "InboxCraft Skills",
+      "description": "Official agent skill pack for InboxCraft - nine PowerShell-based tools enabling AI assistants to manage Outlook rules, folders, and categories via natural language.",
+      "highlights": [
+        "Compatible with Claude Code, Cursor, Antigravity, and any assistant following the npx skills specification.",
+        "Covers rule creation, folder hierarchy visualization, category management, large folder detection, and empty folder cleanup."
+      ],
+      "keywords": [
+        "PowerShell",
+        "Agent Skills",
+        "Claude Code",
+        "Agentic AI",
+        "Microsoft Outlook",
+        "LLM Tooling"
+      ],
+      "url": "https://github.com/trivedi-vatsal/inboxcraft-skills",
+      "type": "library"
+    },
+    {
+      "name": "StaleGuard",
+      "description": "Zero-friction stale deployment detector - silently reloads outdated SPA builds on tab focus by monitoring HTTP ETag/Last-Modified headers, with no polling or user banners.",
+      "highlights": [
+        "Focus-triggered version checking with ETag and Last-Modified fallback; offline-safe.",
+        "Deployed to Azure Static Web Apps and GitHub Pages with automated GitHub Actions workflow."
+      ],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "GitHub Actions",
+        "Azure Static Web Apps"
+      ],
+      "url": "https://github.com/trivedi-vatsal/StaleGuard",
+      "type": "library"
+    },
+    {
+      "name": "PySecRecipes",
+      "description": "Production-ready GitHub Actions workflow for automated Python dependency security audits - weekly scans, vulnerability reporting, and intelligent issue lifecycle management.",
+      "highlights": [
+        "Scans against PyPI Advisory, OSV, and Python Packaging Advisory databases; generates detailed remediation reports.",
+        "Auto-creates and closes GitHub issues as vulnerabilities appear and are resolved; supports monorepos and multi-environment setups."
+      ],
+      "keywords": [
+        "Python",
+        "GitHub Actions",
+        "Security Automation",
+        "CI/CD",
+        "DevSecOps",
+        "pip-audit"
+      ],
+      "url": "https://github.com/trivedi-vatsal/pysec-recipes",
+      "type": "application"
+    },
+    {
+      "name": "PyImportSync",
+      "description": "AST-based Python dependency validator that ensures all imports in a codebase are declared in requirements.txt - available as a GitHub Action and pre-commit hook with a published v1.0.0 release.",
+      "highlights": [
+        "Git-aware caching and configurable analysis paths for fast execution in CI/CD pipelines.",
+        "Cross-platform support via shell and PowerShell scripts; integrates with UV package manager."
+      ],
+      "keywords": [
+        "Python",
+        "AST",
+        "GitHub Actions",
+        "pre-commit",
+        "CI/CD",
+        "Developer Tooling"
+      ],
+      "url": "https://github.com/trivedi-vatsal/PyImportSync",
+      "type": "application"
+    }
+  ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2025-10-06T00:00:00",
+    "lastModified": "2026-05-08T00:00:00",
     "theme": "jsonresume-theme-local"
   }
 }

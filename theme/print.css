@@ -1,6 +1,7 @@
 body {
   font-size: 0.95em;
   -webkit-print-color-adjust: exact;
+  line-height: 1.3;
 }
 
 a[href]:after {
@@ -69,6 +70,51 @@ blockquote,
 
 .badge {
   margin: 0;
+}
+
+/* Hide project highlights sub-bullets in print — description line is enough */
+.list-group .list-group {
+  display: none;
+}
+
+/* Hide work entry summaries in print — highlights already cover the content */
+.job .job-details .description > p,
+.job .job-details > .description > *:not(.highlights):not(ul) {
+  display: none;
+}
+
+/* Tighten work entry spacing */
+.job {
+  margin-bottom: 4px;
+}
+
+/* Hide job URL links in print */
+.job .details .address {
+  display: none;
+}
+
+/* Tighten box spacing */
+.box {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.1em;
+  margin: 6px 0 4px;
+}
+
+/* Tighten highlights list */
+ul.list-group {
+  margin-bottom: 2px;
+}
+
+.list-group-item {
+  padding: 2px 12px;
+}
+
+/* Hide volunteer section in print to save space */
+.box:has(h2 .fa-users) {
+  display: none;
 }
 
 .list-group-item {

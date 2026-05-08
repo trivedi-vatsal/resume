@@ -180,6 +180,24 @@
             </ul>
           </div>
           {{/awardsBool}}
+          {{#projectsBool}}
+          <!-- PROJECTS -->
+          <div class="box">
+            <h2><i class="fas fa-code-branch ico"></i> Projects</h2>
+            <ul class="list-group">
+              {{#projects}}
+              <li class="list-group-item">
+                {{#url}}<a href="{{ url }}" target="_blank" style="font-weight: bold">{{ name }}</a>{{/url}}{{^url}}<span style="font-weight: bold">{{ name }}</span>{{/url}}: {{ description }}
+                {{#highlights}}
+                <ul class="list-group" style="margin-top:4px">
+                  {{#.}}<li class="list-group-item" style="font-size:0.9em">{{{.}}}</li>{{/.}}
+                </ul>
+                {{/highlights}}
+              </li>
+              {{/projects}}
+            </ul>
+          </div>
+          {{/projectsBool}}
           {{#volunteerBool}}
           <!-- VOLUNTEER -->
           <div class="box">
@@ -222,20 +240,6 @@
             {{/volunteer}}
           </div>
           {{/volunteerBool}}
-          {{#projectsBool}}
-          <!-- PROJECTS -->
-          <div class="box">
-            <h2><i class="fas fa-code-branch ico"></i> Projects</h2>
-            <ul class="list-group">
-              {{#projects}}
-              <li class="list-group-item">
-                <span style="font-weight: bold">{{ name }}</span
-                >: {{ description }}
-              </li>
-              {{/projects}}
-            </ul>
-          </div>
-          {{/projectsBool}}
         </div>
         <div class="col-xs-12 col-sm-5">
           <!-- CONTACT -->
