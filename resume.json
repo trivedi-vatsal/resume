@@ -7,7 +7,7 @@
     "email": "trivedivatsal005@gmail.com",
     "url": "https://vatsal.xyz",
     "phone": "(+91)7600635053",
-    "summary": "With over 8 years of experience building innovative web applications and scalable SaaS platforms, I specialize in solving complex integration challenges and crafting data-driven solutions. My expertise spans modern full-stack development, AI integration, and data visualization. I bring a design-focused mindset with strong UI/UX sensibilities and a stack-agnostic approach, ensuring each solution is both technically robust and user-centered.",
+    "summary": "I build intelligent systems at the intersection of generative AI and enterprise software. My work centers on architecting agentic workflows, LLM orchestration pipelines, and RAG powered applications that solve real problems in pharma and martech. Over the years I have worked across the full stack and what keeps me engaged is the combination of systems thinking, deep integration challenges, and crafting products that people genuinely enjoy using. I pay close attention to the design layer just as much as the architecture, and I am always finding ways to make AI feel less like infrastructure and more like a natural collaborator inside the products I help build.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -161,11 +161,36 @@
       "keywords": [
         "Large Language Models (LLMs)",
         "Generative AI Systems",
+        "Agentic AI and Multi-Agent Systems",
+        "Retrieval-Augmented Generation (RAG)",
         "Context Engineering",
         "Prompt Optimization",
+        "LangChain and LangGraph",
+        "LlamaIndex",
+        "Model Context Protocol (MCP)",
+        "Tool Use and Function Calling",
+        "AI Safety and Guardrails",
+        "AI Evaluation and Testing",
         "AI-Augmented Workflows",
         "Vector Search & Databases",
         "AI Content Generation Pipelines"
+      ]
+    },
+    {
+      "name": "Agentic AI Frameworks & Tools",
+      "keywords": [
+        "LangChain",
+        "LangGraph",
+        "LlamaIndex",
+        "Anthropic Claude API",
+        "OpenAI API",
+        "Hugging Face Transformers",
+        "Ollama",
+        "Vercel AI SDK",
+        "Pinecone",
+        "Weaviate",
+        "ChromaDB",
+        "pgvector"
       ]
     },
     {
@@ -198,6 +223,11 @@
         "GraphQL & REST APIs",
         "Git & GitHub Actions",
         "OpenAI API & LLM Integrations",
+        "LangChain & LangGraph",
+        "Anthropic SDK",
+        "Vercel AI SDK",
+        "FastAPI",
+        "Next.js",
         "Storybook",
         "Zustand",
         "ShadCN/UI",
@@ -253,7 +283,7 @@
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2025-10-06T00:00:00",
+    "lastModified": "2026-05-08T00:00:00",
     "theme": "jsonresume-theme-local"
   }
 }
