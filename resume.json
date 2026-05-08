@@ -7,7 +7,7 @@
     "email": "trivedivatsal005@gmail.com",
     "url": "https://vatsal.xyz",
     "phone": "+91 760-063-5053",
-    "summary": "I embed with the problem, ship into production, and own the integrations that make AI systems actually useful inside real enterprises. My work spans LLM orchestration, multi-tenant SaaS architecture, compliance-aware pipelines, and deep enterprise integrations; the kind of engineering where production uptime, audit trails, and regulated workflows are the bar. Strong full-stack delivery across the entire lifecycle, with a forward deployed mindset that prioritizes working software over polished demos.",
+    "summary": "Full-spectrum Engineer who embeds with the problem, ships into production, and owns the integrations that make AI systems actually useful inside real enterprises. My work spans LLM orchestration, multi-tenant SaaS architecture, compliance-aware pipelines, and deep enterprise integrations — the kind of engineering where production uptime, audit trails, and regulated workflows are the bar.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -195,13 +195,7 @@
     {
       "name": "Programming Languages",
       "level": "",
-      "keywords": [
-        "TypeScript",
-        "JavaScript",
-        "Python",
-        "SQL",
-        "Go"
-      ]
+      "keywords": ["TypeScript", "JavaScript", "Python", "SQL", "Go"]
     },
     {
       "name": "Frameworks & Tools",
@@ -223,13 +217,7 @@
     {
       "name": "Databases",
       "level": "",
-      "keywords": [
-        "PostgreSQL",
-        "MongoDB",
-        "BigQuery",
-        "Redis",
-        "Cassandra"
-      ]
+      "keywords": ["PostgreSQL", "MongoDB", "BigQuery", "Redis", "Cassandra"]
     },
     {
       "name": "Design & Prototyping",
