@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"No tests specified\""
   },
-  "author": "Vatsal Trivedi",
+  "author": "trivedi-vatsal",
   "license": "MIT",
   "dependencies": {
     "gravatar": "^1.0.6",

@@ -157,6 +157,18 @@ function render(resumeObject) {
   if (resumeObject.projects && resumeObject.projects.length) {
     if (resumeObject.projects[0].name) {
       resumeObject.projectsBool = true;
+      _.each(resumeObject.projects, function (p) {
+        if (!p.url) return;
+        try {
+          var parsed = new URL(p.url);
+          p.displayUrl = parsed.hostname.replace(/^www\./, "");
+          if (parsed.pathname && parsed.pathname !== "/") {
+            p.displayUrl += parsed.pathname.replace(/\/$/, "");
+          }
+        } catch (e) {
+          p.displayUrl = p.url;
+        }
+      });
     }
   }
 
@@ -212,7 +224,6 @@ function render(resumeObject) {
 
   if (resumeObject.publications && resumeObject.publications.length) {
     if (resumeObject.publications[0].name) {
-      resumeObject.publicationsBool = true;
       _.each(resumeObject.publications, function (a) {
         a.year = (a.releaseDate || "").substr(0, 4);
         a.day = (a.releaseDate || "").substr(8, 2);
@@ -233,11 +244,7 @@ function render(resumeObject) {
     }
   }
 
-  if (resumeObject.languages && resumeObject.languages.length) {
-    if (resumeObject.languages[0].name) {
-      resumeObject.languagesBool = true;
-    }
-  }
+  // Hidden for now: certificates, publications, languages stay in resume.json.
 
   if (resumeObject.references && resumeObject.references.length) {
     if (resumeObject.references[0].name) {

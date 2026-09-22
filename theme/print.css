@@ -8,7 +8,9 @@ a[href]:after {
   content: none !important;
 }
 
-#photo {
+#photo,
+.theme-switch,
+.print-trigger {
   display: none;
 }
 
@@ -53,8 +55,10 @@ blockquote,
 
 #awards .description,
 #education .description,
-.job .details {
+.job .details,
+.publication.panel {
   border: 1px solid #eee;
+  border-radius: 0;
 }
 .publication,
 .publication .panel-heading,
@@ -72,7 +76,6 @@ blockquote,
   margin: 0;
 }
 
-/* Hide project highlights sub-bullets in print — description line is enough */
 .list-group .list-group {
   display: none;
 }
@@ -122,6 +125,9 @@ ul.list-group {
   margin: 0;
   padding: 5px 15px;
 }
+.list-group-item:before {
+  display: none;
+}
 .list-group-item:after {
   content: "";
   position: absolute;
@@ -136,8 +142,26 @@ ul.list-group {
   pointer-events: none;
 }
 
+.box > .list-group > .list-group-item:after {
+  content: none;
+}
+
+.skill,
+.interest,
 .skill-badge .badge {
   border: 0.5px solid;
-  border-radius: 0;
+  border-radius: 4px;
+}
+.skill-badge .badge {
   margin-top: 5px;
+}
+
+.project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.project-url {
+  font-size: 0.8em;
 }

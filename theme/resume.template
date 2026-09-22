@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="copper">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8" />
@@ -14,6 +14,12 @@
     <meta property="og:url" content="{{ basics.url }}">
     <meta property="og:type" content="website">
     <title>{{ basics.name }}</title>
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("resume-theme");
+        if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
+      } catch (e) {}
+    </script>
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link
@@ -32,6 +38,21 @@
     </style>
   </head>
   <body>
+    <div class="theme-switch">
+      <button type="button" class="theme-toggle" aria-label="Change color theme" aria-expanded="false" aria-haspopup="true">
+        <span class="theme-toggle-swatch"></span>
+      </button>
+      <div class="theme-menu" role="group" aria-label="Color theme" hidden>
+        <button type="button" data-theme="copper" aria-label="Copper"></button>
+        <button type="button" data-theme="blue" aria-label="Blue"></button>
+        <button type="button" data-theme="ink" aria-label="Ink"></button>
+        <button type="button" data-theme="green" aria-label="Green"></button>
+        <button type="button" data-theme="plum" aria-label="Plum"></button>
+      </div>
+    </div>
+    <button type="button" class="print-trigger" aria-label="Print resume">
+      <i class="fas fa-print" aria-hidden="true"></i>
+    </button>
     <div class="container ">
       <div class="row">
         <div class="col-xs-12">
@@ -57,10 +78,7 @@
                   {{ basics.location.city }}{{#basics.location.region}},
                 {{ basics.location.region }}{{/basics.location.region
                 }}{{#basics.location.postalCode}} {{ basics.location.postalCode
-                }}{{/basics.location.postalCode
-                }}{{#basics.location.countryCode}}
-                {{ basics.location.countryCode
-                }}{{/basics.location.countryCode}}</span>
+                }}{{/basics.location.postalCode}}</span>
               </div>
               {{/basics.location}}
               {{#basics.phone}}
@@ -117,7 +135,7 @@
               <div class="row">
                 <div class="details">
                   <div class="where">
-                    {{ name }}
+                    {{#url}}<a href="{{ url }}" target="_blank">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}
                     {{#location}}
                     <div class="pull-right">
                       {{ location }}
@@ -129,13 +147,6 @@
                     {{ description }}
                   </div>
                   {{/description}}
-                  {{#url}}
-                  <div class="address">
-                    <a href="{{ url }}" target="_blank"
-                      ><i class="fas fa-globe ico"></i> {{ url }}</a
-                    >
-                  </div>
-                  {{/url}}
                   <div class="year">
                     {{ startDateMonth }}{{ startDateYear }} – {{ endDateMonth
                     }}{{ endDateYear }}
@@ -146,9 +157,8 @@
                 <div class="job-details col-xs-11">
                   <div class="profession">{{ position }}</div>
                   <div class="description">
-                    {{{summary}}}
+                    {{#summary}}<p>{{{summary}}}</p>{{/summary}}
                     {{#boolHighlights}}
-                    <div class="highlights">Highlights</div>
                     <ul class="list-group">
                       {{#highlights}}
                       <li class="list-group-item">{{{.}}}</li>
@@ -187,10 +197,15 @@
             <ul class="list-group">
               {{#projects}}
               <li class="list-group-item">
-                {{#url}}<a href="{{ url }}" target="_blank" style="font-weight: bold">{{ name }}</a>{{/url}}{{^url}}<span style="font-weight: bold">{{ name }}</span>{{/url}}: {{ description }}
+                <div class="project-head">
+                  {{#url}}<a href="{{ url }}" target="_blank" class="project-name">{{ name }}</a>{{/url}}{{^url}}<span class="project-name">{{ name }}</span>{{/url}}
+                  {{#displayUrl}}<a href="{{ url }}" target="_blank" class="project-url">{{ displayUrl }}</a>{{/displayUrl}}
+                </div>
+                <span class="project-description">{{ description }}</span>
+                {{#keywords}}<span class="skill project-keyword">{{.}}</span>{{/keywords}}
                 {{#highlights}}
-                <ul class="list-group" style="margin-top:4px">
-                  {{#.}}<li class="list-group-item" style="font-size:0.9em">{{{.}}}</li>{{/.}}
+                <ul class="list-group project-highlights">
+                  {{#.}}<li class="list-group-item">{{{.}}}</li>{{/.}}
                 </ul>
                 {{/highlights}}
               </li>
@@ -224,9 +239,8 @@
                 <div class="job-details col-xs-11">
                   <div class="profession">{{ position }}</div>
                   <div class="description">
-                    {{{summary}}}
+                    {{#summary}}<p>{{{summary}}}</p>{{/summary}}
                     {{#boolHighlights}}
-                    <div class="highlights">Highlights</div>
                     <ul class="list-group">
                       {{#highlights}}
                       <li class="list-group-item">{{{.}}}</li>
@@ -331,15 +345,8 @@
                   {{ startDateYear }} {{ endDateYear }}
                 </div>
                 <div class="description pull-right">
-                  <h3>{{ institution }}</h3>
+                  <h3>{{#url}}<a href="{{ url }}" target="_blank">{{ institution }}</a>{{/url}}{{^url}}{{ institution }}{{/url}}</h3>
                   <div class="where">{{ organization }}</div>
-                  {{#url}}
-                  <div class="address">
-                    <a href="{{ url }}" target="_blank"
-                      ><i class="fas fa-globe ico"></i> {{ url }}</a
-                    >
-                  </div>
-                  {{/url}}
                   {{#studyType}}
                   <p>
                     <i class="fas fa-graduation-cap ico"></i> {{ studyType }}
@@ -383,6 +390,18 @@
             {{/skills}}
           </div>
           {{/skillsBool}}
+          {{#certificatesBool}}
+          <div class="box">
+            <h2><i class="fas fa-certificate ico"></i> Certificates</h2>
+            <ul class="list-group">
+              {{#certificates}}
+              <li class="list-group-item">
+                {{ name }}{{#issuer}}<span class="skill badge pull-right">{{ issuer }}</span>{{/issuer}}
+              </li>
+              {{/certificates}}
+            </ul>
+          </div>
+          {{/certificatesBool}}
           {{#publicationsBool}}
           <!-- PUBLICATIONS -->
           <div class="box">
@@ -390,7 +409,7 @@
             {{#publications}}
             <div class="publication panel panel-default">
               <div class="panel-heading">
-                <div class="name panel-title">{{ name }}</div>
+                <div class="name panel-title">{{#url}}<a href="{{ url }}" target="_blank">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</div>
               </div>
               <div class="panel-body">
                 {{#publisher}}
@@ -399,13 +418,6 @@
                 </div>
                 {{/publisher}}
                 <div class="year">{{ day }} {{ month }} {{ year }}</div>
-                {{#url}}
-                <div class="address">
-                  <a href="{{ url }}" target="_blank"
-                    ><i class="fas fa-globe ico"></i> {{ url }}</a
-                  >
-                </div>
-                {{/url}}
                 {{#summary}}
                 <p>{{{summary}}}</p>
                 {{/summary}}
@@ -463,5 +475,61 @@
         </div>
       </div>
     </div>
+    <script>
+      (function () {
+        var key = "resume-theme";
+        var themes = ["copper", "blue", "ink", "green", "plum"];
+        var root = document.querySelector(".theme-switch");
+        var toggle = root.querySelector(".theme-toggle");
+        var menu = root.querySelector(".theme-menu");
+
+        function setOpen(open) {
+          root.classList.toggle("is-open", open);
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          if (open) menu.removeAttribute("hidden");
+          else menu.setAttribute("hidden", "");
+        }
+
+        function apply(name) {
+          if (themes.indexOf(name) === -1) name = "copper";
+          document.documentElement.setAttribute("data-theme", name);
+          var buttons = menu.querySelectorAll("button");
+          for (var i = 0; i < buttons.length; i++) {
+            var on = buttons[i].getAttribute("data-theme") === name;
+            buttons[i].classList.toggle("is-active", on);
+            buttons[i].setAttribute("aria-pressed", on ? "true" : "false");
+          }
+          try { localStorage.setItem(key, name); } catch (e) {}
+        }
+
+        var saved = "copper";
+        try { saved = localStorage.getItem(key) || "copper"; } catch (e) {}
+        apply(saved);
+        setOpen(false);
+
+        toggle.addEventListener("click", function (event) {
+          event.stopPropagation();
+          setOpen(!root.classList.contains("is-open"));
+        });
+
+        menu.addEventListener("click", function (event) {
+          var button = event.target.closest("button[data-theme]");
+          if (!button) return;
+          apply(button.getAttribute("data-theme"));
+          setOpen(false);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!root.contains(event.target)) setOpen(false);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") setOpen(false);
+        });
+      })();
+      document.querySelector(".print-trigger").addEventListener("click", function () {
+        window.print();
+      });
+    </script>
   </body>
 </html>
