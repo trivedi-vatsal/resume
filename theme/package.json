@@ -1,7 +1,7 @@
 {
   "name": "jsonresume-theme-local",
   "version": "1.0.0",
-  "description": "A JSON Resume theme built with Bootstrap, modified from jsonresume-theme-kendal.",
+  "description": "A single-column JSON Resume theme with serif typography and compact metadata.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests specified\""

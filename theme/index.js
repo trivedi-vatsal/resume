@@ -2,6 +2,14 @@ var fs = require("fs");
 var _ = require("lodash");
 var gravatar = require("gravatar");
 var Mustache = require("mustache");
+var emphasis = require("./emphasis.json");
+var emphasisPattern = new RegExp(emphasis.slice().sort(function (a, b) { return b.length - a.length; }).map(function (phrase) {
+  return Mustache.escape(phrase).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}).join("|"), "g");
+
+function emphasize(text) {
+  return Mustache.escape(text || "").replace(emphasisPattern, "<strong>$&</strong>");
+}
 
 var d = new Date();
 var curyear = d.getFullYear();
@@ -36,6 +44,7 @@ function getMonth(startDateStr) {
 }
 
 function render(resumeObject) {
+  resumeObject.basics.formattedSummary = emphasize(resumeObject.basics.summary);
   resumeObject.basics.capitalName = resumeObject.basics.name.toUpperCase();
   if (resumeObject.basics && resumeObject.basics.email) {
     resumeObject.basics.gravatar = gravatar.url(resumeObject.basics.email, {
@@ -51,6 +60,8 @@ function render(resumeObject) {
   }
 
   _.each(resumeObject.basics.profiles, function (p) {
+    var iconPath = __dirname + "/icons/" + p.network.toLowerCase() + ".svg";
+    p.iconSvg = fs.existsSync(iconPath) ? fs.readFileSync(iconPath, "utf8") : "";
     switch (p.network.toLowerCase()) {
       // special cases
       case "google-plus":
@@ -111,6 +122,7 @@ function render(resumeObject) {
   if (resumeObject.work && resumeObject.work.length) {
     resumeObject.workBool = true;
     _.each(resumeObject.work, function (w) {
+      w.formattedHighlights = (w.highlights || []).map(emphasize);
       if (w.startDate) {
         w.startDateYear = (w.startDate || "").substr(0, 4);
         w.startDateMonth = getMonth(w.startDate || "");
@@ -158,6 +170,8 @@ function render(resumeObject) {
     if (resumeObject.projects[0].name) {
       resumeObject.projectsBool = true;
       _.each(resumeObject.projects, function (p) {
+        p.formattedDescription = emphasize(p.description);
+        p.boolHighlights = Array.isArray(p.highlights) && p.highlights.length > 0;
         if (!p.url) return;
         try {
           var parsed = new URL(p.url);

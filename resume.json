@@ -7,7 +7,7 @@
     "email": "trivedivatsal005@gmail.com",
     "url": "https://vatsal.xyz",
     "phone": "+91 760-063-5053",
-    "summary": "I build AI products and the platforms under them. At Phamax I lead engineering for Ariya, a generative-AI platform for pharma teams: React frontends, Django and FastAPI services, retrieval-grounded LLM pipelines on Azure OpenAI and Azure AI Search, and the CI/CD that ships it to 8 pharma and life-sciences clients. Before that I spent three years on Factoreal, a fan-engagement SaaS for sports teams incubated by Comviva, where I built its BigQuery analytics pipeline, fan scoring, and Shopify integration. Then I ran releases and wrote the segmentation engine for Comviva's MobiLytix Rewards. The figures in this resume are counted from each employer's git history, with merges and teammates' work kept separate. I also ship small tools in the open. The current one is openpreflight: GitHub Check Runs on a server you already run.",
+    "summary": "Principal engineer building AI products, multi-tenant platforms, and the data systems behind them. At Phamax, I lead architecture and delivery for Ariya across eight pharma and life-sciences client deployments, connecting source-backed generation, regulated content workflows, and enterprise integrations. Previously, I led engineering for Factoreal’s omnichannel marketing platform and Comviva’s MobiLytix Rewards, spanning large-scale analytics, loyalty targeting, and event-driven services. My work combines hands-on implementation, engineering standards, and team leadership from design through production. I also build open-source developer tools.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -47,70 +47,76 @@
     {
       "name": "Phamax",
       "location": "Bengaluru, India",
-      "description": "Ariya: generative-AI platform for pharma content, research, analytics, and engagement",
+      "description": "Ariya: AI platform for pharmaceutical content, research, analytics, and engagement",
       "position": "Principal Engineer (Ariya Platform)",
       "startDate": "2025-05-08",
-      "summary": "I lead engineering for Ariya, a generative-AI platform that pharma marketing and medical teams use to create, review, localize, and publish content. It runs as dedicated deployments for 8 pharma and life-sciences clients. I write code across it (729 commits of my own in 16 repositories since May 2025) and review the team's: 185 of the 373 pull requests I merged were teammates' work.",
+      "summary": "Lead engineering for Ariya across eight client deployments, owning architecture, hands-on implementation, engineering standards, and production delivery for pharma marketing and medical teams.",
       "highlights": [
-        "Wrote the codebase restructuring plan and carried it out in about eight weeks: stood up the new core API, portal, and wizard repositories with their CI, then moved every deployment from tag-based to branch-based releases.",
-        "Designed Content Compose, the email pipeline for medical content that must cite its sources, and wrote 23 of its 26 commits: three LLM passes over hybrid search in Azure AI Search. The model never writes the reference list; it is rebuilt from inline citations, and a 14-check validator QA-checks every output.",
-        "Took a white-label RAG assistant over 551 medical publications from a Turborepo migration to production in five weeks (staging on day 4, UAT on day 15, production on day 35), writing 146 of the 156 commits since: PIN + JWT access, citation chips that open the source PDF, an agent-reasoning panel, and an admin console with audit logs.",
-        "Built the Speech Avatar end to end in about two and a half weeks: six endpoints on the Azure Speech SDK (tokens, streaming chat, post-call conversation analysis), the data model, and the portal UI.",
-        "Built the localization system (32 of 33 portal commits and all of the backend), and moved the Content Wizard from hardcoded steps to configuration served by the API, with per-instance theming and delegated template approval.",
-        "Wrote the structured-data ingestion pipeline (41 of its 42 commits): Bronze/Silver/Gold on Azure Blob Storage with a DBML-driven schema registry. When Gold-layer loads failed in production, fixed six causes in one pass (emoji encoding, unmapped columns, VARCHAR overflow, missing surrogate keys) and made loads idempotent with hashed keys.",
-        "Built a SonarQube scanning kit in four days, then made 20 security fixes in the next three, applied to three client release lines: AES-GCM in place of static-IV AES-CBC, a JWT algorithm allow-list, SHA-256 at 19 call sites, and parameterised SQL. Earlier, encrypted phone numbers at rest and rotated database SSL certificates across 7 environments in about ten days.",
-        "Wrote about 30 of the GitHub Actions workflows that deploy Ariya to staging, UAT, and production, and built a JSON-to-PPTX service in two days (Bun, Elysia; runs as a server or an Azure Function)."
+        "Restructured the platform into core API, portal, and authoring applications; established shared engineering standards and reusable staging, UAT, and production deployment workflows.",
+        "Built the AI Content Wizard and regulated content lifecycle: configuration-driven authoring, localization, multi-stage approval, compliance checks, and distribution across content types and markets.",
+        "Architected Content Compose with three LLM stages, hybrid retrieval on Azure AI Search, deterministic source-linked bibliographies, and a 14-check validator for content completeness and citation integrity.",
+        "Designed LLM orchestration across prompts, context injection, RAG, embeddings, and tool calling; integrated Veeva CRM and Salesforce Marketing Cloud into tenant-specific omnichannel workflows.",
+        "Delivered a white-label RAG assistant over 551 medical publications with controlled access, inspectable source PDFs, feedback, audit logs, and an admin console on Azure Container Apps.",
+        "Built the Speech Avatar end to end across Azure Speech, Django, and the portal, covering streaming chat, credential exchange, conversation logs, and post-call analysis.",
+        "Architected Bronze/Silver/Gold ingestion with a DBML schema registry and run tracking; resolved six production failure causes and introduced deterministic keys for repeatable UPSERTs.",
+        "Established the Data Catalog for metadata-based discovery, observability, and self-service access; built HCP and SFMC email-data APIs powering the Daily Sales Brief.",
+        "Established repeatable SonarQube assessment and applied 20 security fixes across three client release lines, strengthening encryption, JWT validation, hashing, SQL access, and application controls.",
+        "Encrypted phone numbers at rest, automated dependency security audits, and coordinated database certificate rotation across seven environments and four services.",
+        "Improved build efficiency with uv and Docker caching; delivered a JSON-to-PPTX service and administrative APIs for content metrics and event reporting."
       ]
     },
     {
       "name": "Comviva",
       "location": "Bengaluru, India",
-      "description": "MobiLytix Rewards: reward campaigns and loyalty programs for telecom and retail",
+      "description": "MobiLytix Rewards: multi-tenant loyalty and campaign platform for telecom and retail",
       "position": "Technical Lead",
       "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
       "startDate": "2023-10-01",
       "endDate": "2025-03-24",
-      "summary": "I was technical lead on MobiLytix Rewards, Comviva's loyalty platform, rebuilt as multi-tenant TypeScript microservices on FeathersJS, Keycloak, PostgreSQL, Redis, and Kafka. I ran its releases, wrote the segmentation service, and wrote the shared data packages the services build on.",
+      "summary": "Technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards, owning full-stack architecture, targeting services, shared backend foundations, and delivery across in-house and vendor teams.",
       "highlights": [
-        "Ran the release train from 5.7.0 to 5.8.2: all 17 release-to-main merges across 6 services, four tagged releases of the core loyalty service in 30 days, and 50 feature, fix, and security branches integrated from about 8 in-house and vendor engineers.",
-        "Wrote the segmentation service that drives loyalty targeting (24 of its 28 non-merge commits). It turns rule-builder JSON into PostgreSQL across 26 operators, 11 of them date-based, and reads custom member attributes from a JSON column, so new segment fields need no schema change.",
-        "Built club onboarding in the core loyalty service: a hook that creates each club's five tables inside a transaction, plus a Kafka hook that recomputes a segment as soon as it is edited.",
-        "Sole author of the shared Postgres (Knex) and Redis client packages that 5 services build on, and of the service-to-service JWT helpers. Primary author of the member business-logic package (27 of its 32 commits). Moved the S3 package to TypeScript and set up npm publishing in GitLab CI.",
-        "Added the first automated tests to three services that had none (segment, scheduler, tier), moving from Mocha to Jest with coverage thresholds. The segment service got 48 test cases."
+        "Led the cloud-agnostic, multi-tenant platform rewrite across TypeScript, React, FeathersJS, PostgreSQL, Delta Lake, and vector databases, connecting customer-facing features to distributed service and data foundations.",
+        "Owned Kafka campaign processing with asynchronous execution and caching for high-throughput reward and loyalty workflows; delivered AI/ML personalization and segmentation capabilities.",
+        "Designed a JSON-to-PostgreSQL segmentation engine with 26 operators, including 11 date operators; supported custom member attributes without schema changes, scheduled execution, and explicit run history.",
+        "Made club provisioning transactional to prevent partial tenant setup and connected segment changes to Kafka-driven recomputation.",
+        "Authored PostgreSQL and Redis clients used by five services and service-to-service JWT helpers; centralized enrollment, membership validation, attribute updates, and caching in a shared member package.",
+        "Introduced platform observability and monitoring to support more reliable deployments and faster incident diagnosis; coordinated production releases and security remediation across six services.",
+        "Established Jest suites and coverage gates for segmentation, scheduling, and tiers, including 48 segmentation tests; strengthened shared-package delivery with TypeScript and automated publishing."
       ]
     },
     {
       "name": "Factoreal",
       "location": "Bengaluru, India",
-      "description": "Factoreal: omnichannel fan-engagement SaaS for sports teams, incubated by Comviva",
+      "description": "Factoreal: omnichannel marketing automation platform, incubated by Comviva",
       "position": "Technical Lead",
-      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-digital-marketing/",
+      "url": "https://www.factoreal.com/",
       "startDate": "2021-12-01",
       "endDate": "2023-09-01",
-      "summary": "Factoreal is a marketing-automation platform that cricket, football, soccer, and baseball teams use to run fan campaigns over email, SMS, WhatsApp, push, and social. It was incubated by Comviva, later became MobiLytix Digital Marketing, and is now part of Satisfi Labs. As technical lead I owned fan scoring, the Shopify relaunch, and analytics provisioning. Across both roles I built 13 third-party integrations, including Shopify, Razorpay, SeatGeek, HubSpot, GoodData, and reCAPTCHA Enterprise.",
+      "summary": "Led engineering across email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics for ecommerce, sports, and other customer verticals.",
       "highlights": [
-        "Designed and built the Fan Maturity Model: six channel scores (email, SMS, app, web, store spend, WhatsApp) combined with per-team weights into four tiers, from Inactive to Fanatic. It runs as daily BigQuery scheduled queries over 19 tables per team; I wrote 93% of the Python scheduling module and the portal configuration view.",
-        "Rebuilt the Shopify app for the 2022 App Store relaunch (install from the store, signup, per-store tables, OAuth scopes). Took webhook handling from 17 topics to 40, added GraphQL billing webhooks, and upgraded the Admin API from 2020-01 to 2023-04 in two steps.",
-        "Grew per-customer analytics provisioning from 57 BigQuery tables to 86, plus 49 views. By January 2023 the platform ran 998 scheduled queries across 71 customer datasets.",
-        "Created the shared contact-operations npm package, used by 5 production services, and shipped the 1.0.0 release of the plan-entitlements package that 12 services use.",
-        "Added per-customer session timeouts and reCAPTCHA Enterprise on signup, fixed duplicate Shopify contacts by normalizing phone numbers, and built the SeatGeek ticketing integration."
+        "Built and evolved the BigQuery analytics foundation for a platform handling 10 billion transactions; automated provisioning and scoring across 71 customer datasets and 998 scheduled queries.",
+        "Designed the Fan Maturity Model for the sports vertical, combining six channel scores and customer-configurable weights into four audience tiers, with daily scoring orchestration and portal controls.",
+        "Rebuilt the Shopify app for its App Store relaunch, covering installation, signup, store provisioning, and OAuth; expanded webhook coverage from 17 to 40 topics and added GraphQL billing subscriptions.",
+        "Built SeatGeek ticketing synchronization and WhatsApp commerce data capture; maintained Shopify API compatibility and resolved duplicate identities with country-aware phone normalization.",
+        "Centralized contact operations across five services and plan entitlements across twelve; automated customer retirement and refined contact queries and data-cleanup routines.",
+        "Strengthened account security with tenant-configurable session expiry and risk-scored signup protection; connected operational reporting through GoodData cache invalidation, social dashboards, and Jira-to-BigQuery synchronization."
       ]
     },
     {
       "name": "Factoreal",
       "location": "Bengaluru, India",
-      "description": "Factoreal: omnichannel fan-engagement SaaS for sports teams, incubated by Comviva",
+      "description": "Factoreal: omnichannel marketing automation platform, incubated by Comviva",
       "position": "Senior Engineer",
-      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-digital-marketing/",
+      "url": "https://www.factoreal.com/",
       "startDate": "2020-06-01",
       "endDate": "2021-11-01",
-      "summary": "I worked across the whole Factoreal stack: the Strapi API that every service talks to, the React portal, and the Node.js and Python services around them.",
+      "summary": "Built the data, integration, and channel foundations of Factoreal across its core API, React portal, and backend services, connecting customer activity to analytics and automated campaigns.",
       "highlights": [
-        "Wrote the analytics pipeline: a sync engine that copies Postgres and Cassandra data into BigQuery through 24 per-entity jobs (220 of its 230 commits), per-customer datasets created at signup (25 tables at launch, 57 by year end), and a KPI service computing 10 email metrics for embedded GoodData dashboards.",
-        "Built Shopify ingestion in the API. When Shopify retries created duplicate orders, added an idempotency check, then enforced it with unique indexes on three per-customer tables. Built abandoned-cart events on a Redis-backed timer driven by Kafka, 3 hours by default and configurable per customer.",
-        "Added Razorpay payments with webhooks that publish order and payment events to Kafka, and web push and mobile-app SDK events in the core API.",
-        "Stopped page views from flooding the events catalog with a Redis key per customer, domain, and page title, and fixed double-counted first visits in the tracking snippet customers embed.",
-        "Built email-domain verification and the website trial-signup flow, and wrote the HubSpot contact import used for customer migrations."
+        "Built PostgreSQL and Cassandra-to-BigQuery synchronization across 24 entity workflows, with incremental processing and pagination; automated customer dataset provisioning at signup.",
+        "Built email delivery and engagement KPI APIs and embedded GoodData dashboards, giving customers visibility into deliverability, audience response, and unsubscribe rates.",
+        "Made Shopify order ingestion safe under webhook retries with application idempotency and database uniqueness constraints; built Redis- and Kafka-driven abandoned-cart triggers with tenant-configurable timeouts.",
+        "Integrated Razorpay payment events into Kafka and built web-push subscriptions and mobile SDK registration and events, extending commerce and engagement workflows.",
+        "Improved tracking accuracy with page deduplication, tenant-specific event exclusions, and first-visit corrections; delivered verified-domain trial onboarding and HubSpot contact migration."
       ]
     },
     {
@@ -121,11 +127,11 @@
       "url": "https://www.tcs.com/what-we-do/industries/life-sciences/solution/tcs-lifesciences-interactive",
       "startDate": "2018-09-01",
       "endDate": "2020-05-01",
-      "summary": "Built full-stack applications and reporting tools for global life sciences clients, in a regulated enterprise setting.",
+      "summary": "Built full-stack applications, enterprise workflows, and reporting for global life-sciences clients in a regulated environment.",
       "highlights": [
-        "Built full-stack applications with ReactJS, Angular, NodeJS, and ExpressJS.",
-        "Set up Microsoft 365 workflows with SharePoint, Teams, Power Automate, and Power BI.",
-        "Built analytics and reporting with GA360, Google Tag Manager, and Data Studio for life sciences teams."
+        "Delivered React and Angular applications backed by Node.js and Express, connecting user-facing workflows to enterprise services for life-sciences clients.",
+        "Built Microsoft 365 workflows across SharePoint, Teams, Power Automate, and Power BI to support collaboration, process automation, and reporting.",
+        "Implemented GA360, Google Tag Manager, and Data Studio analytics, giving life-sciences teams visibility into digital activity and performance."
       ]
     }
   ],
@@ -185,7 +191,10 @@
         "Developer Tooling",
         "Data Engineering",
         "Application Security",
-        "Regulated Environments"
+        "Regulated Environments",
+        "Platform Architecture",
+        "Engineering Leadership",
+        "Regulated Content Workflows"
       ]
     },
     {
@@ -223,7 +232,8 @@
         "SonarQube",
         "Observability",
         "Infrastructure as Code",
-        "Security Automation"
+        "Security Automation",
+        "Azure Container Apps"
       ]
     },
     {
@@ -285,13 +295,27 @@
         "Pandas",
         "PyArrow",
         "SQLAlchemy",
-        "GoodData"
+        "GoodData",
+        "Data Catalogs",
+        "Metadata Discovery"
       ]
     },
     {
       "name": "Design",
       "level": "",
       "keywords": ["Figma", "Affinity Designer", "Procreate"]
+    },
+    {
+      "name": "Enterprise Integrations",
+      "level": "",
+      "keywords": [
+        "Veeva CRM",
+        "Salesforce Marketing Cloud",
+        "Shopify",
+        "SeatGeek",
+        "HubSpot",
+        "Razorpay"
+      ]
     }
   ],
   "certificates": [

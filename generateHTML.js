@@ -24,6 +24,7 @@ async function generateHTML() {
 
     console.log(`Resume HTML has been successfully written to ${outputPath}`);
   } catch (error) {
+    process.exitCode = 1;
     if (error.code === "ENOENT") {
       console.error("File not found:", error.path);
     } else if (error.name === "SyntaxError") {

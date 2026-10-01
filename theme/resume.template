@@ -1,535 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="copper">
+<html lang="en" data-theme="ink">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{{ basics.name }}" />
-    <meta name="author" content="{{ basics.name }}">
-    <meta property="og:title" content="{{ basics.name }}">
-    <meta property="og:description" content="{{ basics.name }}">
-    <meta name="keywords" content="Resume, {{ basics.name }}">
-    <meta property="og:image" content="./favicon.ico">
-    <meta property="og:url" content="{{ basics.url }}">
-    <meta property="og:type" content="website">
-    <title>{{ basics.name }}</title>
-    <script>
-      try {
-        var savedTheme = localStorage.getItem("resume-theme");
-        if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
-      } catch (e) {}
-    </script>
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style type="text/css">
-      {{{css}}}
-    </style>
-    <style type="text/css" media="print">
-      {{{printcss}}}
-    </style>
+    <meta name="description" content="{{ basics.label }} - {{ basics.name }}" />
+    <meta name="author" content="{{ basics.name }}" />
+    <title>{{ basics.name }} - Resume</title>
+    <style>{{{css}}}</style>
+    <style media="print">{{{printcss}}}</style>
   </head>
   <body>
-    <div class="theme-switch">
-      <button type="button" class="theme-toggle" aria-label="Change color theme" aria-expanded="false" aria-haspopup="true">
-        <span class="theme-toggle-swatch"></span>
-      </button>
-      <div class="theme-menu" role="group" aria-label="Color theme" hidden>
-        <button type="button" data-theme="copper" aria-label="Copper"></button>
-        <button type="button" data-theme="blue" aria-label="Blue"></button>
-        <button type="button" data-theme="ink" aria-label="Ink"></button>
-        <button type="button" data-theme="green" aria-label="Green"></button>
-        <button type="button" data-theme="plum" aria-label="Plum"></button>
-      </div>
-    </div>
-    <button type="button" class="print-trigger" aria-label="Print resume">
-      <i class="fas fa-print" aria-hidden="true"></i>
-    </button>
-    <div class="container ">
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="photo-header" class="text-center">
-            <!-- PHOTO (AVATAR) -->
-            {{#photo}}
-            <div id="photo">
-              <img src="{{ photo }}" alt="avatar" />
-            </div>
-            {{/photo}}
-            <div id="text-header" {{^photo}}style="margin-top: 90px;"{{/photo}}>
-              <h1>
-                {{ basics.name }}<br />{{#basics.label
-                }}<span style="text-transform: none">{{ basics.label }}</span
-                >{{/basics.label}}
-              </h1>
-            </div>
-            <div class="header-profiles contact-item">
-               {{#basics.location}}
-              <div class="header-profile-badge">
-                <span class="fas fa-map-marker fa-fw"></span>
-                <span class="title">
-                  {{ basics.location.city }}{{#basics.location.region}},
-                {{ basics.location.region }}{{/basics.location.region
-                }}{{#basics.location.postalCode}} {{ basics.location.postalCode
-                }}{{/basics.location.postalCode}}</span>
-              </div>
-              {{/basics.location}}
-              {{#basics.phone}}
-               <div class="header-profile-badge">
-                <span class="fas fa-phone fa-fw"></span>
-                <span class="title">{{ basics.phone }}
-                </span>
-              </div>
-                {{/basics.phone}}
-                {{#basics.email}}
-                <div class="header-profile-badge">
-                 <span class="fas fa-envelope fa-fw"></span>
-                <span class="title">  <a href="mailto:{{ basics.email }}" target="_blank">{{
-                      basics.email
-                    }}</a>
-                </span>
-              </div>
-              {{/basics.email}}
-               {{#basics.url}}
-                <div class="header-profile-badge">
-                 <span class="fas fa-globe fa-fw"></span>
-                <span class="title">  <a href="{{ basics.url }}" target="_blank">{{ basics.url }}</a>
-                </span>
-              </div>
-              {{/basics.url}}
-            </div>
-            <div class="header-profiles contact-item">
-             {{#basics.profiles}}
-              <div class="header-profile-badge">
-                <span class="{{ iconClass }} fa-fw"></span> 
-                <span class="title">{{ network }}</span>
-                <a href="{{ url }}" target="_blank">{{#username}}{{ username }}{{/username}}{{^username }}{{ url}}{{/username}}</a>
-              </div>
-              {{/basics.profiles}}
-            </div>
-          </div>
+    <nav class="resume-controls" aria-label="Resume actions">
+      <a href="./pdf/{{ basics.name }}.pdf">Download PDF</a>
+    </nav>
+    <main class="resume">
+      <header class="resume-header">
+        <h1>{{ basics.name }}</h1>
+        {{#basics.label}}<p class="headline">{{ basics.label }}</p>{{/basics.label}}
+        <div class="contact-line">
+          {{#basics.location}}<span>{{ city }}{{#region}}, {{ region }}{{/region}}</span>{{/basics.location}}
+          {{#basics.email}}<a href="mailto:{{ basics.email }}">{{ basics.email }}</a>{{/basics.email}}
+          {{#basics.phone}}<a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>{{/basics.phone}}
+          {{#basics.url}}<a href="{{ basics.url }}">{{ basics.url }}</a>{{/basics.url}}
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-7">
-          {{#basics.summary}}
-          <!-- ABOUT ME -->
-          <div class="box">
-            <h2><i class="fas fa-user ico"></i> About</h2>
-            <p style="margin-left: 3%">{{{basics.summary}}}</p>
-          </div>
-          {{/basics.summary}}
-          {{#workBool}}
-          <!-- WORK EXPERIENCE -->
-          <div class="box">
-            <h2><i class="fas fa-suitcase ico"></i> Work Experience</h2>
-            {{#work}}
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">
-                    {{#url}}<a href="{{ url }}" target="_blank">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}
-                    {{#location}}
-                    <div class="pull-right">
-                      {{ location }}
-                    </div>
-                    {{/location}}
-                  </div>
-                  {{#description}}
-                  <div class="description">
-                    {{ description }}
-                  </div>
-                  {{/description}}
-                  <div class="year">
-                    {{ startDateMonth }}{{ startDateYear }} – {{ endDateMonth
-                    }}{{ endDateYear }}
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">{{ position }}</div>
-                  <div class="description">
-                    {{#summary}}<p>{{{summary}}}</p>{{/summary}}
-                    {{#boolHighlights}}
-                    <ul class="list-group">
-                      {{#highlights}}
-                      <li class="list-group-item">{{{.}}}</li>
-                      {{/highlights}}
-                    </ul>
-                    {{/boolHighlights}}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {{/work}}
-          </div>
-          {{/workBool}}
-          {{#awardsBool}}
-          <!-- AWARDS -->
-          <div class="box">
-            <h2><i class="fas fa-certificate ico"></i> Awards</h2>
-            <ul id="awards" class="clearfix">
-              {{#awards}}
-              <li>
-                <div class="year pull-left">{{ month }} {{ year }}</div>
-                <div class="description pull-right">
-                  <h3>{{ awarder }}</h3>
-                  <p><i class="fas fa-trophy ico"></i> {{ title }}</p>
-                  <p>{{{summary}}}</p>
-                </div>
-              </li>
-              {{/awards}}
-            </ul>
-          </div>
-          {{/awardsBool}}
-          {{#projectsBool}}
-          <!-- PROJECTS -->
-          <div class="box">
-            <h2><i class="fas fa-code-branch ico"></i> Projects</h2>
-            <ul class="list-group">
-              {{#projects}}
-              <li class="list-group-item">
-                <div class="project-head">
-                  {{#url}}<a href="{{ url }}" target="_blank" class="project-name">{{ name }}</a>{{/url}}{{^url}}<span class="project-name">{{ name }}</span>{{/url}}
-                  {{#displayUrl}}<a href="{{ url }}" target="_blank" class="project-url">{{ displayUrl }}</a>{{/displayUrl}}
-                </div>
-                <span class="project-description">{{ description }}</span>
-                {{#keywords}}<span class="skill project-keyword">{{.}}</span>{{/keywords}}
-                {{#highlights}}
-                <ul class="list-group project-highlights">
-                  {{#.}}<li class="list-group-item">{{{.}}}</li>{{/.}}
-                </ul>
-                {{/highlights}}
-              </li>
-              {{/projects}}
-            </ul>
-          </div>
-          {{/projectsBool}}
-          {{#volunteerBool}}
-          <!-- VOLUNTEER -->
-          <div class="box">
-            <h2><i class="fas fa-users ico"></i> Volunteer</h2>
-            {{#volunteer}}
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">{{ organization }}</div>
-                  {{#url}}
-                  <div class="address">
-                    <a href="{{ url }}" target="_blank"
-                      ><i class="fas fa-globe ico"></i> {{ url }}</a
-                    >
-                  </div>
-                  {{/url}}
-                  <div class="year">
-                    {{ startDateMonth }}{{ startDateYear }} – {{ endDateMonth
-                    }}{{ endDateYear }}
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">{{ position }}</div>
-                  <div class="description">
-                    {{#summary}}<p>{{{summary}}}</p>{{/summary}}
-                    {{#boolHighlights}}
-                    <ul class="list-group">
-                      {{#highlights}}
-                      <li class="list-group-item">{{{.}}}</li>
-                      {{/highlights}}
-                    </ul>
-                    {{/boolHighlights}}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {{/volunteer}}
-          </div>
-          {{/volunteerBool}}
+        <div class="profile-line">
+          {{#basics.profiles}}<a href="{{ url }}" aria-label="{{ network }} profile for {{ username }}" title="{{ network }}">{{#iconSvg}}{{{ iconSvg }}}{{/iconSvg}}{{^iconSvg}}<span>{{ network }}</span>{{/iconSvg}}<span>{{#username}}{{ username }}{{/username}}{{^username}}{{ url }}{{/username}}</span></a>{{/basics.profiles}}
         </div>
-        <div class="col-xs-12 col-sm-5">
-          <!-- CONTACT -->
-          <!-- <div class="box clearfix">
-            <h2><i class="fas fa-bullseye ico"></i> Contact</h2>
-            {{#basics.location}}
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-map-marker fa-fw"></span>
-              </div>
-              {{#basics.location.address}}
-              <div class="title pull-right">{{ basics.location.address }}</div>
-              {{/basics.location.address}}
-              <div
-                class="title {{^basics.location.address}}only {{/basics.location.address}} pull-right"
-              >
-                {{ basics.location.city }}{{#basics.location.region}},
-                {{ basics.location.region }}{{/basics.location.region
-                }}{{#basics.location.postalCode}} {{ basics.location.postalCode
-                }}{{/basics.location.postalCode
-                }}{{#basics.location.countryCode}}
-                {{ basics.location.countryCode
-                }}{{/basics.location.countryCode}}
-              </div>
-            </div>
-            {{/basics.location}}
-            {{#basics.phone}}
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-phone fa-fw"></span>
-              </div>
-              <div class="title only pull-right">{{ basics.phone }}</div>
-            </div>
-            {{/basics.phone}}
-            {{#basics.email}}
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-envelope fa-fw"></span>
-              </div>
-              <div class="title only pull-right">
-                <a href="mailto:{{ basics.email }}" target="_blank">{{
-                  basics.email
-                }}</a>
-              </div>
-            </div>
-            {{/basics.email}}
-            {{#basics.url}}
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-globe fa-fw"></span>
-              </div>
-              <div class="title only pull-right">
-                <a href="{{ basics.url }}" target="_blank">{{ basics.url }}</a>
-              </div>
-            </div>
-            {{/basics.url}}
-          </div>
-          -->
-          <!-- PROFILE -->
-          <!-- <div class="box clearfix">
-            <h2><i class="fas fa-bullseye ico"></i> Profiles</h2>
-            <div class="row">
-              {{#basics.profiles}}
-              <div class="col-sm-6">
-                <div class="contact-item">
-                  <div class="icon pull-left text-center">
-                    <span class="{{ iconClass }} fa-fw"></span>
-                  </div>
-                  <div class="title pull-right">{{ network }}</div>
-                  <div class="description pull-right">
-                    <a href="{{ url }}" target="_blank"
-                      >{{#username}}{{ username }}{{/username}}{{^username
-                      }}{{ url }}{{/username}}</a
-                    >
-                  </div>
-                </div>
-              </div>
-              {{/basics.profiles}}
-            </div>
-          </div> -->
-          {{#educationBool}}
-          <!-- EDUCATION -->
-          <div class="box">
-            <h2><i class="fas fa-university ico"></i> Education</h2>
-            <ul id="education" class="clearfix">
-              {{#education}}
-              <li>
-                <div class="year pull-left">
-                  {{ startDateYear }} {{ endDateYear }}
-                </div>
-                <div class="description pull-right">
-                  <h3>{{#url}}<a href="{{ url }}" target="_blank">{{ institution }}</a>{{/url}}{{^url}}{{ institution }}{{/url}}</h3>
-                  <div class="where">{{ organization }}</div>
-                  {{#studyType}}
-                  <p>
-                    <i class="fas fa-graduation-cap ico"></i> {{ studyType }}
-                  </p>
-                  {{/studyType}}
-                  <p>{{ area }}</p>
-                  {{#score}}
-                  <p>Grade: {{ score }}</p>
-                  {{/score}}
-                  {{#educationCourses}}
-                  <div>Courses</div>
-                  <ul class="list-group">
-                    {{#courses}}
-                    <li class="list-group-item">{{{.}}}</li>
-                    {{/courses}}
-                  </ul>
-                  {{/educationCourses}}
-                </div>
-              </li>
-              {{/education}}
-            </ul>
-          </div>
-          {{/educationBool}}
-          {{#skillsBool}}
-          <!-- SKILLS -->
-          <div class="box skill-badge">
-            <h2><i class="fas fa-tasks ico"></i> Skills</h2>
-            {{#skills}}
-            <div class="skills clearfix">
-              <div class="item-skills">
-                {{ name }}
-                {{#level}}<span class="skill-level">{{ level }}</span
-                >{{/level}}
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                {{#keywords}}
-                <span class="skill badge">{{{.}}}</span>
-                {{/keywords}}
-              </div>
-            </div>
-            {{/skills}}
-          </div>
-          {{/skillsBool}}
-          {{#certificatesBool}}
-          <div class="box">
-            <h2><i class="fas fa-certificate ico"></i> Certificates</h2>
-            <ul class="list-group">
-              {{#certificates}}
-              <li class="list-group-item">
-                {{ name }}{{#issuer}}<span class="skill badge pull-right">{{ issuer }}</span>{{/issuer}}
-              </li>
-              {{/certificates}}
-            </ul>
-          </div>
-          {{/certificatesBool}}
-          {{#publicationsBool}}
-          <!-- PUBLICATIONS -->
-          <div class="box">
-            <h2><i class="fas fa-book ico"></i> Publications</h2>
-            {{#publications}}
-            <div class="publication panel panel-default">
-              <div class="panel-heading">
-                <div class="name panel-title">{{#url}}<a href="{{ url }}" target="_blank">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</div>
-              </div>
-              <div class="panel-body">
-                {{#publisher}}
-                <div class="publisher">
-                  <i class="fas fa-bookmark ico"></i> {{ publisher }}
-                </div>
-                {{/publisher}}
-                <div class="year">{{ day }} {{ month }} {{ year }}</div>
-                {{#summary}}
-                <p>{{{summary}}}</p>
-                {{/summary}}
-              </div>
-            </div>
-            {{/publications}}
-          </div>
-          {{/publicationsBool}}
-          {{#languagesBool}}
-          <!-- LANGUAGES -->
-          <div class="box">
-            <h2><i class="fas fa-language ico"></i> Languages</h2>
-            <ul class="list-group">
-              {{#languages}}
-              <li class="list-group-item">
-                {{ language
-                }}<span class="skill badge pull-right">{{ fluency }}</span>
-              </li>
-              {{/languages}}
-            </ul>
-          </div>
-          {{/languagesBool}}
-          {{#interestsBool}}
-          <!-- HOBBIES -->
-          <div class="box">
-            <h2><i class="fas fa-heart ico"></i> Interests</h2>
-            {{#interests}}
-            <div class="interests clearfix">
-              <div class="item-interests">
-                {{ name }}
-              </div>
-              <div class="col-sm-offset-1 col-sm-12 clearfix">
-                {{#keywords}}
-                <span class="interest badge">{{{.}}}</span>
-                {{/keywords}}
-              </div>
-            </div>
-            {{/interests}}
-          </div>
-          {{/interestsBool}}
-          {{#referencesBool}}
-          <div class="box">
-            <h2><i class="fas fa-check-square ico"></i> References</h2>
-            {{#references}}
-            <blockquote>
-              <div>{{{reference}}}</div>
-              <footer>
-                <a href="{{ url }}" target="_blank">{{ name }}</a>
-              </footer>
-            </blockquote>
-            <br />
-            {{/references}}
-          </div>
-          {{/referencesBool}}
-        </div>
-      </div>
-    </div>
-    <script>
-      (function () {
-        var key = "resume-theme";
-        var themes = ["copper", "blue", "ink", "green", "plum"];
-        var root = document.querySelector(".theme-switch");
-        var toggle = root.querySelector(".theme-toggle");
-        var menu = root.querySelector(".theme-menu");
+      </header>
 
-        function setOpen(open) {
-          root.classList.toggle("is-open", open);
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
-          if (open) menu.removeAttribute("hidden");
-          else menu.setAttribute("hidden", "");
-        }
+      {{#basics.summary}}
+      <section class="resume-section profile-section">
+        <h2>Profile</h2>
+        <p>{{{ basics.formattedSummary }}}</p>
+      </section>
+      {{/basics.summary}}
 
-        function apply(name) {
-          if (themes.indexOf(name) === -1) name = "copper";
-          document.documentElement.setAttribute("data-theme", name);
-          var buttons = menu.querySelectorAll("button");
-          for (var i = 0; i < buttons.length; i++) {
-            var on = buttons[i].getAttribute("data-theme") === name;
-            buttons[i].classList.toggle("is-active", on);
-            buttons[i].setAttribute("aria-pressed", on ? "true" : "false");
-          }
-          try { localStorage.setItem(key, name); } catch (e) {}
-        }
+      {{#workBool}}
+      <section class="resume-section experience-section">
+        <h2>Experience</h2>
+        {{#work}}
+        <article class="work-entry">
+          <header class="entry-heading">
+            <div class="company-line">
+              <h3>{{#url}}<a href="{{ url }}">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</h3>
+              {{#location}}<span class="entry-location">{{ location }}</span>{{/location}}
+            </div>
+            <div class="role-line">
+              <h4>{{ position }}</h4>
+              <span class="entry-date">{{ startDateMonth }}{{ startDateYear }} - {{ endDateMonth }}{{ endDateYear }}</span>
+            </div>
+            {{#description}}<p class="company-description">{{ description }}</p>{{/description}}
+          </header>
+          {{#summary}}<p class="role-summary">{{{ summary }}}</p>{{/summary}}
+          {{#boolHighlights}}
+          <ul class="achievements">
+            {{#formattedHighlights}}<li>{{{ . }}}</li>{{/formattedHighlights}}
+          </ul>
+          {{/boolHighlights}}
+        </article>
+        {{/work}}
+      </section>
+      {{/workBool}}
 
-        var saved = "copper";
-        try { saved = localStorage.getItem(key) || "copper"; } catch (e) {}
-        apply(saved);
-        setOpen(false);
+      {{#projectsBool}}
+      <section class="resume-section projects-section">
+        <h2>Selected projects</h2>
+        {{#projects}}
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3>{{#url}}<a href="{{ url }}">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</h3>
+            {{#displayUrl}}<a class="project-url" href="{{ url }}">{{ displayUrl }}</a>{{/displayUrl}}
+          </header>
+          <p>{{{ formattedDescription }}}</p>
+          {{#boolHighlights}}
+          <ul class="project-highlights">
+            {{#highlights}}<li>{{{ . }}}</li>{{/highlights}}
+          </ul>
+          {{/boolHighlights}}
+          <div class="technology-line">{{#keywords}}<span>{{ . }}</span>{{/keywords}}</div>
+        </article>
+        {{/projects}}
+      </section>
+      {{/projectsBool}}
 
-        toggle.addEventListener("click", function (event) {
-          event.stopPropagation();
-          setOpen(!root.classList.contains("is-open"));
-        });
+      {{#skillsBool}}
+      <section class="resume-section skills-section">
+        <h2>Skills</h2>
+        <dl class="skills-list">
+          {{#skills}}
+          <div class="skill-group">
+            <dt>{{ name }}</dt>
+            <dd>{{#keywords}}<span>{{ . }}</span>{{/keywords}}</dd>
+          </div>
+          {{/skills}}
+        </dl>
+      </section>
+      {{/skillsBool}}
 
-        menu.addEventListener("click", function (event) {
-          var button = event.target.closest("button[data-theme]");
-          if (!button) return;
-          apply(button.getAttribute("data-theme"));
-          setOpen(false);
-        });
+      {{#educationBool}}
+      <section class="resume-section education-section">
+        <h2>Education</h2>
+        {{#education}}
+        <article class="education-entry">
+          <div class="role-line">
+            <h3>{{ studyType }}{{#area}}, {{ area }}{{/area}}</h3>
+            <span class="entry-date">{{ startDateYear }} - {{ endDateYear }}</span>
+          </div>
+          <p>{{#url}}<a href="{{ url }}">{{ institution }}</a>{{/url}}{{^url}}{{ institution }}{{/url}}</p>
+          {{#score}}<p class="entry-note">Grade: {{ score }}</p>{{/score}}
+          {{#educationCourses}}<div class="technology-line">{{#courses}}<span>{{ . }}</span>{{/courses}}</div>{{/educationCourses}}
+        </article>
+        {{/education}}
+      </section>
+      {{/educationBool}}
 
-        document.addEventListener("click", function (event) {
-          if (!root.contains(event.target)) setOpen(false);
-        });
+      {{#awardsBool}}
+      <section class="resume-section">
+        <h2>Awards</h2>
+        {{#awards}}
+        <article class="education-entry">
+          <div class="role-line"><h3>{{ title }}</h3><span class="entry-date">{{ month }} {{ year }}</span></div>
+          <p>{{ awarder }}</p>
+          {{#summary}}<p>{{{ summary }}}</p>{{/summary}}
+        </article>
+        {{/awards}}
+      </section>
+      {{/awardsBool}}
 
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") setOpen(false);
-        });
-      })();
-      document.querySelector(".print-trigger").addEventListener("click", function () {
-        window.print();
-      });
-    </script>
+      {{#volunteerBool}}
+      <section class="resume-section volunteer-section">
+        <h2>Community</h2>
+        {{#volunteer}}
+        <article class="education-entry">
+          <div class="role-line"><h3>{{ position }} - {{ organization }}</h3><span class="entry-date">{{ startDateYear }} - {{ endDateYear }}</span></div>
+          {{#summary}}<p>{{{ summary }}}</p>{{/summary}}
+          {{#boolHighlights}}<ul class="achievements">{{#highlights}}<li>{{{ . }}}</li>{{/highlights}}</ul>{{/boolHighlights}}
+        </article>
+        {{/volunteer}}
+      </section>
+      {{/volunteerBool}}
+
+      {{#certificatesBool}}<section class="resume-section"><h2>Certificates</h2>{{#certificates}}<p>{{ name }}{{#issuer}} - {{ issuer }}{{/issuer}}</p>{{/certificates}}</section>{{/certificatesBool}}
+      {{#publicationsBool}}<section class="resume-section"><h2>Publications</h2>{{#publications}}<article class="education-entry"><h3>{{#url}}<a href="{{ url }}">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</h3><p>{{ publisher }}</p>{{#summary}}<p>{{{ summary }}}</p>{{/summary}}</article>{{/publications}}</section>{{/publicationsBool}}
+      {{#languagesBool}}<section class="resume-section"><h2>Languages</h2><div class="technology-line">{{#languages}}<span>{{ language }} - {{ fluency }}</span>{{/languages}}</div></section>{{/languagesBool}}
+      {{#interestsBool}}<section class="resume-section"><h2>Interests</h2><div class="technology-line">{{#interests}}<span>{{ name }}</span>{{/interests}}</div></section>{{/interestsBool}}
+      {{#referencesBool}}<section class="resume-section"><h2>References</h2>{{#references}}<blockquote><p>{{{ reference }}}</p><footer>{{ name }}</footer></blockquote>{{/references}}</section>{{/referencesBool}}
+    </main>
   </body>
 </html>
