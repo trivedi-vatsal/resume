@@ -7,7 +7,7 @@
     "email": "trivedivatsal005@gmail.com",
     "url": "https://vatsal.xyz",
     "phone": "+91 760-063-5053",
-    "summary": "I build AI platforms, multi-tenant SaaS, and the integrations companies actually run them on. At Phamax I lead engineering for Ariya, a pharma AI platform for content, research, analytics, and engagement. That includes the compliance path and the Veeva CRM and Salesforce Marketing Cloud connections. I also ship small tools in the open. The current one is openpreflight: GitHub Check Runs on a server you already run.",
+    "summary": "I'm a principal engineer who builds AI products and the platforms they run on. At Phamax, I lead Ariya's architecture and delivery across eight pharma and life-sciences client deployments. The platform handles source-backed generation, regulated content workflows, and enterprise integrations. Before that, I led engineering for Factoreal's omnichannel marketing product and Comviva's MobiLytix Rewards, working on analytics at scale, loyalty targeting, and event-driven services. I write code, set engineering standards, and lead teams through production releases. I also build open-source developer tools.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -41,56 +41,83 @@
         "username": "trivedivatsal",
         "url": "https://dev.to/trivedivatsal"
       }
-    ]
+    ],
+    "focusAreas": "Production RAG · LLM orchestration · AI evaluation · Tool calling & agent workflows · Regulated content lifecycle · Enterprise integrations · Platform engineering · Multi-tenant SaaS · Distributed systems · Event-driven architecture · Large-scale analytics · Data engineering · Observability & reliability · Application security · Developer tooling · Engineering leadership · Architecture & delivery"
   },
   "work": [
     {
       "name": "Phamax",
       "location": "Bengaluru, India",
-      "description": "Ariya is an AI platform for pharma: content generation, research, analytics, and engagement.",
+      "description": "Ariya: AI platform for pharmaceutical content, research, analytics, and engagement",
       "position": "Principal Engineer (Ariya Platform)",
       "startDate": "2025-05-08",
-      "summary": "Lead engineering for Ariya, an AI platform for pharmaceutical content, research, analytics, and engagement. The work is to design and ship systems that put generative AI into the tools pharma teams already use, without skipping compliance.",
+      "summary": "I lead engineering for Ariya across eight client deployments. I design the architecture, write code, set engineering standards, and manage production delivery for pharma marketing and medical teams.",
       "highlights": [
-        "Architect the core systems for an AI platform used by global pharmaceutical clients. Workflows cover content creation, research, analytics, and engagement.",
-        "Built the AI Content Wizard and the content lifecycle around it: authoring, multi-stage approval, compliance checks, and distribution in regulated markets.",
-        "Designed and shipped LLM orchestration (prompts, context injection, RAG, embeddings, tool calling) so generated content stays compliant and traceable across content types and markets.",
-        "Integrated Veeva CRM and Salesforce Marketing Cloud (SFMC) so omnichannel campaigns can run across client tenants without breaking compliance.",
-        "Led the Data Catalog so business and engineering teams can find data from metadata, with observability and self-serve access.",
-        "Shipped audit trails, deployment pipelines, and monitoring, and sped up AI and data workflows with caching and vector databases."
+        "Restructured Ariya into core API, portal, and authoring applications. Set shared engineering standards and reusable staging, UAT, and production deployment workflows.",
+        "Built the AI Content Wizard and regulated content lifecycle, with configuration-driven authoring, localization, multi-stage approval, compliance checks, and distribution across content types and markets.",
+        "Designed Content Compose with three LLM stages, hybrid Azure AI Search retrieval, source-linked bibliographies rebuilt after generation, and a 14-check validator for completeness and citations.",
+        "Designed LLM orchestration with prompts, context injection, RAG, embeddings, and tool calling. Integrated Veeva CRM and Salesforce Marketing Cloud into omnichannel workflows for each tenant.",
+        "Delivered a white-label RAG assistant over 551 medical publications with access controls, inspectable source PDFs, feedback, audit logs, and an admin console on Azure Container Apps.",
+        "Built the Speech Avatar across Azure Speech, Django, and the portal, including streaming chat, credential exchange, conversation logs, and post-call analysis.",
+        "Designed Bronze/Silver/Gold ingestion with a DBML registry and run tracking. Fixed six causes of production failures and added deterministic keys for repeatable UPSERTs.",
+        "Built the Data Catalog for metadata discovery, observability, and self-service access, and the HCP and SFMC email-data APIs for the Daily Sales Brief.",
+        "Built repeatable SonarQube checks and applied 20 security fixes across three client release lines for encryption, JWT validation, hashing, SQL access, and application controls.",
+        "Encrypted phone numbers at rest, automated dependency security audits, and coordinated database certificate rotation across seven environments and four services.",
+        "Added uv and Docker caching to Python builds. Built a JSON-to-PPTX service and admin APIs for content metrics and event reports."
       ]
     },
     {
       "name": "Comviva",
       "location": "Bengaluru, India",
-      "description": "MobiLytix Rewards and MobiLytix Digital Marketing Product",
+      "description": "MobiLytix Rewards: multi-tenant loyalty and campaign platform for telecom and retail",
       "position": "Technical Lead",
       "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
-      "startDate": "2021-12-01",
+      "startDate": "2023-10-01",
       "endDate": "2025-03-24",
-      "summary": "Technical lead for MobiLytix Rewards, an engagement product for loyalty programs and promotional campaigns.",
+      "summary": "I was technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards. I owned full-stack architecture, targeting services, and shared backend packages, and worked with in-house and vendor teams on delivery.",
       "highlights": [
-        "Led the rewrite of MobiLytix Rewards into a cloud-agnostic, multi-tenant SaaS product, with AI/ML personalization, for telecom and retail clients.",
-        "Owned full-stack architecture and features in TypeScript, React, FeathersJS, Delta Lake, Postgres, and vector databases, on a distributed microservices system.",
-        "Owned the Kafka campaign pipeline for high-throughput reward and loyalty workflows, with async processing and caching.",
-        "Introduced observability and monitoring across the platform. Deploys got more reliable and production incidents took less time to resolve.",
-        "Improved user engagement and campaign performance with personalization and ML segmentation."
+        "Led the cloud-agnostic, multi-tenant platform rewrite in TypeScript, React, and FeathersJS, with PostgreSQL, Delta Lake, and vector databases. Built product features and the services and data systems they use.",
+        "Owned Kafka campaign processing for high-throughput reward and loyalty workflows, with asynchronous execution and caching. Delivered AI/ML personalization and segmentation.",
+        "Built a JSON-to-PostgreSQL segmentation engine with 26 operators, including 11 date operators. Added custom member attributes without schema changes, scheduled runs, and run history.",
+        "Made club provisioning transactional so partial tenant setup rolls back. Used Kafka to recompute segments when their rules change.",
+        "Wrote PostgreSQL and Redis clients used by five services and service-to-service JWT helpers. Built a shared member package for enrollment, membership validation, attribute updates, and caching.",
+        "Introduced platform observability and monitoring for more reliable deployments and faster incident diagnosis. Coordinated releases and security fixes across six services.",
+        "Introduced Jest tests and coverage gates for segmentation, scheduling, and tiers, including 48 segmentation tests. Moved shared packages to TypeScript and automated publishing."
       ]
     },
     {
-      "name": "Comviva",
+      "name": "Factoreal",
       "location": "Bengaluru, India",
-      "description": "MobiLytix Digital Marketing Product",
+      "description": "Factoreal: omnichannel marketing automation platform, incubated by Comviva",
+      "position": "Technical Lead",
+      "url": "https://www.factoreal.com/",
+      "startDate": "2021-12-01",
+      "endDate": "2023-09-01",
+      "summary": "I led engineering for Factoreal's email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics features. The product served ecommerce, sports, and other businesses.",
+      "highlights": [
+        "Built and expanded BigQuery analytics for a platform handling 10 billion transactions. Automated provisioning and scoring across 71 customer datasets and 998 scheduled queries.",
+        "Designed the Fan Maturity Model for the sports vertical. Six channel scores and customer-configurable weights produce four audience tiers, with daily scoring and portal controls.",
+        "Rebuilt the Shopify app for its App Store relaunch: installation, signup, store provisioning, and OAuth. Expanded webhook coverage from 17 to 40 topics and added GraphQL billing subscriptions.",
+        "Built SeatGeek ticketing synchronization and WhatsApp commerce data capture. Kept Shopify API compatibility current and fixed duplicate contacts with country-aware phone normalization.",
+        "Built shared contact operations across five services and plan entitlements across twelve. Automated customer retirement and improved contact queries and data-cleanup routines.",
+        "Added tenant-configurable session expiry and risk-scored signup protection. Automated GoodData cache invalidation and built social dashboards and Jira-to-BigQuery reporting sync."
+      ]
+    },
+    {
+      "name": "Factoreal",
+      "location": "Bengaluru, India",
+      "description": "Factoreal: omnichannel marketing automation platform, incubated by Comviva",
       "position": "Senior Engineer",
-      "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-digital-marketing/",
+      "url": "https://www.factoreal.com/",
       "startDate": "2020-06-01",
       "endDate": "2021-11-01",
-      "summary": "Built integrations and analytics for an omnichannel marketing automation platform used to reach customers across digital channels.",
+      "summary": "I built data pipelines, integrations, and channel support across Factoreal's core API, React portal, and backend services. They feed its analytics and automated campaigns.",
       "highlights": [
-        "Shipped 14+ integrations including Shopify Public App, Seatgeek, HubSpot, AWS QuickSight, GoodData, Matomo, WooCommerce, WordPress, Batch Push, and Unlayer Editor.",
-        "Built ML insights on Google BigQuery and GoodData for campaign optimization.",
-        "Improved performance with query work, caching, and CDNs.",
-        "Worked through multi-tenant data isolation, API rate limits, and how credentials are stored for third-party platforms."
+        "Built PostgreSQL and Cassandra-to-BigQuery synchronization across 24 entity workflows, with incremental processing and pagination. Automated customer dataset provisioning at signup.",
+        "Built email delivery and engagement KPI APIs and embedded GoodData dashboards so customers can see deliverability, audience response, and unsubscribe rates.",
+        "Made Shopify order ingestion safe under retries with application idempotency and database uniqueness constraints. Built Redis- and Kafka-driven abandoned-cart triggers with tenant-configurable timeouts.",
+        "Published Razorpay payment events into Kafka. Built web-push subscriptions and mobile SDK registration and events for commerce and engagement workflows.",
+        "Fixed tracking accuracy with page deduplication, tenant-specific event exclusions, and first-visit corrections. Built verified-domain trial onboarding and HubSpot contact migration."
       ]
     },
     {
@@ -101,11 +128,11 @@
       "url": "https://www.tcs.com/what-we-do/industries/life-sciences/solution/tcs-lifesciences-interactive",
       "startDate": "2018-09-01",
       "endDate": "2020-05-01",
-      "summary": "Built full-stack applications and reporting tools for global life sciences clients, in a regulated enterprise setting.",
+      "summary": "I built full-stack applications, enterprise workflows, and reports for global life-sciences clients in a regulated environment.",
       "highlights": [
-        "Built full-stack applications with ReactJS, Angular, NodeJS, and ExpressJS.",
-        "Set up Microsoft 365 workflows with SharePoint, Teams, Power Automate, and Power BI.",
-        "Built analytics and reporting with GA360, Google Tag Manager, and Data Studio for life sciences teams."
+        "Built React and Angular applications with Node.js and Express backends for enterprise life-sciences workflows.",
+        "Built Microsoft 365 workflows with SharePoint, Teams, Power Automate, and Power BI for collaboration, process automation, and reporting.",
+        "Set up GA360, Google Tag Manager, and Data Studio analytics so life-sciences teams can measure digital activity and performance."
       ]
     }
   ],
@@ -163,7 +190,12 @@
         "Distributed Systems",
         "Event-Driven Architecture",
         "Developer Tooling",
-        "Regulated Environments"
+        "Data Engineering",
+        "Application Security",
+        "Regulated Environments",
+        "Platform Architecture",
+        "Engineering Leadership",
+        "Regulated Content Workflows"
       ]
     },
     {
@@ -175,9 +207,14 @@
         "Prompt Engineering",
         "Tool Calling",
         "AI Evaluations",
+        "Azure OpenAI",
+        "Azure AI Search",
         "OpenAI API",
         "Claude",
+        "LangChain",
         "LangGraph",
+        "CopilotKit / AG-UI",
+        "Azure Speech",
         "Vector Databases",
         "MCP",
         "Agent Skills"
@@ -189,25 +226,46 @@
       "keywords": [
         "CI/CD",
         "GitHub Actions",
+        "GitLab CI",
         "Docker",
+        "Azure (App Service, Functions, Blob Storage, Key Vault)",
+        "Bicep",
+        "SonarQube",
         "Observability",
         "Infrastructure as Code",
-        "Security Automation"
+        "Security Automation",
+        "Azure Container Apps"
       ]
     },
     {
       "name": "Programming Languages",
       "level": "",
-      "keywords": ["TypeScript", "JavaScript", "Python", "Go", "SQL"]
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Go",
+        "SQL",
+        "PowerShell"
+      ]
     },
     {
       "name": "Frameworks & Tools",
       "level": "",
       "keywords": [
         "React",
+        "Next.js",
         "Node.js",
+        "Django",
+        "FastAPI",
+        "Celery",
+        "Strapi",
         "FeathersJS",
+        "Express",
+        "Keycloak",
         "Kafka",
+        "BullMQ",
+        "Jest",
         "GraphQL & REST",
         "Vercel AI SDK",
         "Shopify",
@@ -220,6 +278,7 @@
       "level": "",
       "keywords": [
         "PostgreSQL",
+        "MySQL",
         "SQLite",
         "MongoDB",
         "BigQuery",
@@ -229,9 +288,35 @@
       ]
     },
     {
+      "name": "Data Engineering",
+      "level": "",
+      "keywords": [
+        "Medallion Architecture",
+        "ETL & Sync Pipelines",
+        "Pandas",
+        "PyArrow",
+        "SQLAlchemy",
+        "GoodData",
+        "Data Catalogs",
+        "Metadata Discovery"
+      ]
+    },
+    {
       "name": "Design",
       "level": "",
       "keywords": ["Figma", "Affinity Designer", "Procreate"]
+    },
+    {
+      "name": "Enterprise Integrations",
+      "level": "",
+      "keywords": [
+        "Veeva CRM",
+        "Salesforce Marketing Cloud",
+        "Shopify",
+        "SeatGeek",
+        "HubSpot",
+        "Razorpay"
+      ]
     }
   ],
   "certificates": [
@@ -339,7 +424,7 @@
   "meta": {
     "canonical": "https://resume.vatsal.xyz",
     "version": "v1.0.0",
-    "lastModified": "2026-09-22T00:00:00",
+    "lastModified": "2026-09-30T00:00:00",
     "theme": "jsonresume-theme-local"
   }
 }

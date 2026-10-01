@@ -1,1443 +1,394 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="copper">
+<html lang="en" data-theme="ink">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Vatsal Trivedi" />
-    <meta name="author" content="Vatsal Trivedi">
-    <meta property="og:title" content="Vatsal Trivedi">
-    <meta property="og:description" content="Vatsal Trivedi">
-    <meta name="keywords" content="Resume, Vatsal Trivedi">
-    <meta property="og:image" content="./favicon.ico">
-    <meta property="og:url" content="https:&#x2F;&#x2F;vatsal.xyz">
-    <meta property="og:type" content="website">
-    <title>Vatsal Trivedi</title>
-    <script>
-      try {
-        var savedTheme = localStorage.getItem("resume-theme");
-        if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
-      } catch (e) {}
-    </script>
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style type="text/css">
-      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
-@charset "utf-8";
-@-webkit-viewport {
-  width: device-width;
-}
-@-moz-viewport {
-  width: device-width;
-}
-@-ms-viewport {
-  width: device-width;
-}
-@-o-viewport {
-  width: device-width;
-}
-@viewport {
-  width: device-width;
+    <meta name="description" content="Principal Engineer · AI Platforms · Enterprise Integrations - Vatsal Trivedi" />
+    <meta name="author" content="Vatsal Trivedi" />
+    <title>Vatsal Trivedi - Resume</title>
+    <style>:root {
+  color-scheme: light;
+  --text: #202126;
+  --muted: #5b606b;
+  --rule: #d7dae1;
 }
 
-:root,
-html[data-theme="copper"] {
-  --main-resume-color: #c45c26;
-  --main-resume-background-color: #f6f3ee;
-  --main-resume-container-color: #fffcf8;
-  --main-resume-badge-color: #f6f1eb;
-  --main-resume-accent-color: #c45c26;
-  --main-resume-text-color: #1c1917;
-  --main-resume-border-color: #e7e0d6;
-  --main-resume-highlight-color: #a34b1c;
-  --main-resume-surface: #f6f1eb;
-  --main-resume-surface-border: #eadfd4;
+* { box-sizing: border-box; }
+body { margin: 0; background: #f3f4f6; color: var(--text); font-family: Georgia, "Times New Roman", serif; font-size: 16px; line-height: 1.4; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin: 0 0 7px; }
+h1, h2, h3, h4 { margin: 0; }
+.resume { max-width: 960px; margin: 32px auto; padding: 42px 48px; background: white; box-shadow: 0 3px 24px #2021260a; }
+.resume-header { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+.resume-header h1 { font-size: 36px; font-weight: 400; letter-spacing: -1px; line-height: 1.15; }
+.headline { margin: 7px 0 12px; font: 15px/1.3 Arial, sans-serif; color: var(--muted); }
+.contact-line, .profile-line { display: flex; flex-wrap: wrap; gap: 3px 18px; font: 12px/1.5 Arial, sans-serif; }
+.profile-line { margin-top: 4px; color: var(--muted); }
+.profile-line a { display: inline-flex; align-items: center; gap: 5px; }
+.profile-line svg { width: 14px; height: 14px; flex-shrink: 0; }
+strong { font-weight: 700; }
+.resume-section { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.profile-section { border: 0; margin-top: 0; padding-top: 0; }
+.resume-section > h2 { margin-bottom: 9px; font: 700 14px/1.3 Arial, sans-serif; }
+.work-entry { margin-bottom: 16px; }
+.entry-heading { margin-bottom: 4px; }
+.company-line, .role-line, .project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+.company-line h3 { font: 700 14px/1.35 Arial, sans-serif; }
+.role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 16px; line-height: 1.35; font-weight: 700; }
+.entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font: 12px/1.4 Arial, sans-serif; color: var(--muted); }
+.entry-date { flex-shrink: 0; }
+.company-description { margin: 3px 0 5px; }
+.role-summary { color: var(--muted); margin: 5px 0; }
+.achievements, .project-highlights { margin: 4px 0 0; padding-left: 16px; }
+.achievements li, .project-highlights li { margin-bottom: 3px; padding-left: 1px; }
+li::marker { color: #8a8f99; }
+.project-entry { margin-bottom: 10px; padding-bottom: 9px; border-bottom: 1px solid #e8eaef; }
+.project-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.project-entry p { margin: 3px 0 4px; }
+.project-highlights { margin-bottom: 5px; }
+.project-url { overflow-wrap: anywhere; }
+.technology-line span + span::before, .skill-group dd span + span::before { content: " · "; }
+.skills-list { margin: 0; font: inherit; }
+.skill-group { margin-bottom: 8px; }
+.skill-group dt { margin-bottom: 2px; font-weight: 700; }
+.skill-group dd { margin: 0; color: var(--muted); }
+.education-entry { margin-bottom: 10px; }
+.resume-controls { max-width: 960px; margin: 20px auto -16px; text-align: right; padding: 0 4px; }
+.resume-controls a { display: inline-block; border: 1px solid var(--rule); border-radius: 4px; padding: 8px 12px; background: white; color: var(--muted); font: 12px Arial, sans-serif; }
+blockquote { margin: 8px 0; padding-left: 12px; border-left: 2px solid var(--rule); }
+
+@media (max-width: 640px) {
+  .resume { margin: 12px; padding: 24px; }
+  .resume-controls { margin: 12px 16px; }
+  .resume-header h1 { font-size: 30px; }
+  .company-line, .role-line, .project-heading { flex-wrap: wrap; gap: 2px 12px; }
+  .entry-date { width: 100%; }
 }
-html[data-theme="blue"] {
-  --main-resume-color: #2563eb;
-  --main-resume-background-color: #f1f5f9;
-  --main-resume-container-color: #ffffff;
-  --main-resume-badge-color: #eff6ff;
-  --main-resume-accent-color: #1e40af;
-  --main-resume-text-color: #334155;
-  --main-resume-border-color: #e2e8f0;
-  --main-resume-highlight-color: #3b82f6;
-  --main-resume-surface: #f8fafc;
-  --main-resume-surface-border: #e2e8f0;
-}
-html[data-theme="ink"] {
-  --main-resume-color: #1c1917;
-  --main-resume-background-color: #f5f5f4;
-  --main-resume-container-color: #ffffff;
-  --main-resume-badge-color: #f5f5f4;
-  --main-resume-accent-color: #44403c;
-  --main-resume-text-color: #1c1917;
-  --main-resume-border-color: #e7e5e4;
-  --main-resume-highlight-color: #57534e;
-  --main-resume-surface: #fafaf9;
-  --main-resume-surface-border: #e7e5e4;
-}
-html[data-theme="green"] {
-  --main-resume-color: #3f6b4a;
-  --main-resume-background-color: #f3f6f2;
-  --main-resume-container-color: #fffcf8;
-  --main-resume-badge-color: #eef3ee;
-  --main-resume-accent-color: #2f5238;
-  --main-resume-text-color: #1c241c;
-  --main-resume-border-color: #dce5dc;
-  --main-resume-highlight-color: #3f6b4a;
-  --main-resume-surface: #f4f7f3;
-  --main-resume-surface-border: #d5e0d4;
-}
-html[data-theme="plum"] {
-  --main-resume-color: #7c3a5f;
-  --main-resume-background-color: #f7f3f6;
-  --main-resume-container-color: #fffcfd;
-  --main-resume-badge-color: #f6eef3;
-  --main-resume-accent-color: #6b2d51;
-  --main-resume-text-color: #2a1c24;
-  --main-resume-border-color: #eadfe6;
-  --main-resume-highlight-color: #7c3a5f;
-  --main-resume-surface: #faf6f8;
-  --main-resume-surface-border: #eadfe6;
-}
+
+.focus-areas { margin-top: 10px; font: inherit; color: var(--text); }
+.focus-areas strong { color: var(--text); margin-right: 5px; }
+</style>
+    <style media="print">@page { size: A4; margin: 12mm; }
 
 body {
-  font-family: "Open Sans", Arial, Tahoma;
-  font-weight: 400;
-  color: var(--main-resume-text-color);
-  background: var(--main-resume-background-color);
-}
-blockquote {
-  font-size: 1em;
-}
-
-.container {
-  margin-top: 80px;
-  margin-bottom: 15px;
-  background: var(--main-resume-container-color);
-}
-
-#photo-header {
-  margin-top: -75px;
-}
-#photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  overflow: hidden;
-  padding: 5px;
-  background: var(--main-resume-background-color);
-  display: inline-block;
-}
-#photo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-#text-header h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-}
-#text-header h1::first-line {
-  font-size: 1.5em;
-  font-weight: 800;
-  line-height: 1.5em;
-}
-#text-header h1 span {
-  color: var(--main-resume-color);
-  opacity: 1;
-}
-#text-header h1 sup {
-  opacity: 0.5;
-}
-#text-header:after {
-  width: 100%;
-  height: 3px;
-  border-bottom: 1px solid var(--main-resume-border-color);
-  margin-top: 15px;
-  content: "";
-  display: block;
-}
-
-.box {
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-}
-.box h2 {
-  color: var(--main-resume-color);
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-#awards,
-#education {
-  margin-top: 20px;
-  margin-bottom: 0;
-  position: relative;
-  padding: 1em 0;
-  list-style: none;
-}
-#awards:before,
-#education:before {
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  left: 35px;
-  top: 0;
-  content: " ";
-  display: block;
-  background: var(--main-resume-accent-color);
-  background: -moz-linear-gradient(
-    top,
-    #ffffff 0%,
-    var(--main-resume-accent-color) 7%,
-    var(--main-resume-accent-color) 89%,
-    #ffffff 100%
-  );
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #ffffff),
-    color-stop(7%, var(--main-resume-accent-color)),
-    color-stop(89%, var(--main-resume-accent-color)),
-    color-stop(100%, #ffffff)
-  );
-  background: -webkit-linear-gradient(
-    top,
-    #ffffff 0%,
-    var(--main-resume-accent-color) 7%,
-    var(--main-resume-accent-color) 89%,
-    #ffffff 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    #ffffff 0%,
-    var(--main-resume-accent-color) 7%,
-    var(--main-resume-accent-color) 89%,
-    #ffffff 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    #ffffff 0%,
-    var(--main-resume-accent-color) 7%,
-    var(--main-resume-accent-color) 89%,
-    #ffffff 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    var(--main-resume-accent-color) 7%,
-    var(--main-resume-accent-color) 89%,
-    #ffffff 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
-}
-#awards li,
-#education li {
-  width: 100%;
-  z-index: 2;
-  position: relative;
-  float: left;
-}
-#awards .year,
-#education .year {
-  width: 14%;
-  background: #fff;
-  padding: 10px;
-  font-weight: 700;
-  display: inline-block;
-}
-#awards .description,
-#education .description {
-  width: 83%;
-  display: inline-block;
-  background: var(--main-resume-container-color);
-  margin-bottom: 10px;
-  position: relative;
-  padding: 10px;
-  border-bottom: 1px solid var(--main-resume-border-color);
-  border-right: 1px solid var(--main-resume-border-color);
-}
-#awards .description:after,
-#education .description:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 0;
-  left: -16px;
-  height: 0;
-  width: 0;
-  border: solid transparent;
-  border-right-color: var(--main-resume-container-color);
-  border-width: 8px;
-  pointer-events: none;
-}
-#awards .description h3,
-#education .description h3 {
-  font-size: 1.2em;
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-}
-#awards .description p,
-#education .description p {
-  margin-top: 5px;
-  padding: 0;
-}
-
-.job {
-  margin-bottom: 15px;
-}
-.job .details {
-  margin-left: 3%;
-  width: 95%;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  background: var(--main-resume-surface);
-  border: 1px solid var(--main-resume-surface-border);
-  border-radius: 8px;
-}
-.job .where {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.job .year {
-  opacity: 0.7;
-}
-.job .profession {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.job .description {
-  line-height: 1.5em;
-}
-.job .highlights {
-  padding: 5px 0;
-  font-weight: bold;
-}
-.job .job-details {
-  padding-left: 5%;
-  width: 100%;
-}
-.publication {
-  margin-bottom: 0;
-}
-.publication .name {
-  font-size: 1em;
-  font-weight: bold;
-}
-.publication .year {
-  opacity: 0.7;
-}
-.publication p {
-  margin: 0;
-  padding-top: 10px;
-}
-
-.contact-item {
-  width: 100%;
-  float: left;
-}
-.contact-item .icon {
-  padding: 10px;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  color: #32475c;
-  background: #eee;
-}
-.contact-item:last-child .icon {
-  border-bottom: none;
-}
-.contact-item .title {
-  width: 80%;
-  width: calc(100% - 55px);
-  font-weight: 700;
-  opacity: 0.9;
-}
-.contact-item .title.only {
-  margin-top: 10px;
-}
-.contact-item .description {
-  width: 80%;
-  width: calc(100% - 55px);
-  color: var(--main-resume-color);
-}
-
-.item-interests,
-.item-skills {
-  height: 30px;
-  color: var(--main-resume-color);
-  padding: 5px 10px;
-  margin-bottom: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.interest,
-.skill {
-  color: var(--main-resume-color);
-  display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding: 5px 10px;
-  background: var(--main-resume-badge-color);
-  position: relative;
-  font-size: 0.85em;
-  border: 0.5px solid var(--main-resume-color);
-  border-radius: 4px;
-}
-.skill-level {
-  background-color: var(--main-resume-color);
-  border-radius: 4px;
-  color: #fff;
-  padding: 1px 8px;
-  font-size: 0.75em;
-  position: absolute;
-  margin: 1px 10px;
-}
-
-#language-skills .skill {
-  margin: 10px 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.header-profiles:after {
-  width: 100%;
-  height: 3px;
-  border-bottom: 1px solid #ddd;
-  content: "";
-  display: block;
-}
-
-.header-profile-badge {
-  display: inline-block;
-  margin: 10px;
-}
-
-.theme-switch {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 20;
-}
-.theme-toggle {
-  width: 36px;
-  height: 36px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--main-resume-container-color);
-  border: 1px solid var(--main-resume-border-color);
-  border-radius: 50%;
-  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.08);
-  cursor: pointer;
-}
-.theme-toggle-swatch {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--main-resume-color);
-  box-shadow: inset 0 0 0 1px rgba(28, 25, 23, 0.12);
-}
-.theme-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  display: flex;
-  gap: 8px;
-  margin: 0;
-  padding: 8px 10px;
-  background: var(--main-resume-container-color);
-  border: 1px solid var(--main-resume-border-color);
-  border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.08);
-}
-.theme-menu[hidden] {
-  display: none;
-}
-.theme-menu button {
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px rgba(28, 25, 23, 0.12);
-}
-.theme-menu button.is-active {
-  box-shadow:
-    0 0 0 2px var(--main-resume-container-color),
-    0 0 0 4px var(--main-resume-color);
-}
-.theme-menu [data-theme="copper"] { background: #c45c26; }
-.theme-menu [data-theme="blue"] { background: #2563eb; }
-.theme-menu [data-theme="ink"] { background: #1c1917; }
-.theme-menu [data-theme="green"] { background: #3f6b4a; }
-.theme-menu [data-theme="plum"] { background: #7c3a5f; }
-
-.print-trigger {
-  position: fixed;
-  bottom: 12px;
-  left: 12px;
-  z-index: 20;
-  width: 36px;
-  height: 36px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--main-resume-container-color);
-  border: 1px solid var(--main-resume-border-color);
-  border-radius: 50%;
-  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.08);
-  color: var(--main-resume-color);
-  font-size: 14px;
-  cursor: pointer;
-}
-
-a {
-  color: var(--main-resume-color);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-.list-group-item {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 3px 0 3px 14px;
-}
-.list-group-item:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.65em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--main-resume-color);
-}
-.box > .list-group > .list-group-item {
-  padding: 10px 0 12px;
-  border-bottom: 1px solid var(--main-resume-border-color);
-}
-.box > .list-group > .list-group-item:last-child {
-  border-bottom: none;
-}
-.box > .list-group > .list-group-item:before {
-  display: none;
-}
-.project-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-}
-.project-name {
-  font-weight: 700;
-}
-.project-url {
-  flex: none;
-  font-size: 0.85em;
-  font-weight: 500;
-  color: var(--main-resume-color);
-  opacity: 0.85;
-}
-.project-description {
-  display: block;
-  margin: 4px 0 8px;
-}
-.project-keyword {
-  font-size: 0.72em;
-  padding: 3px 8px;
-}
-.project-highlights {
-  margin-top: 6px;
-  margin-bottom: 0;
-}
-.job .description p {
-  margin: 0 0 6px;
-}
-
-#awards .description,
-#education .description {
-  border: 1px solid var(--main-resume-border-color);
-  border-radius: 8px;
-  border-bottom: 1px solid var(--main-resume-border-color);
-  border-right: 1px solid var(--main-resume-border-color);
-}
-
-.publication.panel {
-  border: 1px solid var(--main-resume-border-color);
-  border-radius: 8px;
-  box-shadow: none;
-  background: transparent;
-}
-.publication .panel-heading {
-  background: transparent;
-  border-bottom: none;
-}
-
-    </style>
-    <style type="text/css" media="print">
-      body {
-  font-size: 0.95em;
+  background: white;
+  font-size: 9.8pt;
+  line-height: 1.28;
   -webkit-print-color-adjust: exact;
-  line-height: 1.3;
+  print-color-adjust: exact;
 }
 
-a[href]:after {
-  content: none !important;
-}
+.resume { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+.resume-controls { display: none; }
 
-#photo,
-.theme-switch,
-.print-trigger {
-  display: none;
+/* The PDF exporter repeats this header in the reserved page margin. */
+.pdf-export .resume-header { display: none; }
+.resume-header {
+  margin: 0 0 4mm;
+  padding: 0 0 3mm;
+  background: white;
 }
+.resume-header h1 { font-size: 23pt; line-height: 1.1; }
+.headline { font-size: 10pt; margin: 2mm 0 2mm; }
+.contact-line, .profile-line { font-size: 8pt; line-height: 1.4; gap: 1mm 4mm; }
+.profile-line { margin-top: 1mm; }
 
-.box {
-  margin-bottom: -10px;
-}
-
-blockquote,
-#education,
-#awards,
-.contact-item,
-.publication,
-.skills,
-.interests {
-  page-break-inside: avoid;
-}
-
-.col-sm-5 {
-  width: 40%;
-  padding: 0 15px;
-}
-
-.col-sm-7 {
-  width: 60%;
-  padding: 0 15px;
-}
-
-.skills .col-sm-offset-1,
-.interests .col-sm-offset-1 {
-  margin-top: -10px;
-  margin-bottom: 5px;
-}
-
-#education {
-  margin: 0;
-  margin-bottom: -20px;
-}
-#awards:before,
-#education:before {
-  background: none;
-}
-
-#awards .description,
-#education .description,
-.job .details,
-.publication.panel {
-  border: 1px solid #eee;
-  border-radius: 0;
-}
-.publication,
-.publication .panel-heading,
-.publication .name {
-  margin: 0;
-  padding: 0 5px;
-  border: none;
-}
-.publication .panel-body {
-  padding: 0 10px;
-  margin: 0;
-}
-
-.badge {
-  margin: 0;
-}
-
-.list-group .list-group {
-  display: none;
-}
-
-/* Hide work entry summaries in print — highlights already cover the content */
-.job .job-details .description > p,
-.job .job-details > .description > *:not(.highlights):not(ul) {
-  display: none;
-}
-
-/* Tighten work entry spacing */
-.job {
-  margin-bottom: 4px;
-}
-
-/* Hide job URL links in print */
-.job .details .address {
-  display: none;
-}
-
-/* Tighten box spacing */
-.box {
-  margin-bottom: 0;
-}
-
-h2 {
-  font-size: 1.1em;
-  margin: 6px 0 4px;
-}
-
-/* Tighten highlights list */
-ul.list-group {
-  margin-bottom: 2px;
-}
-
-.list-group-item {
-  padding: 2px 12px;
-}
-
-/* Hide volunteer section in print to save space */
-.box:has(h2 .fa-users) {
-  display: none;
-}
-
-.list-group-item {
-  border: none;
-  margin: 0;
-  padding: 5px 15px;
-}
-.list-group-item:before {
-  display: none;
-}
-.list-group-item:after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 0;
-  left: -1px;
-  height: 0;
-  width: 0;
-  border: solid transparent;
-  border-right-color: #999;
-  border-width: 4px;
-  pointer-events: none;
-}
-
-.box > .list-group > .list-group-item:after {
-  content: none;
-}
-
-.skill,
-.interest,
-.skill-badge .badge {
-  border: 0.5px solid;
-  border-radius: 4px;
-}
-.skill-badge .badge {
-  margin-top: 5px;
-}
-
-.project-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-}
-.project-url {
-  font-size: 0.8em;
-}
-
-    </style>
+.resume-section { margin-top: 3mm; padding-top: 2mm; }
+.profile-section { margin-top: 0; padding-top: 0; }
+.resume-section > h2 { font-size: 10pt; margin-bottom: 2mm; break-after: avoid; page-break-after: avoid; }
+.work-entry { margin-bottom: 2.5mm; }
+.entry-heading { break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid; }
+.company-line h3 { font-size: 10pt; }
+.role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 11pt; }
+.entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font-size: 8.5pt; }
+.company-description { margin: 1mm 0; }
+.role-summary { display: none; }
+.achievements { margin-top: 1mm; padding-left: 3.5mm; }
+.achievements li, .project-highlights li { margin-bottom: 0.6mm; break-inside: avoid; page-break-inside: avoid; }
+.project-entry { break-inside: avoid; page-break-inside: avoid; margin-bottom: 0.5mm; padding-bottom: 0.5mm; }
+.project-entry p { margin: 1px 0 2px; }
+.project-highlights { display: none; }
+.skills-list { font: inherit; }
+.skill-group { break-inside: avoid; page-break-inside: avoid; margin-bottom: 0.5mm; }
+.skill-group dt, .skill-group dd { display: inline; }
+.skill-group dt::after { content: " - "; font-weight: 400; }
+.education-entry { break-inside: avoid; page-break-inside: avoid; }
+.education-section { margin-top: 2mm; padding-top: 1.5mm; }
+.education-section > h2 { margin-bottom: 1mm; }
+.education-entry, .education-entry p { margin-bottom: 0; }
+.volunteer-section { display: none; }
+a[href]::after { content: none; }
+</style>
   </head>
   <body>
-    <div class="theme-switch">
-      <button type="button" class="theme-toggle" aria-label="Change color theme" aria-expanded="false" aria-haspopup="true">
-        <span class="theme-toggle-swatch"></span>
-      </button>
-      <div class="theme-menu" role="group" aria-label="Color theme" hidden>
-        <button type="button" data-theme="copper" aria-label="Copper"></button>
-        <button type="button" data-theme="blue" aria-label="Blue"></button>
-        <button type="button" data-theme="ink" aria-label="Ink"></button>
-        <button type="button" data-theme="green" aria-label="Green"></button>
-        <button type="button" data-theme="plum" aria-label="Plum"></button>
-      </div>
-    </div>
-    <button type="button" class="print-trigger" aria-label="Print resume">
-      <i class="fas fa-print" aria-hidden="true"></i>
-    </button>
-    <div class="container ">
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="photo-header" class="text-center">
-            <!-- PHOTO (AVATAR) -->
-            <div id="photo">
-              <img src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;14287645?v&#x3D;4" alt="avatar" />
-            </div>
-            <div id="text-header" >
-              <h1>
-                Vatsal Trivedi<br /><span style="text-transform: none">Principal Engineer · AI Platforms · Enterprise Integrations</span
-                >
-              </h1>
-            </div>
-            <div class="header-profiles contact-item">
-              <div class="header-profile-badge">
-                <span class="fas fa-map-marker fa-fw"></span>
-                <span class="title">
-                  Bengaluru,
-                India</span>
-              </div>
-               <div class="header-profile-badge">
-                <span class="fas fa-phone fa-fw"></span>
-                <span class="title">+91 760-063-5053
-                </span>
-              </div>
-                <div class="header-profile-badge">
-                 <span class="fas fa-envelope fa-fw"></span>
-                <span class="title">  <a href="mailto:trivedivatsal005@gmail.com" target="_blank">trivedivatsal005@gmail.com</a>
-                </span>
-              </div>
-                <div class="header-profile-badge">
-                 <span class="fas fa-globe fa-fw"></span>
-                <span class="title">  <a href="https:&#x2F;&#x2F;vatsal.xyz" target="_blank">https:&#x2F;&#x2F;vatsal.xyz</a>
-                </span>
-              </div>
-            </div>
-            <div class="header-profiles contact-item">
-              <div class="header-profile-badge">
-                <span class="fab fa-github fa-fw"></span> 
-                <span class="title">Github</span>
-                <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal" target="_blank">trivedi-vatsal</a>
-              </div>
-              <div class="header-profile-badge">
-                <span class="fab fa-linkedin fa-fw"></span> 
-                <span class="title">LinkedIn</span>
-                <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal" target="_blank">trivedi-vatsal</a>
-              </div>
-              <div class="header-profile-badge">
-                <span class="fab fa-behance fa-fw"></span> 
-                <span class="title">Behance</span>
-                <a href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
-              </div>
-              <div class="header-profile-badge">
-                <span class="fab fa-dribbble fa-fw"></span> 
-                <span class="title">Dribbble</span>
-                <a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
-              </div>
-              <div class="header-profile-badge">
-                <span class="fab fa-dev fa-fw"></span> 
-                <span class="title">Dev.to</span>
-                <a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" target="_blank">trivedivatsal</a>
-              </div>
-            </div>
-          </div>
+    <nav class="resume-controls" aria-label="Resume actions">
+      <a href="./pdf/Vatsal Trivedi.pdf">Download PDF</a>
+    </nav>
+    <main class="resume">
+      <header class="resume-header">
+        <h1>Vatsal Trivedi</h1>
+        <p class="headline">Principal Engineer · AI Platforms · Enterprise Integrations</p>
+        <div class="contact-line">
+          <span>Bengaluru, India</span>
+          <a href="mailto:trivedivatsal005@gmail.com">trivedivatsal005@gmail.com</a>
+          <a href="tel:+91 760-063-5053">+91 760-063-5053</a>
+          <a href="https:&#x2F;&#x2F;vatsal.xyz">https:&#x2F;&#x2F;vatsal.xyz</a>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-7">
-          <!-- ABOUT ME -->
-          <div class="box">
-            <h2><i class="fas fa-user ico"></i> About</h2>
-            <p style="margin-left: 3%">I build AI platforms, multi-tenant SaaS, and the integrations companies actually run them on. At Phamax I lead engineering for Ariya, a pharma AI platform for content, research, analytics, and engagement. That includes the compliance path and the Veeva CRM and Salesforce Marketing Cloud connections. I also ship small tools in the open. The current one is openpreflight: GitHub Check Runs on a server you already run.</p>
-          </div>
-          <!-- WORK EXPERIENCE -->
-          <div class="box">
-            <h2><i class="fas fa-suitcase ico"></i> Work Experience</h2>
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">
-                    Phamax
-                    <div class="pull-right">
-                      Bengaluru, India
-                    </div>
-                  </div>
-                  <div class="description">
-                    Ariya is an AI platform for pharma: content generation, research, analytics, and engagement.
-                  </div>
-                  <div class="year">
-                    May 2025 – Present
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">Principal Engineer (Ariya Platform)</div>
-                  <div class="description">
-                    <p>Lead engineering for Ariya, an AI platform for pharmaceutical content, research, analytics, and engagement. The work is to design and ship systems that put generative AI into the tools pharma teams already use, without skipping compliance.</p>
-                    <ul class="list-group">
-                      <li class="list-group-item">Architect the core systems for an AI platform used by global pharmaceutical clients. Workflows cover content creation, research, analytics, and engagement.</li>
-                      <li class="list-group-item">Built the AI Content Wizard and the content lifecycle around it: authoring, multi-stage approval, compliance checks, and distribution in regulated markets.</li>
-                      <li class="list-group-item">Designed and shipped LLM orchestration (prompts, context injection, RAG, embeddings, tool calling) so generated content stays compliant and traceable across content types and markets.</li>
-                      <li class="list-group-item">Integrated Veeva CRM and Salesforce Marketing Cloud (SFMC) so omnichannel campaigns can run across client tenants without breaking compliance.</li>
-                      <li class="list-group-item">Led the Data Catalog so business and engineering teams can find data from metadata, with observability and self-serve access.</li>
-                      <li class="list-group-item">Shipped audit trails, deployment pipelines, and monitoring, and sped up AI and data workflows with caching and vector databases.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">
-                    <a href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-rewards&#x2F;" target="_blank">Comviva</a>
-                    <div class="pull-right">
-                      Bengaluru, India
-                    </div>
-                  </div>
-                  <div class="description">
-                    MobiLytix Rewards and MobiLytix Digital Marketing Product
-                  </div>
-                  <div class="year">
-                    December 2021 – March 2025
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">Technical Lead</div>
-                  <div class="description">
-                    <p>Technical lead for MobiLytix Rewards, an engagement product for loyalty programs and promotional campaigns.</p>
-                    <ul class="list-group">
-                      <li class="list-group-item">Led the rewrite of MobiLytix Rewards into a cloud-agnostic, multi-tenant SaaS product, with AI/ML personalization, for telecom and retail clients.</li>
-                      <li class="list-group-item">Owned full-stack architecture and features in TypeScript, React, FeathersJS, Delta Lake, Postgres, and vector databases, on a distributed microservices system.</li>
-                      <li class="list-group-item">Owned the Kafka campaign pipeline for high-throughput reward and loyalty workflows, with async processing and caching.</li>
-                      <li class="list-group-item">Introduced observability and monitoring across the platform. Deploys got more reliable and production incidents took less time to resolve.</li>
-                      <li class="list-group-item">Improved user engagement and campaign performance with personalization and ML segmentation.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">
-                    <a href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-digital-marketing&#x2F;" target="_blank">Comviva</a>
-                    <div class="pull-right">
-                      Bengaluru, India
-                    </div>
-                  </div>
-                  <div class="description">
-                    MobiLytix Digital Marketing Product
-                  </div>
-                  <div class="year">
-                    June 2020 – November 2021
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">Senior Engineer</div>
-                  <div class="description">
-                    <p>Built integrations and analytics for an omnichannel marketing automation platform used to reach customers across digital channels.</p>
-                    <ul class="list-group">
-                      <li class="list-group-item">Shipped 14+ integrations including Shopify Public App, Seatgeek, HubSpot, AWS QuickSight, GoodData, Matomo, WooCommerce, WordPress, Batch Push, and Unlayer Editor.</li>
-                      <li class="list-group-item">Built ML insights on Google BigQuery and GoodData for campaign optimization.</li>
-                      <li class="list-group-item">Improved performance with query work, caching, and CDNs.</li>
-                      <li class="list-group-item">Worked through multi-tenant data isolation, API rate limits, and how credentials are stored for third-party platforms.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">
-                    <a href="https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive" target="_blank">Tata Consultancy Services (TCS)</a>
-                    <div class="pull-right">
-                      Gandhinagar, India
-                    </div>
-                  </div>
-                  <div class="description">
-                    Life sciences work for global clients.
-                  </div>
-                  <div class="year">
-                    September 2018 – May 2020
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">Assistant System Engineer</div>
-                  <div class="description">
-                    <p>Built full-stack applications and reporting tools for global life sciences clients, in a regulated enterprise setting.</p>
-                    <ul class="list-group">
-                      <li class="list-group-item">Built full-stack applications with ReactJS, Angular, NodeJS, and ExpressJS.</li>
-                      <li class="list-group-item">Set up Microsoft 365 workflows with SharePoint, Teams, Power Automate, and Power BI.</li>
-                      <li class="list-group-item">Built analytics and reporting with GA360, Google Tag Manager, and Data Studio for life sciences teams.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- PROJECTS -->
-          <div class="box">
-            <h2><i class="fas fa-code-branch ico"></i> Projects</h2>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;openpreflight.xyz" target="_blank" class="project-name">openpreflight</a>
-                  <a href="https:&#x2F;&#x2F;openpreflight.xyz" target="_blank" class="project-url">openpreflight.xyz</a>
-                </div>
-                <span class="project-description">Self-hosted GitHub Check Runs for private pull requests. One Go binary, one SQLite file, on a server you run. Apache-2.0.</span>
-                <span class="skill project-keyword">Go</span><span class="skill project-keyword">SQLite</span><span class="skill project-keyword">Docker</span><span class="skill project-keyword">GitHub Apps</span>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">GitHub App, webhooks, runner, UI, and local state in one deployable unit. Docker Compose or a Linux release binary.</li>
-                </ul>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">The project checks itself: docs, site, and the binary each get a Check Run from ci.openpreflight.xyz. GitHub Actions is only used to publish release images.</li>
-                </ul>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">Wrote a five-part series on vatsal.xyz, from the trigger model through running untrusted code.</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;knock.codes" target="_blank" class="project-name">Knock</a>
-                  <a href="https:&#x2F;&#x2F;knock.codes" target="_blank" class="project-url">knock.codes</a>
-                </div>
-                <span class="project-description">Copy-paste React and Tailwind components for private previews: access screens, invitations, and draft controls. Drops into a shadcn project.</span>
-                <span class="skill project-keyword">React</span><span class="skill project-keyword">Tailwind</span><span class="skill project-keyword">shadcn&#x2F;ui</span>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;inboxcraft.app&#x2F;" target="_blank" class="project-name">InboxCraft</a>
-                  <a href="https:&#x2F;&#x2F;inboxcraft.app&#x2F;" target="_blank" class="project-url">inboxcraft.app</a>
-                </div>
-                <span class="project-description">A browser-only PowerShell generator for Microsoft 365 Outlook inbox rules. Quick and Advanced modes, with templates for GitHub, Slack, and Jira. Scripts stay in the browser.</span>
-                <span class="skill project-keyword">TypeScript</span><span class="skill project-keyword">React</span><span class="skill project-keyword">PowerShell</span>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills" target="_blank" class="project-name">InboxCraft Skills</a>
-                  <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills" target="_blank" class="project-url">github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills</a>
-                </div>
-                <span class="project-description">Official Agent Skills pack for InboxCraft. Nine PowerShell tools so assistants can manage Outlook rules, folders, and categories from a prompt.</span>
-                <span class="skill project-keyword">PowerShell</span><span class="skill project-keyword">Agent Skills</span><span class="skill project-keyword">Outlook</span>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">Works with Claude Code, Cursor, and other assistants that follow the npx skills spec.</li>
-                </ul>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">Covers rule creation, folder trees, categories, large-folder scans, and empty-folder cleanup.</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;audit-plan-tasks" target="_blank" class="project-name">audit-plan-tasks</a>
-                  <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;audit-plan-tasks" target="_blank" class="project-url">github.com&#x2F;trivedi-vatsal&#x2F;audit-plan-tasks</a>
-                </div>
-                <span class="project-description">Agent Skill that scaffolds AUDIT.md, PLAN.md, and TASKS.md so a plan is based on what you actually checked, not on the request.</span>
-                <span class="skill project-keyword">Agent Skills</span><span class="skill project-keyword">Planning</span>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">Audit first: read the code, run the commands, hit the real endpoints, then plan.</li>
-                </ul>
-                <ul class="list-group project-highlights">
-                  <li class="list-group-item">Install with npx skills add trivedi-vatsal/audit-plan-tasks.</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;StaleGuard&#x2F;" target="_blank" class="project-name">StaleGuard</a>
-                  <a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;StaleGuard&#x2F;" target="_blank" class="project-url">vatsal.xyz&#x2F;StaleGuard</a>
-                </div>
-                <span class="project-description">Reloads a stale SPA when the tab is focused again, by checking ETag and Last-Modified. No polling and no banner.</span>
-                <span class="skill project-keyword">TypeScript</span><span class="skill project-keyword">React</span>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;pysec-recipes&#x2F;" target="_blank" class="project-name">PySecRecipes</a>
-                  <a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;pysec-recipes&#x2F;" target="_blank" class="project-url">vatsal.xyz&#x2F;pysec-recipes</a>
-                </div>
-                <span class="project-description">GitHub Actions recipes that audit Python dependencies against PyPI, OSV, and Python Packaging advisories, and open or close issues as findings change.</span>
-                <span class="skill project-keyword">Python</span><span class="skill project-keyword">GitHub Actions</span><span class="skill project-keyword">DevSecOps</span>
-              </li>
-              <li class="list-group-item">
-                <div class="project-head">
-                  <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync" target="_blank" class="project-name">PyImportSync</a>
-                  <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync" target="_blank" class="project-url">github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync</a>
-                </div>
-                <span class="project-description">AST check that every Python import is declared in requirements.txt. Ships as a GitHub Action and a pre-commit hook.</span>
-                <span class="skill project-keyword">Python</span><span class="skill project-keyword">AST</span><span class="skill project-keyword">pre-commit</span>
-              </li>
-            </ul>
-          </div>
-          <!-- VOLUNTEER -->
-          <div class="box">
-            <h2><i class="fas fa-users ico"></i> Volunteer</h2>
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">Google Developer Groups Ahmedabad</div>
-                  <div class="address">
-                    <a href="https:&#x2F;&#x2F;devfest.gdgahmedabad.com&#x2F;" target="_blank"
-                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;devfest.gdgahmedabad.com&#x2F;</a
-                    >
-                  </div>
-                  <div class="year">
-                    September 2018 – Present
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">Creative Designer</div>
-                  <div class="description">
-                    <p>Design for the GDG Ahmedabad chapter: event visuals, branding, and social graphics.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="job clearfix">
-              <div class="row">
-                <div class="details">
-                  <div class="where">GirlScript</div>
-                  <div class="address">
-                    <a href="https:&#x2F;&#x2F;gssoc.girlscript.tech&#x2F;" target="_blank"
-                      ><i class="fas fa-globe ico"></i> https:&#x2F;&#x2F;gssoc.girlscript.tech&#x2F;</a
-                    >
-                  </div>
-                  <div class="year">
-                    February 2020 – May 2020
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="job-details col-xs-11">
-                  <div class="profession">Summer of Code 2020 Mentor</div>
-                  <div class="description">
-                    <p>Mentored contributors on project structure, code review, and how to land a change.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="profile-line">
+          <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal" aria-label="Github profile for trivedi-vatsal" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg><span>trivedi-vatsal</span></a><a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal" aria-label="LinkedIn profile for trivedi-vatsal" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="white" d="M5 9h3v11H5zM5 4h3v3H5zM10 9h3v1.5c.8-1.2 1.8-1.8 3.3-1.8 2.8 0 3.7 1.8 3.7 4.8V20h-3v-6c0-1.5-.4-2.5-1.7-2.5-1.6 0-2.3 1.1-2.3 2.8V20h-3z"/></svg><span>trivedi-vatsal</span></a><a href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal" aria-label="Behance profile for trivedivatsal" title="Behance"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>Behance</title><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"></path></svg><span>trivedivatsal</span></a><a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" aria-label="Dribbble profile for trivedivatsal" title="Dribbble"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>Dribbble</title><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"></path></svg><span>trivedivatsal</span></a><a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" aria-label="Dev.to profile for trivedivatsal" title="Dev.to"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>dev.to</title><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"></path></svg><span>trivedivatsal</span></a>
         </div>
-        <div class="col-xs-12 col-sm-5">
-          <!-- CONTACT -->
-          <!-- <div class="box clearfix">
-            <h2><i class="fas fa-bullseye ico"></i> Contact</h2>
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-map-marker fa-fw"></span>
-              </div>
-              <div
-                class="title only  pull-right"
-              >
-                Bengaluru,
-                India
-                IN
-              </div>
+      </header>
+
+      <section class="resume-section profile-section">
+        <h2>Profile</h2>
+        <p>I&#39;m a principal engineer who builds AI products and the platforms they run on. At Phamax, I lead Ariya&#39;s <strong>architecture and delivery</strong> across <strong>eight pharma and life-sciences client deployments</strong>. The platform handles source-backed generation, regulated content workflows, and enterprise integrations. Before that, I led engineering for Factoreal&#39;s omnichannel marketing product and Comviva&#39;s MobiLytix Rewards, working on analytics at scale, loyalty targeting, and event-driven services. I write code, set engineering standards, and lead teams through production releases. I also build open-source developer tools.</p>
+      </section>
+
+      <p class="focus-areas"><strong>Focus areas</strong> Production RAG · LLM orchestration · AI evaluation · Tool calling &amp; agent workflows · Regulated content lifecycle · Enterprise integrations · Platform engineering · Multi-tenant SaaS · Distributed systems · Event-driven architecture · Large-scale analytics · Data engineering · Observability &amp; reliability · Application security · Developer tooling · Engineering leadership · Architecture &amp; delivery</p>
+
+      <section class="resume-section experience-section">
+        <h2>Experience</h2>
+        <article class="work-entry">
+          <header class="entry-heading">
+            <div class="company-line">
+              <h3>Phamax</h3>
+              <span class="entry-location">Bengaluru, India</span>
             </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-phone fa-fw"></span>
-              </div>
-              <div class="title only pull-right">+91 760-063-5053</div>
+            <div class="role-line">
+              <h4>Principal Engineer (Ariya Platform)</h4>
+              <span class="entry-date">May 2025 - Present</span>
             </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-envelope fa-fw"></span>
-              </div>
-              <div class="title only pull-right">
-                <a href="mailto:trivedivatsal005@gmail.com" target="_blank">trivedivatsal005@gmail.com</a>
-              </div>
+            <p class="company-description">Ariya: AI platform for pharmaceutical content, research, analytics, and engagement</p>
+          </header>
+          <p class="role-summary">I lead engineering for Ariya across eight client deployments. I design the architecture, write code, set engineering standards, and manage production delivery for pharma marketing and medical teams.</p>
+          <ul class="achievements">
+            <li>Restructured Ariya into core API, portal, and authoring applications. Set <strong>shared engineering standards</strong> and reusable staging, UAT, and production deployment workflows.</li><li>Built the AI Content Wizard and <strong>regulated content lifecycle</strong>, with configuration-driven authoring, localization, <strong>multi-stage approval, compliance checks, and distribution</strong> across content types and markets.</li><li>Designed <strong>Content Compose</strong> with three LLM stages, hybrid Azure AI Search retrieval, <strong>source-linked bibliographies</strong> rebuilt after generation, and a <strong>14-check validator</strong> for completeness and citations.</li><li>Designed <strong>LLM orchestration</strong> with prompts, context injection, RAG, embeddings, and tool calling. Integrated <strong>Veeva CRM and Salesforce Marketing Cloud</strong> into omnichannel workflows for each tenant.</li><li>Delivered a white-label RAG assistant over <strong>551 medical publications</strong> with access controls, inspectable source PDFs, feedback, audit logs, and an admin console on Azure Container Apps.</li><li>Built the <strong>Speech Avatar</strong> across Azure Speech, Django, and the portal, including streaming chat, credential exchange, conversation logs, and post-call analysis.</li><li>Designed <strong>Bronze&#x2F;Silver&#x2F;Gold ingestion</strong> with a DBML registry and run tracking. Fixed six causes of production failures and added deterministic keys for <strong>repeatable UPSERTs</strong>.</li><li>Built the <strong>Data Catalog</strong> for metadata discovery, observability, and <strong>self-service access</strong>, and the HCP and SFMC email-data APIs for the Daily Sales Brief.</li><li>Built repeatable SonarQube checks and applied <strong>20 security fixes</strong> across <strong>three client release lines</strong> for encryption, JWT validation, hashing, SQL access, and application controls.</li><li><strong>Encrypted phone numbers at rest</strong>, automated dependency security audits, and coordinated database certificate rotation across <strong>seven environments and four services</strong>.</li><li>Added uv and Docker caching to Python builds. Built a <strong>JSON-to-PPTX service</strong> and admin APIs for content metrics and event reports.</li>
+          </ul>
+        </article>
+        <article class="work-entry">
+          <header class="entry-heading">
+            <div class="company-line">
+              <h3><a href="https:&#x2F;&#x2F;www.comviva.com&#x2F;products-solutions&#x2F;martech&#x2F;cvm&#x2F;mobilytix-rewards&#x2F;">Comviva</a></h3>
+              <span class="entry-location">Bengaluru, India</span>
             </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-                <span class="fas fa-globe fa-fw"></span>
-              </div>
-              <div class="title only pull-right">
-                <a href="https:&#x2F;&#x2F;vatsal.xyz" target="_blank">https:&#x2F;&#x2F;vatsal.xyz</a>
-              </div>
+            <div class="role-line">
+              <h4>Technical Lead</h4>
+              <span class="entry-date">October 2023 - March 2025</span>
             </div>
+            <p class="company-description">MobiLytix Rewards: multi-tenant loyalty and campaign platform for telecom and retail</p>
+          </header>
+          <p class="role-summary">I was technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards. I owned full-stack architecture, targeting services, and shared backend packages, and worked with in-house and vendor teams on delivery.</p>
+          <ul class="achievements">
+            <li>Led the <strong>cloud-agnostic, multi-tenant platform rewrite</strong> in TypeScript, React, and FeathersJS, with PostgreSQL, Delta Lake, and vector databases. Built product features and the services and data systems they use.</li><li>Owned <strong>Kafka campaign processing</strong> for high-throughput reward and loyalty workflows, with asynchronous execution and caching. Delivered <strong>AI&#x2F;ML personalization and segmentation</strong>.</li><li>Built a <strong>JSON-to-PostgreSQL segmentation engine</strong> with 26 operators, including 11 date operators. Added <strong>custom member attributes without schema changes</strong>, scheduled runs, and run history.</li><li>Made <strong>club provisioning transactional</strong> so partial tenant setup rolls back. Used Kafka to recompute segments when their rules change.</li><li>Wrote PostgreSQL and Redis <strong>clients used by five services</strong> and service-to-service JWT helpers. Built a shared member package for enrollment, membership validation, attribute updates, and caching.</li><li>Introduced <strong>platform observability and monitoring</strong> for more reliable deployments and faster incident diagnosis. Coordinated releases and security fixes across six services.</li><li>Introduced Jest tests and coverage gates for segmentation, scheduling, and tiers, including <strong>48 segmentation tests</strong>. Moved shared packages to TypeScript and automated publishing.</li>
+          </ul>
+        </article>
+        <article class="work-entry">
+          <header class="entry-heading">
+            <div class="company-line">
+              <h3><a href="https:&#x2F;&#x2F;www.factoreal.com&#x2F;">Factoreal</a></h3>
+              <span class="entry-location">Bengaluru, India</span>
+            </div>
+            <div class="role-line">
+              <h4>Technical Lead</h4>
+              <span class="entry-date">December 2021 - September 2023</span>
+            </div>
+            <p class="company-description">Factoreal: omnichannel marketing automation platform, incubated by Comviva</p>
+          </header>
+          <p class="role-summary">I led engineering for Factoreal's email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics features. The product served ecommerce, sports, and other businesses.</p>
+          <ul class="achievements">
+            <li>Built and expanded BigQuery analytics for a platform handling <strong>10 billion transactions</strong>. Automated provisioning and scoring across <strong>71 customer datasets and 998 scheduled queries</strong>.</li><li>Designed the <strong>Fan Maturity Model</strong> for the sports vertical. Six channel scores and customer-configurable weights produce four audience tiers, with daily scoring and portal controls.</li><li>Rebuilt the <strong>Shopify app for its App Store relaunch</strong>: installation, signup, store provisioning, and OAuth. Expanded webhook coverage from <strong>17 to 40 topics</strong> and added GraphQL billing subscriptions.</li><li>Built <strong>SeatGeek ticketing synchronization</strong> and WhatsApp commerce data capture. Kept Shopify API compatibility current and fixed duplicate contacts with <strong>country-aware phone normalization</strong>.</li><li>Built shared <strong>contact operations across five services</strong> and <strong>plan entitlements across twelve</strong>. Automated customer retirement and improved contact queries and data-cleanup routines.</li><li>Added <strong>tenant-configurable session expiry and risk-scored signup protection</strong>. Automated GoodData cache invalidation and built social dashboards and Jira-to-BigQuery reporting sync.</li>
+          </ul>
+        </article>
+        <article class="work-entry">
+          <header class="entry-heading">
+            <div class="company-line">
+              <h3><a href="https:&#x2F;&#x2F;www.factoreal.com&#x2F;">Factoreal</a></h3>
+              <span class="entry-location">Bengaluru, India</span>
+            </div>
+            <div class="role-line">
+              <h4>Senior Engineer</h4>
+              <span class="entry-date">June 2020 - November 2021</span>
+            </div>
+            <p class="company-description">Factoreal: omnichannel marketing automation platform, incubated by Comviva</p>
+          </header>
+          <p class="role-summary">I built data pipelines, integrations, and channel support across Factoreal's core API, React portal, and backend services. They feed its analytics and automated campaigns.</p>
+          <ul class="achievements">
+            <li>Built <strong>PostgreSQL and Cassandra-to-BigQuery synchronization</strong> across 24 entity workflows, with <strong>incremental processing and pagination</strong>. Automated customer dataset provisioning at signup.</li><li>Built <strong>email delivery and engagement KPI APIs</strong> and embedded GoodData dashboards so customers can see deliverability, audience response, and unsubscribe rates.</li><li>Made Shopify order ingestion safe under retries with <strong>application idempotency and database uniqueness constraints</strong>. Built <strong>Redis- and Kafka-driven abandoned-cart triggers</strong> with tenant-configurable timeouts.</li><li>Published <strong>Razorpay payment events into Kafka</strong>. Built web-push subscriptions and mobile SDK registration and events for commerce and engagement workflows.</li><li>Fixed <strong>tracking accuracy</strong> with page deduplication, tenant-specific event exclusions, and first-visit corrections. Built verified-domain trial onboarding and <strong>HubSpot contact migration</strong>.</li>
+          </ul>
+        </article>
+        <article class="work-entry">
+          <header class="entry-heading">
+            <div class="company-line">
+              <h3><a href="https:&#x2F;&#x2F;www.tcs.com&#x2F;what-we-do&#x2F;industries&#x2F;life-sciences&#x2F;solution&#x2F;tcs-lifesciences-interactive">Tata Consultancy Services (TCS)</a></h3>
+              <span class="entry-location">Gandhinagar, India</span>
+            </div>
+            <div class="role-line">
+              <h4>Assistant System Engineer</h4>
+              <span class="entry-date">September 2018 - May 2020</span>
+            </div>
+            <p class="company-description">Life sciences work for global clients.</p>
+          </header>
+          <p class="role-summary">I built full-stack applications, enterprise workflows, and reports for global life-sciences clients in a regulated environment.</p>
+          <ul class="achievements">
+            <li>Built <strong>React and Angular applications</strong> with Node.js and Express backends for enterprise life-sciences workflows.</li><li>Built <strong>Microsoft 365 workflows</strong> with SharePoint, Teams, Power Automate, and Power BI for collaboration, process automation, and reporting.</li><li>Set up <strong>GA360, Google Tag Manager, and Data Studio analytics</strong> so life-sciences teams can measure digital activity and performance.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section projects-section">
+        <h2>Projects I built</h2>
+        <p>Personal projects and developer tools I built, including open-source software.</p>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;openpreflight.xyz">openpreflight</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;openpreflight.xyz">openpreflight.xyz</a>
+          </header>
+          <p><strong>Self-hosted GitHub Check Runs</strong> for private pull requests. One Go binary, one SQLite file, on a server you run. Apache-2.0.</p>
+          <ul class="project-highlights">
+            <li>GitHub App, webhooks, runner, UI, and local state in one deployable unit. Docker Compose or a Linux release binary.</li><li>The project checks itself: docs, site, and the binary each get a Check Run from ci.openpreflight.xyz. GitHub Actions is only used to publish release images.</li><li>Wrote a five-part series on vatsal.xyz, from the trigger model through running untrusted code.</li>
+          </ul>
+          <div class="technology-line"><span>Go</span><span>SQLite</span><span>Docker</span><span>GitHub Apps</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;knock.codes">Knock</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;knock.codes">knock.codes</a>
+          </header>
+          <p>Copy-paste React and Tailwind components for private previews: access screens, invitations, and draft controls. Drops into a shadcn project.</p>
+          <div class="technology-line"><span>React</span><span>Tailwind</span><span>shadcn&#x2F;ui</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;inboxcraft.app&#x2F;">InboxCraft</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;inboxcraft.app&#x2F;">inboxcraft.app</a>
+          </header>
+          <p>A <strong>browser-only PowerShell generator</strong> for Microsoft 365 Outlook inbox rules. Quick and Advanced modes, with templates for GitHub, Slack, and Jira. Scripts stay in the browser.</p>
+          <div class="technology-line"><span>TypeScript</span><span>React</span><span>PowerShell</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills">InboxCraft Skills</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills">github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills</a>
+          </header>
+          <p>Official Agent Skills pack for InboxCraft. <strong>Nine PowerShell tools</strong> so assistants can manage Outlook rules, folders, and categories from a prompt.</p>
+          <ul class="project-highlights">
+            <li>Works with Claude Code, Cursor, and other assistants that follow the npx skills spec.</li><li>Covers rule creation, folder trees, categories, large-folder scans, and empty-folder cleanup.</li>
+          </ul>
+          <div class="technology-line"><span>PowerShell</span><span>Agent Skills</span><span>Outlook</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;audit-plan-tasks">audit-plan-tasks</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;audit-plan-tasks">github.com&#x2F;trivedi-vatsal&#x2F;audit-plan-tasks</a>
+          </header>
+          <p>Agent Skill that scaffolds AUDIT.md, PLAN.md, and TASKS.md so a plan is based on what you actually checked, not on the request.</p>
+          <ul class="project-highlights">
+            <li>Audit first: read the code, run the commands, hit the real endpoints, then plan.</li><li>Install with npx skills add trivedi-vatsal/audit-plan-tasks.</li>
+          </ul>
+          <div class="technology-line"><span>Agent Skills</span><span>Planning</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;StaleGuard&#x2F;">StaleGuard</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;StaleGuard&#x2F;">vatsal.xyz&#x2F;StaleGuard</a>
+          </header>
+          <p>Reloads a stale SPA when the tab is focused again, by checking ETag and Last-Modified. No polling and no banner.</p>
+          <div class="technology-line"><span>TypeScript</span><span>React</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;pysec-recipes&#x2F;">PySecRecipes</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;pysec-recipes&#x2F;">vatsal.xyz&#x2F;pysec-recipes</a>
+          </header>
+          <p>GitHub Actions recipes that <strong>audit Python dependencies</strong> against PyPI, OSV, and Python Packaging advisories, and open or close issues as findings change.</p>
+          <div class="technology-line"><span>Python</span><span>GitHub Actions</span><span>DevSecOps</span></div>
+        </article>
+        <article class="project-entry">
+          <header class="project-heading">
+            <h3><a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync">PyImportSync</a></h3>
+            <a class="project-url" href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync">github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync</a>
+          </header>
+          <p>AST check that <strong>every Python import is declared</strong> in requirements.txt. Ships as a GitHub Action and a pre-commit hook.</p>
+          <div class="technology-line"><span>Python</span><span>AST</span><span>pre-commit</span></div>
+        </article>
+      </section>
+
+      <section class="resume-section skills-section">
+        <h2>Skills</h2>
+        <dl class="skills-list">
+          <div class="skill-group">
+            <dt>Core Areas</dt>
+            <dd><span>AI Platforms</span><span>Enterprise Integrations</span><span>Multi-Tenant SaaS</span><span>LLM Systems</span><span>Distributed Systems</span><span>Event-Driven Architecture</span><span>Developer Tooling</span><span>Data Engineering</span><span>Application Security</span><span>Regulated Environments</span><span>Platform Architecture</span><span>Engineering Leadership</span><span>Regulated Content Workflows</span></dd>
           </div>
-          -->
-          <!-- PROFILE -->
-          <!-- <div class="box clearfix">
-            <h2><i class="fas fa-bullseye ico"></i> Profiles</h2>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="contact-item">
-                  <div class="icon pull-left text-center">
-                    <span class="fab fa-github fa-fw"></span>
-                  </div>
-                  <div class="title pull-right">Github</div>
-                  <div class="description pull-right">
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal" target="_blank"
-                      >trivedi-vatsal</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="contact-item">
-                  <div class="icon pull-left text-center">
-                    <span class="fab fa-linkedin fa-fw"></span>
-                  </div>
-                  <div class="title pull-right">LinkedIn</div>
-                  <div class="description pull-right">
-                    <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal" target="_blank"
-                      >trivedi-vatsal</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="contact-item">
-                  <div class="icon pull-left text-center">
-                    <span class="fab fa-behance fa-fw"></span>
-                  </div>
-                  <div class="title pull-right">Behance</div>
-                  <div class="description pull-right">
-                    <a href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal" target="_blank"
-                      >trivedivatsal</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="contact-item">
-                  <div class="icon pull-left text-center">
-                    <span class="fab fa-dribbble fa-fw"></span>
-                  </div>
-                  <div class="title pull-right">Dribbble</div>
-                  <div class="description pull-right">
-                    <a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" target="_blank"
-                      >trivedivatsal</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="contact-item">
-                  <div class="icon pull-left text-center">
-                    <span class="fab fa-dev fa-fw"></span>
-                  </div>
-                  <div class="title pull-right">Dev.to</div>
-                  <div class="description pull-right">
-                    <a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" target="_blank"
-                      >trivedivatsal</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- EDUCATION -->
-          <div class="box">
-            <h2><i class="fas fa-university ico"></i> Education</h2>
-            <ul id="education" class="clearfix">
-              <li>
-                <div class="year pull-left">
-                  2014 2018
-                </div>
-                <div class="description pull-right">
-                  <h3><a href="https:&#x2F;&#x2F;bvmengineering.ac.in&#x2F;" target="_blank">Birla Vishvakarma Mahavidyalaya Engineering College, Vallabh Vidyanagar</a></h3>
-                  <div class="where"></div>
-                  <p>
-                    <i class="fas fa-graduation-cap ico"></i> Bachelor of Engineering
-                  </p>
-                  <p>Computer Engineering</p>
-                </div>
-              </li>
-            </ul>
+          <div class="skill-group">
+            <dt>AI &amp; LLM Engineering</dt>
+            <dd><span>LLM Orchestration</span><span>RAG Pipelines</span><span>Prompt Engineering</span><span>Tool Calling</span><span>AI Evaluations</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>OpenAI API</span><span>Claude</span><span>LangChain</span><span>LangGraph</span><span>CopilotKit &#x2F; AG-UI</span><span>Azure Speech</span><span>Vector Databases</span><span>MCP</span><span>Agent Skills</span></dd>
           </div>
-          <!-- SKILLS -->
-          <div class="box skill-badge">
-            <h2><i class="fas fa-tasks ico"></i> Skills</h2>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                Core Areas
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">AI Platforms</span>
-                <span class="skill badge">Enterprise Integrations</span>
-                <span class="skill badge">Multi-Tenant SaaS</span>
-                <span class="skill badge">LLM Systems</span>
-                <span class="skill badge">Distributed Systems</span>
-                <span class="skill badge">Event-Driven Architecture</span>
-                <span class="skill badge">Developer Tooling</span>
-                <span class="skill badge">Regulated Environments</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                AI &amp; LLM Engineering
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">LLM Orchestration</span>
-                <span class="skill badge">RAG Pipelines</span>
-                <span class="skill badge">Prompt Engineering</span>
-                <span class="skill badge">Tool Calling</span>
-                <span class="skill badge">AI Evaluations</span>
-                <span class="skill badge">OpenAI API</span>
-                <span class="skill badge">Claude</span>
-                <span class="skill badge">LangGraph</span>
-                <span class="skill badge">Vector Databases</span>
-                <span class="skill badge">MCP</span>
-                <span class="skill badge">Agent Skills</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                Platform Engineering
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">CI/CD</span>
-                <span class="skill badge">GitHub Actions</span>
-                <span class="skill badge">Docker</span>
-                <span class="skill badge">Observability</span>
-                <span class="skill badge">Infrastructure as Code</span>
-                <span class="skill badge">Security Automation</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                Programming Languages
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">TypeScript</span>
-                <span class="skill badge">JavaScript</span>
-                <span class="skill badge">Python</span>
-                <span class="skill badge">Go</span>
-                <span class="skill badge">SQL</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                Frameworks &amp; Tools
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">React</span>
-                <span class="skill badge">Node.js</span>
-                <span class="skill badge">FeathersJS</span>
-                <span class="skill badge">Kafka</span>
-                <span class="skill badge">GraphQL & REST</span>
-                <span class="skill badge">Vercel AI SDK</span>
-                <span class="skill badge">Shopify</span>
-                <span class="skill badge">Turborepo</span>
-                <span class="skill badge">shadcn/ui</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                Databases
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">PostgreSQL</span>
-                <span class="skill badge">SQLite</span>
-                <span class="skill badge">MongoDB</span>
-                <span class="skill badge">BigQuery</span>
-                <span class="skill badge">Redis</span>
-                <span class="skill badge">Cassandra</span>
-                <span class="skill badge">Delta Lake</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                Design
-                
-              </div>
-              <div class="col-sm-offset-1 col-sm-11 clearfix">
-                <span class="skill badge">Figma</span>
-                <span class="skill badge">Affinity Designer</span>
-                <span class="skill badge">Procreate</span>
-              </div>
-            </div>
+          <div class="skill-group">
+            <dt>Platform Engineering</dt>
+            <dd><span>CI&#x2F;CD</span><span>GitHub Actions</span><span>GitLab CI</span><span>Docker</span><span>Azure (App Service, Functions, Blob Storage, Key Vault)</span><span>Bicep</span><span>SonarQube</span><span>Observability</span><span>Infrastructure as Code</span><span>Security Automation</span><span>Azure Container Apps</span></dd>
           </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      (function () {
-        var key = "resume-theme";
-        var themes = ["copper", "blue", "ink", "green", "plum"];
-        var root = document.querySelector(".theme-switch");
-        var toggle = root.querySelector(".theme-toggle");
-        var menu = root.querySelector(".theme-menu");
+          <div class="skill-group">
+            <dt>Programming Languages</dt>
+            <dd><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Go</span><span>SQL</span><span>PowerShell</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Frameworks &amp; Tools</dt>
+            <dd><span>React</span><span>Next.js</span><span>Node.js</span><span>Django</span><span>FastAPI</span><span>Celery</span><span>Strapi</span><span>FeathersJS</span><span>Express</span><span>Keycloak</span><span>Kafka</span><span>BullMQ</span><span>Jest</span><span>GraphQL &amp; REST</span><span>Vercel AI SDK</span><span>Shopify</span><span>Turborepo</span><span>shadcn&#x2F;ui</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Databases</dt>
+            <dd><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>MongoDB</span><span>BigQuery</span><span>Redis</span><span>Cassandra</span><span>Delta Lake</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Data Engineering</dt>
+            <dd><span>Medallion Architecture</span><span>ETL &amp; Sync Pipelines</span><span>Pandas</span><span>PyArrow</span><span>SQLAlchemy</span><span>GoodData</span><span>Data Catalogs</span><span>Metadata Discovery</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Design</dt>
+            <dd><span>Figma</span><span>Affinity Designer</span><span>Procreate</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Enterprise Integrations</dt>
+            <dd><span>Veeva CRM</span><span>Salesforce Marketing Cloud</span><span>Shopify</span><span>SeatGeek</span><span>HubSpot</span><span>Razorpay</span></dd>
+          </div>
+        </dl>
+      </section>
 
-        function setOpen(open) {
-          root.classList.toggle("is-open", open);
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
-          if (open) menu.removeAttribute("hidden");
-          else menu.setAttribute("hidden", "");
-        }
+      <section class="resume-section education-section">
+        <h2>Education</h2>
+        <article class="education-entry">
+          <div class="role-line">
+            <h3>Bachelor of Engineering, Computer Engineering</h3>
+            <span class="entry-date">2014 - 2018</span>
+          </div>
+          <p><a href="https:&#x2F;&#x2F;bvmengineering.ac.in&#x2F;">Birla Vishvakarma Mahavidyalaya Engineering College, Vallabh Vidyanagar</a></p>
+          
+          
+        </article>
+      </section>
 
-        function apply(name) {
-          if (themes.indexOf(name) === -1) name = "copper";
-          document.documentElement.setAttribute("data-theme", name);
-          var buttons = menu.querySelectorAll("button");
-          for (var i = 0; i < buttons.length; i++) {
-            var on = buttons[i].getAttribute("data-theme") === name;
-            buttons[i].classList.toggle("is-active", on);
-            buttons[i].setAttribute("aria-pressed", on ? "true" : "false");
-          }
-          try { localStorage.setItem(key, name); } catch (e) {}
-        }
 
-        var saved = "copper";
-        try { saved = localStorage.getItem(key) || "copper"; } catch (e) {}
-        apply(saved);
-        setOpen(false);
+      <section class="resume-section volunteer-section">
+        <h2>Community</h2>
+        <article class="education-entry">
+          <div class="role-line"><h3>Creative Designer - Google Developer Groups Ahmedabad</h3><span class="entry-date">2018 - Present</span></div>
+          <p>Design for the GDG Ahmedabad chapter: event visuals, branding, and social graphics.</p>
+          
+        </article>
+        <article class="education-entry">
+          <div class="role-line"><h3>Summer of Code 2020 Mentor - GirlScript</h3><span class="entry-date">2020 - 2020</span></div>
+          <p>Mentored contributors on project structure, code review, and how to land a change.</p>
+          
+        </article>
+      </section>
 
-        toggle.addEventListener("click", function (event) {
-          event.stopPropagation();
-          setOpen(!root.classList.contains("is-open"));
-        });
-
-        menu.addEventListener("click", function (event) {
-          var button = event.target.closest("button[data-theme]");
-          if (!button) return;
-          apply(button.getAttribute("data-theme"));
-          setOpen(false);
-        });
-
-        document.addEventListener("click", function (event) {
-          if (!root.contains(event.target)) setOpen(false);
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") setOpen(false);
-        });
-      })();
-      document.querySelector(".print-trigger").addEventListener("click", function () {
-        window.print();
-      });
-    </script>
+      
+      
+      
+      
+      
+    </main>
   </body>
 </html>
