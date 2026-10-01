@@ -58,5 +58,5 @@ blockquote { margin: 8px 0; padding-left: 12px; border-left: 2px solid var(--rul
   .entry-date { width: 100%; }
 }
 
-.focus-areas { margin-top: 10px; font: 12px/1.5 Arial, sans-serif; color: var(--muted); }
+.focus-areas { margin-top: 10px; font: inherit; color: var(--text); }
 .focus-areas strong { color: var(--text); margin-right: 5px; }
