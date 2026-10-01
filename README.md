@@ -31,6 +31,7 @@ This project allows you to create and manage your resume in a JSON format, and g
 - Generate a styled HTML version of your resume.
 - Generate a PDF version of your resume using Puppeteer.
 - Customize the theme to fit your needs.
+- Single-column layout with serif text and a repeated name and contact header on every generated PDF page.
 
 ## Getting Started
 
@@ -92,7 +93,13 @@ To generate a PDF version of your resume, run:
 npm run generate:pdf
 ```
 
-The generated PDF file will be saved to `./build/resume.pdf`.
+The generated PDF file will be saved to `./build/pdf/Vatsal Trivedi.pdf`.
+
+If Puppeteer’s bundled Chrome is unavailable locally, use an installed browser:
+
+```sh
+PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm run build
+```
 
 ### Build
 
