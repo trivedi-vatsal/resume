@@ -27,7 +27,7 @@ strong { font-weight: 700; }
 .entry-heading { margin-bottom: 4px; }
 .company-line, .role-line, .project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
 .company-line h3 { font: 700 14px/1.35 Arial, sans-serif; }
-.role-line h4, .project-heading h3, .education-entry h3 { font-size: 16px; line-height: 1.35; font-weight: 700; }
+.role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 16px; line-height: 1.35; font-weight: 700; }
 .entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font: 12px/1.4 Arial, sans-serif; color: var(--muted); }
 .entry-date { flex-shrink: 0; }
 .company-description { margin: 3px 0 5px; }
@@ -39,9 +39,9 @@ li::marker { color: #8a8f99; }
 .project-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
 .project-entry p { margin: 3px 0 4px; }
 .project-highlights { margin-bottom: 5px; }
-.project-url { font-size: 11px; overflow-wrap: anywhere; }
+.project-url { overflow-wrap: anywhere; }
 .technology-line span + span::before, .skill-group dd span + span::before { content: " · "; }
-.skills-list { margin: 0; font: 13px/1.45 Arial, sans-serif; }
+.skills-list { margin: 0; font: inherit; }
 .skill-group { margin-bottom: 8px; }
 .skill-group dt { margin-bottom: 2px; font-weight: 700; }
 .skill-group dd { margin: 0; color: var(--muted); }

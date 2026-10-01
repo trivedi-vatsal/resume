@@ -29,17 +29,17 @@ body {
 .work-entry { margin-bottom: 2.5mm; }
 .entry-heading { break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid; }
 .company-line h3 { font-size: 10pt; }
-.role-line h4, .project-heading h3, .education-entry h3 { font-size: 11pt; }
-.entry-date, .entry-location, .company-description, .technology-line, .entry-note { font-size: 8.5pt; }
+.role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 11pt; }
+.entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font-size: 8.5pt; }
 .company-description { margin: 1mm 0; }
 .role-summary { display: none; }
 .achievements { margin-top: 1mm; padding-left: 3.5mm; }
 .achievements li, .project-highlights li { margin-bottom: 0.6mm; break-inside: avoid; page-break-inside: avoid; }
-.project-entry { break-inside: avoid; page-break-inside: avoid; margin-bottom: 1mm; padding-bottom: 1mm; }
-.project-url { font-size: 8pt; }
+.project-entry { break-inside: avoid; page-break-inside: avoid; margin-bottom: 0.5mm; padding-bottom: 0.5mm; }
+.project-entry p { margin: 1px 0 2px; }
 .project-highlights { display: none; }
-.skills-list { font-size: 8.5pt; line-height: 1.3; }
-.skill-group { break-inside: avoid; page-break-inside: avoid; margin-bottom: 1mm; }
+.skills-list { font: inherit; }
+.skill-group { break-inside: avoid; page-break-inside: avoid; margin-bottom: 0.5mm; }
 .skill-group dt, .skill-group dd { display: inline; }
 .skill-group dt::after { content: " - "; font-weight: 400; }
 .education-entry { break-inside: avoid; page-break-inside: avoid; }
