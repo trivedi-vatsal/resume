@@ -35,6 +35,10 @@
       </section>
       {{/basics.summary}}
 
+      {{#basics.focusAreas}}
+      <p class="focus-areas"><strong>Focus areas</strong> {{ basics.focusAreas }}</p>
+      {{/basics.focusAreas}}
+
       {{#workBool}}
       <section class="resume-section experience-section">
         <h2>Experience</h2>
