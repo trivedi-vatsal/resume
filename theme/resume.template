@@ -68,7 +68,8 @@
 
       {{#projectsBool}}
       <section class="resume-section projects-section">
-        <h2>Selected projects</h2>
+        <h2>Projects I built</h2>
+        <p>Personal projects and developer tools I built, including open-source software.</p>
         {{#projects}}
         <article class="project-entry">
           <header class="project-heading">
