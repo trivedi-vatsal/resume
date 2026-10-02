@@ -31,7 +31,7 @@ This project allows you to create and manage your resume in a JSON format, and g
 - Generate a styled HTML version of your resume.
 - Generate a PDF version of your resume using Puppeteer.
 - Customize the theme to fit your needs.
-- Single-column layout with serif text and a repeated name and contact header on every generated PDF page.
+- Single-column layout with serif text. The name and contact block print once, at the top of the PDF.
 
 ## Getting Started
 

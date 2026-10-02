@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="resume-controls" aria-label="Resume actions">
-      <a href="./pdf/{{ basics.name }}.pdf">Download PDF</a>
+      <a href="./pdf/{{ basics.pdfFilename }}">Download PDF</a>
     </nav>
     <main class="resume">
       <header class="resume-header">
@@ -20,11 +20,11 @@
         <div class="contact-line">
           {{#basics.location}}<span>{{ city }}{{#region}}, {{ region }}{{/region}}</span>{{/basics.location}}
           {{#basics.email}}<a href="mailto:{{ basics.email }}">{{ basics.email }}</a>{{/basics.email}}
-          {{#basics.phone}}<a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>{{/basics.phone}}
+          {{#basics.phone}}<a href="{{ basics.phoneHref }}">{{ basics.phone }}</a>{{/basics.phone}}
           {{#basics.url}}<a href="{{ basics.url }}">{{ basics.url }}</a>{{/basics.url}}
         </div>
         <div class="profile-line">
-          {{#basics.profiles}}<a href="{{ url }}" aria-label="{{ network }} profile for {{ username }}" title="{{ network }}">{{#iconSvg}}{{{ iconSvg }}}{{/iconSvg}}{{^iconSvg}}<span>{{ network }}</span>{{/iconSvg}}<span>{{#username}}{{ username }}{{/username}}{{^username}}{{ url }}{{/username}}</span></a>{{/basics.profiles}}
+          {{#basics.profiles}}<a href="{{ url }}" aria-label="{{ network }} profile">{{#iconSvg}}{{{ iconSvg }}}{{/iconSvg}}<span>{{ displayUrl }}</span></a>{{/basics.profiles}}
         </div>
       </header>
 
@@ -36,7 +36,10 @@
       {{/basics.summary}}
 
       {{#basics.focusAreas}}
-      <p class="focus-areas"><strong>Focus areas</strong> {{ basics.focusAreas }}</p>
+      <section class="resume-section focus-section">
+        <h2>Focus areas</h2>
+        <p>{{ basics.focusAreas }}</p>
+      </section>
       {{/basics.focusAreas}}
 
       {{#workBool}}
@@ -55,10 +58,10 @@
             </div>
             {{#description}}<p class="company-description">{{ description }}</p>{{/description}}
           </header>
-          {{#summary}}<p class="role-summary">{{{ summary }}}</p>{{/summary}}
+          {{#summary}}<p class="role-summary">{{ summary }}</p>{{/summary}}
           {{#boolHighlights}}
           <ul class="achievements">
-            {{#formattedHighlights}}<li>{{{ . }}}</li>{{/formattedHighlights}}
+            {{#formattedHighlights}}<li>• {{{ . }}}</li>{{/formattedHighlights}}
           </ul>
           {{/boolHighlights}}
         </article>
@@ -68,9 +71,10 @@
 
       {{#projectsBool}}
       <section class="resume-section projects-section">
-        <h2>Projects I built</h2>
-        <p>Personal projects and developer tools I built, including open-source software.</p>
+        <h2>Projects</h2>
+        <div class="project-list">
         {{#projects}}
+        {{^hidden}}
         <article class="project-entry">
           <header class="project-heading">
             <h3>{{#url}}<a href="{{ url }}">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</h3>
@@ -79,12 +83,17 @@
           <p>{{{ formattedDescription }}}</p>
           {{#boolHighlights}}
           <ul class="project-highlights">
-            {{#highlights}}<li>{{{ . }}}</li>{{/highlights}}
+            {{#formattedHighlights}}<li>• {{{ . }}}</li>{{/formattedHighlights}}
           </ul>
           {{/boolHighlights}}
           <div class="technology-line">{{#keywords}}<span>{{ . }}</span>{{/keywords}}</div>
         </article>
+        {{/hidden}}
         {{/projects}}
+        </div>
+        {{#meta.experiments}}
+        <p class="project-more">Other experiments and smaller tools are at <a href="{{ meta.experiments }}">{{ meta.experimentsUrl }}</a>.</p>
+        {{/meta.experiments}}
       </section>
       {{/projectsBool}}
 
@@ -126,7 +135,7 @@
         <article class="education-entry">
           <div class="role-line"><h3>{{ title }}</h3><span class="entry-date">{{ month }} {{ year }}</span></div>
           <p>{{ awarder }}</p>
-          {{#summary}}<p>{{{ summary }}}</p>{{/summary}}
+          {{#summary}}<p>{{ summary }}</p>{{/summary}}
         </article>
         {{/awards}}
       </section>
@@ -134,22 +143,22 @@
 
       {{#volunteerBool}}
       <section class="resume-section volunteer-section">
-        <h2>Community</h2>
+        <h2>Volunteer</h2>
         {{#volunteer}}
         <article class="education-entry">
           <div class="role-line"><h3>{{ position }} - {{ organization }}</h3><span class="entry-date">{{ startDateYear }} - {{ endDateYear }}</span></div>
-          {{#summary}}<p>{{{ summary }}}</p>{{/summary}}
-          {{#boolHighlights}}<ul class="achievements">{{#highlights}}<li>{{{ . }}}</li>{{/highlights}}</ul>{{/boolHighlights}}
+          {{#summary}}<p>{{ summary }}</p>{{/summary}}
+          {{#boolHighlights}}<ul class="achievements">{{#highlights}}<li>• {{ . }}</li>{{/highlights}}</ul>{{/boolHighlights}}
         </article>
         {{/volunteer}}
       </section>
       {{/volunteerBool}}
 
-      {{#certificatesBool}}<section class="resume-section"><h2>Certificates</h2>{{#certificates}}<p>{{ name }}{{#issuer}} - {{ issuer }}{{/issuer}}</p>{{/certificates}}</section>{{/certificatesBool}}
-      {{#publicationsBool}}<section class="resume-section"><h2>Publications</h2>{{#publications}}<article class="education-entry"><h3>{{#url}}<a href="{{ url }}">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</h3><p>{{ publisher }}</p>{{#summary}}<p>{{{ summary }}}</p>{{/summary}}</article>{{/publications}}</section>{{/publicationsBool}}
+      {{#certificatesBool}}<section class="resume-section"><h2>Certifications</h2>{{#certificates}}{{^hidden}}<p>{{ name }}{{#issuer}}, {{ issuer }}{{/issuer}}{{#date}}, {{ date }}{{/date}}</p>{{/hidden}}{{/certificates}}</section>{{/certificatesBool}}
+      {{#publicationsBool}}<section class="resume-section"><h2>Publications</h2>{{#publications}}{{^hidden}}<article class="education-entry"><h3>{{#url}}<a href="{{ url }}">{{ name }}</a>{{/url}}{{^url}}{{ name }}{{/url}}</h3><p>{{ publisher }}</p>{{#summary}}<p>{{ summary }}</p>{{/summary}}</article>{{/hidden}}{{/publications}}</section>{{/publicationsBool}}
       {{#languagesBool}}<section class="resume-section"><h2>Languages</h2><div class="technology-line">{{#languages}}<span>{{ language }} - {{ fluency }}</span>{{/languages}}</div></section>{{/languagesBool}}
       {{#interestsBool}}<section class="resume-section"><h2>Interests</h2><div class="technology-line">{{#interests}}<span>{{ name }}</span>{{/interests}}</div></section>{{/interestsBool}}
-      {{#referencesBool}}<section class="resume-section"><h2>References</h2>{{#references}}<blockquote><p>{{{ reference }}}</p><footer>{{ name }}</footer></blockquote>{{/references}}</section>{{/referencesBool}}
+      {{#referencesBool}}<section class="resume-section"><h2>References</h2>{{#references}}<blockquote><p>{{ reference }}</p><footer>{{ name }}</footer></blockquote>{{/references}}</section>{{/referencesBool}}
     </main>
   </body>
 </html>

@@ -1,279 +1,147 @@
 var fs = require("fs");
-var _ = require("lodash");
-var gravatar = require("gravatar");
+var path = require("path");
 var Mustache = require("mustache");
-var emphasis = require("./emphasis.json");
-var emphasisPattern = new RegExp(emphasis.slice().sort(function (a, b) { return b.length - a.length; }).map(function (phrase) {
-  return Mustache.escape(phrase).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}).join("|"), "g");
 
-function emphasize(text) {
-  return Mustache.escape(text || "").replace(emphasisPattern, "<strong>$&</strong>");
+var MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+function monthLabel(date) {
+  var month = Number(String(date || "").slice(5, 7));
+  return month >= 1 && month <= 12 ? MONTHS[month - 1] + " " : "";
 }
 
-var d = new Date();
-var curyear = d.getFullYear();
+function keepHyphens(html) {
+  return String(html || "").replace(/(<[^>]+>)|([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+)/g, function (_, tag, word) {
+    return tag || '<span class="keep">' + word + "</span>";
+  });
+}
 
-function getMonth(startDateStr) {
-  switch (startDateStr.substr(5, 2)) {
-    case "01":
-      return "January ";
-    case "02":
-      return "February ";
-    case "03":
-      return "March ";
-    case "04":
-      return "April ";
-    case "05":
-      return "May ";
-    case "06":
-      return "June ";
-    case "07":
-      return "July ";
-    case "08":
-      return "August ";
-    case "09":
-      return "September ";
-    case "10":
-      return "October ";
-    case "11":
-      return "November ";
-    case "12":
-      return "December ";
+function emphasize(text, phrases) {
+  var safe = Mustache.escape(text || "");
+  if (phrases.length && safe) {
+    var pattern = new RegExp(
+      phrases
+        .slice()
+        .sort(function (a, b) { return b.length - a.length; })
+        .map(function (phrase) {
+          return phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        })
+        .join("|"),
+      "g"
+    );
+    safe = safe.replace(pattern, "<strong>$&</strong>");
+  }
+  return keepHyphens(safe);
+}
+
+function enable(resume, key, field) {
+  var items = resume[key];
+  if (!Array.isArray(items) || !items.some(function (item) { return item && item[field] && !item.hidden; })) {
+    return [];
+  }
+  resume[key + "Bool"] = true;
+  return items;
+}
+
+function addRange(entry, markExpected) {
+  if (entry.startDate) {
+    entry.startDateYear = String(entry.startDate).slice(0, 4);
+    entry.startDateMonth = monthLabel(entry.startDate);
+  }
+  if (entry.endDate) {
+    entry.endDateYear = String(entry.endDate).slice(0, 4);
+    entry.endDateMonth = monthLabel(entry.endDate);
+    if (markExpected && Number(entry.endDateYear) > new Date().getFullYear()) {
+      entry.endDateYear += " (expected)";
+    }
+  } else {
+    entry.endDateYear = "Present";
+    entry.endDateMonth = "";
   }
 }
 
-function render(resumeObject) {
-  resumeObject.basics.formattedSummary = emphasize(resumeObject.basics.summary);
-  resumeObject.basics.capitalName = resumeObject.basics.name.toUpperCase();
-  if (resumeObject.basics && resumeObject.basics.email) {
-    resumeObject.basics.gravatar = gravatar.url(resumeObject.basics.email, {
-      s: "200",
-      r: "pg",
-      d: "mm",
-    });
+function displayUrl(url) {
+  try {
+    var parsed = new URL(url);
+    var text = parsed.hostname.replace(/^www\./, "");
+    if (parsed.pathname && parsed.pathname !== "/") text += parsed.pathname.replace(/\/$/, "");
+    return text;
+  } catch (e) {
+    return url;
   }
-  if (resumeObject.basics.image || resumeObject.basics.gravatar) {
-    resumeObject.photo = resumeObject.basics.image
-      ? resumeObject.basics.image
-      : resumeObject.basics.gravatar;
-  }
+}
 
-  _.each(resumeObject.basics.profiles, function (p) {
-    var iconPath = __dirname + "/icons/" + p.network.toLowerCase() + ".svg";
-    p.iconSvg = fs.existsSync(iconPath) ? fs.readFileSync(iconPath, "utf8") : "";
-    switch (p.network.toLowerCase()) {
-      // special cases
-      case "google-plus":
-      case "googleplus":
-        p.iconClass = "fab fa-google-plus";
-        break;
-      case "flickr":
-      case "flicker":
-        p.iconClass = "fab fa-flickr";
-        break;
-      case "dribbble":
-      case "dribble":
-        p.iconClass = "fab fa-dribbble";
-        break;
-      case "codepen":
-        p.iconClass = "fab fa-codepen";
-        break;
-      case "soundcloud":
-        p.iconClass = "fab fa-soundcloud";
-        break;
-      case "reddit":
-        p.iconClass = "fab fa-reddit";
-        break;
-      case "tumblr":
-      case "tumbler":
-        p.iconClass = "fab fa-tumblr";
-        break;
-      case "stack-overflow":
-      case "stackoverflow":
-        p.iconClass = "fab fa-stack-overflow";
-        break;
-      case "blog":
-      case "rss":
-        p.iconClass = "fas fa-rss";
-        break;
-      case "gitlab":
-        p.iconClass = "fab fa-gitlab";
-        break;
-      case "keybase":
-        p.iconClass = "fas fa-key";
-        break;
-      case "dev.to":
-      case "dev":
-        p.iconClass = "fab fa-dev";
-        break;
-      default:
-        // try to automatically select the icon based on the name
-        p.iconClass = "fab fa-" + p.network.toLowerCase();
-    }
+function pdfFilename(resume) {
+  var basics = (resume && resume.basics) || {};
+  var name = String(basics.name || "resume").trim().replace(/\s+/g, "_");
+  var role = String(basics.label || "").split("·")[0].trim().replace(/\s+/g, "_");
+  return (role ? name + "_" + role : name) + ".pdf";
+}
 
-    if (p.url) {
-      p.text = p.url;
-    } else {
-      p.text = p.network + ": " + p.username;
-    }
+function render(resume) {
+  var phrases = (resume.meta && resume.meta.emphasis) || [];
+  var basics = resume.basics || (resume.basics = {});
+  basics.formattedSummary = emphasize(basics.summary, phrases);
+  basics.phoneHref = basics.phone ? "tel:" + String(basics.phone).replace(/[^\d+]/g, "") : "";
+  basics.pdfFilename = pdfFilename(resume);
+
+  (basics.profiles || []).forEach(function (profile) {
+    var iconPath = path.join(__dirname, "icons", String(profile.network || "").toLowerCase() + ".svg");
+    profile.iconSvg = fs.existsSync(iconPath) ? fs.readFileSync(iconPath, "utf8") : "";
+    profile.displayUrl = profile.url ? displayUrl(profile.url) : (profile.username || profile.network);
   });
 
-  if (resumeObject.work && resumeObject.work.length) {
-    resumeObject.workBool = true;
-    _.each(resumeObject.work, function (w) {
-      w.formattedHighlights = (w.highlights || []).map(emphasize);
-      if (w.startDate) {
-        w.startDateYear = (w.startDate || "").substr(0, 4);
-        w.startDateMonth = getMonth(w.startDate || "");
-      }
-      if (w.endDate) {
-        w.endDateYear = (w.endDate || "").substr(0, 4);
-        w.endDateMonth = getMonth(w.endDate || "");
-      } else {
-        w.endDateYear = "Present";
-      }
-      if (w.highlights) {
-        if (w.highlights[0]) {
-          if (w.highlights[0] != "") {
-            w.boolHighlights = true;
-          }
-        }
-      }
+  enable(resume, "work", "name").forEach(function (job) {
+    job.formattedHighlights = (job.highlights || []).map(function (item) {
+      return emphasize(item, phrases);
     });
-  }
+    job.boolHighlights = job.formattedHighlights.some(Boolean);
+    addRange(job);
+  });
 
-  if (resumeObject.volunteer && resumeObject.volunteer.length) {
-    resumeObject.volunteerBool = true;
-    _.each(resumeObject.volunteer, function (w) {
-      if (w.startDate) {
-        w.startDateYear = (w.startDate || "").substr(0, 4);
-        w.startDateMonth = getMonth(w.startDate || "");
-      }
-      if (w.endDate) {
-        w.endDateYear = (w.endDate || "").substr(0, 4);
-        w.endDateMonth = getMonth(w.endDate || "");
-      } else {
-        w.endDateYear = "Present";
-      }
-      if (w.highlights) {
-        if (w.highlights[0]) {
-          if (w.highlights[0] != "") {
-            w.boolHighlights = true;
-          }
-        }
-      }
+  enable(resume, "volunteer", "organization").forEach(function (item) {
+    item.boolHighlights = Array.isArray(item.highlights) && item.highlights.some(Boolean);
+    addRange(item);
+  });
+
+  enable(resume, "projects", "name").forEach(function (project) {
+    project.formattedDescription = emphasize(project.description, phrases);
+    project.formattedHighlights = (project.highlights || []).map(function (item) {
+      return emphasize(item, phrases);
     });
+    project.boolHighlights = project.formattedHighlights.some(Boolean);
+    if (project.url) project.displayUrl = displayUrl(project.url);
+  });
+
+  if (resume.meta && resume.meta.experiments) {
+    resume.meta.experimentsUrl = displayUrl(resume.meta.experiments);
   }
 
-  if (resumeObject.projects && resumeObject.projects.length) {
-    if (resumeObject.projects[0].name) {
-      resumeObject.projectsBool = true;
-      _.each(resumeObject.projects, function (p) {
-        p.formattedDescription = emphasize(p.description);
-        p.boolHighlights = Array.isArray(p.highlights) && p.highlights.length > 0;
-        if (!p.url) return;
-        try {
-          var parsed = new URL(p.url);
-          p.displayUrl = parsed.hostname.replace(/^www\./, "");
-          if (parsed.pathname && parsed.pathname !== "/") {
-            p.displayUrl += parsed.pathname.replace(/\/$/, "");
-          }
-        } catch (e) {
-          p.displayUrl = p.url;
-        }
-      });
-    }
-  }
+  enable(resume, "education", "institution").forEach(function (item) {
+    addRange(item, true);
+    item.educationCourses = Array.isArray(item.courses) && item.courses.some(Boolean);
+  });
 
-  if (resumeObject.education && resumeObject.education.length) {
-    if (resumeObject.education[0].institution) {
-      resumeObject.educationBool = true;
-      _.each(resumeObject.education, function (e) {
-        if (!e.area || !e.studyType) {
-          e.educationDetail =
-            (e.area == null ? "" : e.area) +
-            (e.studyType == null ? "" : e.studyType);
-        } else {
-          e.educationDetail = e.area + ", " + e.studyType;
-        }
-        if (e.startDate) {
-          e.startDateYear = e.startDate.substr(0, 4);
-          e.startDateMonth = getMonth(e.startDate || "");
-        } else {
-          e.endDateMonth = "";
-        }
-        if (e.endDate) {
-          e.endDateYear = e.endDate.substr(0, 4);
-          e.endDateMonth = getMonth(e.endDate || "");
+  enable(resume, "awards", "title").forEach(function (item) {
+    item.year = String(item.date || "").slice(0, 4);
+    item.month = monthLabel(item.date);
+  });
 
-          if (e.endDateYear > curyear) {
-            e.endDateYear += " (expected)";
-          }
-        } else {
-          e.endDateYear = "Present";
-          e.endDateMonth = "";
-        }
-        if (e.courses) {
-          if (e.courses[0]) {
-            if (e.courses[0] != "") {
-              e.educationCourses = true;
-            }
-          }
-        }
-      });
-    }
-  }
+  enable(resume, "publications", "name");
+  enable(resume, "skills", "name");
+  enable(resume, "certificates", "name");
+  enable(resume, "languages", "language");
+  enable(resume, "interests", "name");
+  enable(resume, "references", "name");
 
-  if (resumeObject.awards && resumeObject.awards.length) {
-    if (resumeObject.awards[0].title) {
-      resumeObject.awardsBool = true;
-      _.each(resumeObject.awards, function (a) {
-        a.year = (a.date || "").substr(0, 4);
-        a.day = (a.date || "").substr(8, 2);
-        a.month = getMonth(a.date || "");
-      });
-    }
-  }
-
-  if (resumeObject.publications && resumeObject.publications.length) {
-    if (resumeObject.publications[0].name) {
-      _.each(resumeObject.publications, function (a) {
-        a.year = (a.releaseDate || "").substr(0, 4);
-        a.day = (a.releaseDate || "").substr(8, 2);
-        a.month = getMonth(a.releaseDate || "");
-      });
-    }
-  }
-
-  if (resumeObject.skills && resumeObject.skills.length) {
-    if (resumeObject.skills[0].name) {
-      resumeObject.skillsBool = true;
-    }
-  }
-
-  if (resumeObject.interests && resumeObject.interests.length) {
-    if (resumeObject.interests[0].name) {
-      resumeObject.interestsBool = true;
-    }
-  }
-
-  // Hidden for now: certificates, publications, languages stay in resume.json.
-
-  if (resumeObject.references && resumeObject.references.length) {
-    if (resumeObject.references[0].name) {
-      resumeObject.referencesBool = true;
-    }
-  }
-
-  resumeObject.css = fs.readFileSync(__dirname + "/style.css", "utf-8");
-  resumeObject.printcss = fs.readFileSync(__dirname + "/print.css", "utf-8");
-  var theme = fs.readFileSync(__dirname + "/resume.template", "utf8");
-  var resumeHTML = Mustache.render(theme, resumeObject);
-
-  return resumeHTML;
+  resume.css = fs.readFileSync(path.join(__dirname, "style.css"), "utf8");
+  resume.printcss = fs.readFileSync(path.join(__dirname, "print.css"), "utf8");
+  return Mustache.render(
+    fs.readFileSync(path.join(__dirname, "resume.template"), "utf8"),
+    resume
+  );
 }
 
-module.exports = {
-  render: render,
-};
+module.exports = { render: render, pdfFilename: pdfFilename };

@@ -1,5 +1,5 @@
 import { promises as fs } from "fs";
-import * as theme from "jsonresume-theme-local";
+import * as theme from "jsonresume-theme-ink";
 import { render } from "resumed";
 import path from "path";
 

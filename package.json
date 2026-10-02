@@ -6,14 +6,14 @@
   "type": "module",
   "scripts": {
     "init": "resumed init",
-    "start": "resumed --theme jsonresume-theme-local",
+    "start": "resumed --theme jsonresume-theme-ink",
     "generate:pdf": "node generatePDF.js",
     "generate:html": "node generateHTML.js",
     "generate:buildReadme": "node generateBuildReadme.js",
     "build": "rimraf build && ncp public build && ncp resume.json build/resume.json && npm run generate:html && npm run generate:pdf && npm run generate:buildReadme"
   },
   "dependencies": {
-    "jsonresume-theme-local": "file:./theme",
+    "jsonresume-theme-ink": "file:./theme",
     "pdf-hoster": "file:./pdf-hoster",
     "puppeteer": "^22.10.0",
     "resumed": "^3.0.0"

@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Vatsal Trivedi",
-    "label": "Principal Engineer · AI Platforms · Enterprise Integrations",
+    "label": "Principal Engineer · Generative AI Platforms · Enterprise Integrations",
     "image": "https://avatars.githubusercontent.com/u/14287645?v=4",
     "email": "trivedivatsal005@gmail.com",
     "url": "https://vatsal.xyz",
-    "phone": "+91 760-063-5053",
-    "summary": "I'm a principal engineer who builds AI products and the platforms they run on. At Phamax, I lead Ariya's architecture and delivery across eight pharma and life-sciences client deployments. The platform handles source-backed generation, regulated content workflows, and enterprise integrations. Before that, I led engineering for Factoreal's omnichannel marketing product and Comviva's MobiLytix Rewards, working on analytics at scale, loyalty targeting, and event-driven services. I write code, set engineering standards, and lead teams through production releases. I also build open-source developer tools.",
+    "phone": "+91 76006 35053",
+    "summary": "I'm a principal engineer who builds generative AI (GenAI) products and the platforms they run on. At Phamax, I lead Ariya's architecture and delivery across eight pharma and life-sciences client deployments. The platform handles source-backed generation, regulated content workflows, and enterprise integrations. Before that, I led engineering for Factoreal's omnichannel marketing product and Comviva's MobiLytix Rewards, working on analytics at scale, loyalty targeting, and event-driven services. I write full-stack code, set engineering standards, and lead teams through production releases.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -15,6 +15,7 @@
       "countryCode": "IN",
       "region": "India"
     },
+    "focusAreas": "Generative AI platforms, Large Language Model pipelines, Retrieval-Augmented Generation, MLR (medical, legal, regulatory) review, and enterprise integrations across pharma client deployments.",
     "profiles": [
       {
         "network": "Github",
@@ -41,29 +42,25 @@
         "username": "trivedivatsal",
         "url": "https://dev.to/trivedivatsal"
       }
-    ],
-    "focusAreas": "Production RAG · LLM orchestration · AI evaluation · Tool calling & agent workflows · Regulated content lifecycle · Enterprise integrations · Platform engineering · Multi-tenant SaaS · Distributed systems · Event-driven architecture · Large-scale analytics · Data engineering · Observability & reliability · Application security · Developer tooling · Engineering leadership · Architecture & delivery"
+    ]
   },
   "work": [
     {
       "name": "Phamax",
       "location": "Bengaluru, India",
-      "description": "Ariya: AI platform for pharmaceutical content, research, analytics, and engagement",
+      "description": "Ariya: generative AI platform for pharmaceutical content, research, analytics, and engagement",
       "position": "Principal Engineer (Ariya Platform)",
       "startDate": "2025-05-08",
-      "summary": "I lead engineering for Ariya across eight client deployments. I design the architecture, write code, set engineering standards, and manage production delivery for pharma marketing and medical teams.",
+      "summary": "I lead architecture and delivery for Ariya across eight pharma and life-sciences client deployments.",
       "highlights": [
-        "Restructured Ariya into core API, portal, and authoring applications. Set shared engineering standards and reusable staging, UAT, and production deployment workflows.",
-        "Built the AI Content Wizard and regulated content lifecycle, with configuration-driven authoring, localization, multi-stage approval, compliance checks, and distribution across content types and markets.",
-        "Designed Content Compose with three LLM stages, hybrid Azure AI Search retrieval, source-linked bibliographies rebuilt after generation, and a 14-check validator for completeness and citations.",
-        "Designed LLM orchestration with prompts, context injection, RAG, embeddings, and tool calling. Integrated Veeva CRM and Salesforce Marketing Cloud into omnichannel workflows for each tenant.",
-        "Delivered a white-label RAG assistant over 551 medical publications with access controls, inspectable source PDFs, feedback, audit logs, and an admin console on Azure Container Apps.",
-        "Built the Speech Avatar across Azure Speech, Django, and the portal, including streaming chat, credential exchange, conversation logs, and post-call analysis.",
-        "Designed Bronze/Silver/Gold ingestion with a DBML registry and run tracking. Fixed six causes of production failures and added deterministic keys for repeatable UPSERTs.",
-        "Built the Data Catalog for metadata discovery, observability, and self-service access, and the HCP and SFMC email-data APIs for the Daily Sales Brief.",
-        "Built repeatable SonarQube checks and applied 20 security fixes across three client release lines for encryption, JWT validation, hashing, SQL access, and application controls.",
-        "Encrypted phone numbers at rest, automated dependency security audits, and coordinated database certificate rotation across seven environments and four services.",
-        "Added uv and Docker caching to Python builds. Built a JSON-to-PPTX service and admin APIs for content metrics and event reports."
+        "Led system design for splitting Ariya into core API, portal, and authoring services on Azure App Service and Azure Functions, and standardized CI/CD across staging, UAT, and production for eight client deployments.",
+        "Architected a three-stage Large Language Model (LLM) generation pipeline (Content Compose) on Azure OpenAI with hybrid Azure AI Search retrieval, post-generation citation rebuilding, and a 14-check validator.",
+        "Owned configuration-driven authoring, localization, and MLR (medical, legal, regulatory) review, with compliance checks and distribution across content types and markets.",
+        "Designed LLM orchestration with prompts, context injection, embeddings, and tool calling, and integrated Veeva CRM and Salesforce Marketing Cloud into each tenant's workflows.",
+        "Shipped a white-label Retrieval-Augmented Generation (RAG) assistant over 551 medical publications on Azure Container Apps, with role-based access, source-PDF citations, audit logs, and an admin console.",
+        "Owned a streaming voice assistant (Speech Avatar) on Azure Speech and Django, including credential exchange, conversation logs, and post-call analysis.",
+        "Designed medallion (Bronze/Silver/Gold) ingestion with a DBML registry, run tracking, and deterministic keys for repeatable UPSERTs. Built a data catalog and Healthcare Professional (HCP) email-data APIs for the daily sales brief.",
+        "Drove 20 security fixes across three client release lines, including encrypted phone numbers at rest, JWT validation, hashing, SQL access, SonarQube checks, security automation on pipeline runs, dependency audits, and database certificate rotation across seven environments and four services."
       ]
     },
     {
@@ -74,50 +71,45 @@
       "url": "https://www.comviva.com/products-solutions/martech/cvm/mobilytix-rewards/",
       "startDate": "2023-10-01",
       "endDate": "2025-03-24",
-      "summary": "I was technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards. I owned full-stack architecture, targeting services, and shared backend packages, and worked with in-house and vendor teams on delivery.",
+      "summary": "Technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards, a multi-tenant loyalty platform for telecom and retail.",
       "highlights": [
-        "Led the cloud-agnostic, multi-tenant platform rewrite in TypeScript, React, and FeathersJS, with PostgreSQL, Delta Lake, and vector databases. Built product features and the services and data systems they use.",
-        "Owned Kafka campaign processing for high-throughput reward and loyalty workflows, with asynchronous execution and caching. Delivered AI/ML personalization and segmentation.",
-        "Built a JSON-to-PostgreSQL segmentation engine with 26 operators, including 11 date operators. Added custom member attributes without schema changes, scheduled runs, and run history.",
-        "Made club provisioning transactional so partial tenant setup rolls back. Used Kafka to recompute segments when their rules change.",
-        "Wrote PostgreSQL and Redis clients used by five services and service-to-service JWT helpers. Built a shared member package for enrollment, membership validation, attribute updates, and caching.",
-        "Introduced platform observability and monitoring for more reliable deployments and faster incident diagnosis. Coordinated releases and security fixes across six services.",
-        "Introduced Jest tests and coverage gates for segmentation, scheduling, and tiers, including 48 segmentation tests. Moved shared packages to TypeScript and automated publishing."
+        "Led the multi-tenant platform rewrite in TypeScript, React, FeathersJS, PostgreSQL, Delta Lake, and vector databases, with Azure Key Vault for tenant secrets and the product features and shared services.",
+        "Owned Kafka campaign processing for high-throughput reward and loyalty workflows, with asynchronous execution, caching, and AI/ML personalization and segmentation.",
+        "Architected a JSON-to-PostgreSQL segmentation engine with 26 operators, including 11 date operators, custom member attributes without schema changes, scheduled runs, and run history.",
+        "Drove transactional club provisioning so partial tenant setup rolls back, and built shared PostgreSQL and Redis clients used by five services.",
+        "Introduced observability and Jest coverage gates, including 48 segmentation tests and platform test coverage above 90%, and coordinated releases and security fixes across six services."
       ]
     },
     {
       "name": "Factoreal",
       "location": "Bengaluru, India",
-      "description": "Factoreal: omnichannel marketing automation platform, incubated by Comviva",
+      "description": "Omnichannel marketing automation for ecommerce, sports, and other businesses",
       "position": "Technical Lead",
       "url": "https://www.factoreal.com/",
       "startDate": "2021-12-01",
       "endDate": "2023-09-01",
-      "summary": "I led engineering for Factoreal's email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics features. The product served ecommerce, sports, and other businesses.",
+      "summary": "Led engineering for email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics.",
       "highlights": [
-        "Built and expanded BigQuery analytics for a platform handling 10 billion transactions. Automated provisioning and scoring across 71 customer datasets and 998 scheduled queries.",
-        "Designed the Fan Maturity Model for the sports vertical. Six channel scores and customer-configurable weights produce four audience tiers, with daily scoring and portal controls.",
-        "Rebuilt the Shopify app for its App Store relaunch: installation, signup, store provisioning, and OAuth. Expanded webhook coverage from 17 to 40 topics and added GraphQL billing subscriptions.",
-        "Built SeatGeek ticketing synchronization and WhatsApp commerce data capture. Kept Shopify API compatibility current and fixed duplicate contacts with country-aware phone normalization.",
-        "Built shared contact operations across five services and plan entitlements across twelve. Automated customer retirement and improved contact queries and data-cleanup routines.",
-        "Added tenant-configurable session expiry and risk-scored signup protection. Automated GoodData cache invalidation and built social dashboards and Jira-to-BigQuery reporting sync."
+        "Owned Google Cloud BigQuery analytics for a platform handling 10 billion transactions, including automated provisioning and scoring across 71 customer datasets and 998 scheduled queries.",
+        "Designed an audience scoring model (Fan Maturity Model) for sports: six channel scores, customer-configurable weights, dynamic tiers, and daily scoring that improved retention.",
+        "Rebuilt the Shopify app for its App Store relaunch, including installation, signup, store provisioning, OAuth, webhook coverage from 17 to 40 topics, and GraphQL billing subscriptions.",
+        "Built SeatGeek ticketing synchronization, WhatsApp commerce capture, and shared contact operations across five services, with country-aware phone normalization to stop duplicate contacts.",
+        "Led the platform UI/UX revamp on Strapi, and owned the WordPress side of the product and website."
       ]
     },
     {
       "name": "Factoreal",
       "location": "Bengaluru, India",
-      "description": "Factoreal: omnichannel marketing automation platform, incubated by Comviva",
+      "description": "Omnichannel marketing automation for ecommerce, sports, and other businesses",
       "position": "Senior Engineer",
       "url": "https://www.factoreal.com/",
       "startDate": "2020-06-01",
       "endDate": "2021-11-01",
-      "summary": "I built data pipelines, integrations, and channel support across Factoreal's core API, React portal, and backend services. They feed its analytics and automated campaigns.",
+      "summary": "Built data pipelines, integrations, and channel support for the core API, React portal, and backend services.",
       "highlights": [
-        "Built PostgreSQL and Cassandra-to-BigQuery synchronization across 24 entity workflows, with incremental processing and pagination. Automated customer dataset provisioning at signup.",
-        "Built email delivery and engagement KPI APIs and embedded GoodData dashboards so customers can see deliverability, audience response, and unsubscribe rates.",
-        "Made Shopify order ingestion safe under retries with application idempotency and database uniqueness constraints. Built Redis- and Kafka-driven abandoned-cart triggers with tenant-configurable timeouts.",
-        "Published Razorpay payment events into Kafka. Built web-push subscriptions and mobile SDK registration and events for commerce and engagement workflows.",
-        "Fixed tracking accuracy with page deduplication, tenant-specific event exclusions, and first-visit corrections. Built verified-domain trial onboarding and HubSpot contact migration."
+        "Built PostgreSQL and Cassandra-to-BigQuery synchronization on Google Cloud with Apache NiFi, across platform microservice workflows, with incremental processing, pagination, and automated dataset provisioning at signup.",
+        "Built email delivery and engagement KPI APIs, stored email and content in Azure Blob Storage, and embedded GoodData dashboards for deliverability, audience response, and unsubscribe rates.",
+        "Made Shopify order ingestion safe under retries with application idempotency and database uniqueness constraints, published Razorpay payment events into Kafka, and migrated contacts from HubSpot."
       ]
     },
     {
@@ -128,11 +120,11 @@
       "url": "https://www.tcs.com/what-we-do/industries/life-sciences/solution/tcs-lifesciences-interactive",
       "startDate": "2018-09-01",
       "endDate": "2020-05-01",
-      "summary": "I built full-stack applications, enterprise workflows, and reports for global life-sciences clients in a regulated environment.",
+      "summary": "Built full-stack applications and analytics for global life-sciences clients in a regulated environment.",
       "highlights": [
+        "Delivered more than 10 solutions from the start through customer deployment.",
         "Built React and Angular applications with Node.js and Express backends for enterprise life-sciences workflows.",
-        "Built Microsoft 365 workflows with SharePoint, Teams, Power Automate, and Power BI for collaboration, process automation, and reporting.",
-        "Set up GA360, Google Tag Manager, and Data Studio analytics so life-sciences teams can measure digital activity and performance."
+        "Set up Google Analytics 360, Google Tag Manager, and Google Data Studio (now Looker Studio) so life-sciences teams can measure digital activity and performance."
       ]
     }
   ],
@@ -161,7 +153,7 @@
       "institution": "Birla Vishvakarma Mahavidyalaya Engineering College, Vallabh Vidyanagar",
       "url": "https://bvmengineering.ac.in/",
       "area": "Computer Engineering",
-      "studyType": "Bachelor of Engineering",
+      "studyType": "Bachelor of Engineering (B.E.)",
       "startDate": "2014-06-01",
       "endDate": "2018-05-01",
       "score": "",
@@ -175,7 +167,8 @@
       "publisher": "vatsal.xyz",
       "releaseDate": "2026-09-21",
       "url": "https://vatsal.xyz/blog/building-openpreflight-1-github-checks-without-a-ci-platform/",
-      "summary": "Five-part series on shipping a self-hosted GitHub Check Run service: one Go binary, one SQLite file, and the parts I refused to add."
+      "summary": "Five-part series on shipping a self-hosted GitHub Check Run service: one Go binary, one SQLite file, and the parts I refused to add.",
+      "hidden": true
     }
   ],
   "skills": [
@@ -183,6 +176,7 @@
       "name": "Core Areas",
       "level": "",
       "keywords": [
+        "Generative AI",
         "AI Platforms",
         "Enterprise Integrations",
         "Multi-Tenant SaaS",
@@ -202,6 +196,9 @@
       "name": "AI & LLM Engineering",
       "level": "",
       "keywords": [
+        "Generative AI",
+        "Large Language Models",
+        "Retrieval-Augmented Generation",
         "LLM Orchestration",
         "RAG Pipelines",
         "Prompt Engineering",
@@ -209,14 +206,8 @@
         "AI Evaluations",
         "Azure OpenAI",
         "Azure AI Search",
-        "OpenAI API",
-        "Claude",
-        "LangChain",
-        "LangGraph",
-        "CopilotKit / AG-UI",
         "Azure Speech",
         "Vector Databases",
-        "MCP",
         "Agent Skills"
       ]
     },
@@ -226,13 +217,13 @@
       "keywords": [
         "CI/CD",
         "GitHub Actions",
-        "GitLab CI",
         "Docker",
-        "Azure (App Service, Functions, Blob Storage, Key Vault)",
-        "Bicep",
+        "Azure App Service",
+        "Azure Functions",
+        "Azure Blob Storage",
+        "Azure Key Vault",
         "SonarQube",
         "Observability",
-        "Infrastructure as Code",
         "Security Automation",
         "Azure Container Apps"
       ]
@@ -254,23 +245,17 @@
       "level": "",
       "keywords": [
         "React",
-        "Next.js",
         "Node.js",
         "Django",
-        "FastAPI",
-        "Celery",
         "Strapi",
         "FeathersJS",
         "Express",
-        "Keycloak",
         "Kafka",
-        "BullMQ",
         "Jest",
-        "GraphQL & REST",
-        "Vercel AI SDK",
+        "GraphQL",
+        "REST",
         "Shopify",
-        "Turborepo",
-        "shadcn/ui"
+        "WordPress"
       ]
     },
     {
@@ -278,9 +263,7 @@
       "level": "",
       "keywords": [
         "PostgreSQL",
-        "MySQL",
         "SQLite",
-        "MongoDB",
         "BigQuery",
         "Redis",
         "Cassandra",
@@ -291,20 +274,14 @@
       "name": "Data Engineering",
       "level": "",
       "keywords": [
+        "Google Cloud",
+        "Apache NiFi",
         "Medallion Architecture",
         "ETL & Sync Pipelines",
-        "Pandas",
-        "PyArrow",
-        "SQLAlchemy",
         "GoodData",
         "Data Catalogs",
         "Metadata Discovery"
       ]
-    },
-    {
-      "name": "Design",
-      "level": "",
-      "keywords": ["Figma", "Affinity Designer", "Procreate"]
     },
     {
       "name": "Enterprise Integrations",
@@ -322,11 +299,13 @@
   "certificates": [
     {
       "name": "Databricks Fundamentals",
-      "issuer": "Databricks"
+      "issuer": "Databricks",
+      "hidden": true
     },
     {
       "name": "Data Science on Google Cloud: Designing Data Warehouses",
-      "issuer": "Google Cloud"
+      "issuer": "Google Cloud",
+      "hidden": true
     }
   ],
   "languages": [
@@ -354,24 +333,13 @@
         "The project checks itself: docs, site, and the binary each get a Check Run from ci.openpreflight.xyz. GitHub Actions is only used to publish release images.",
         "Wrote a five-part series on vatsal.xyz, from the trigger model through running untrusted code."
       ],
-      "keywords": ["Go", "SQLite", "Docker", "GitHub Apps"],
+      "keywords": [
+        "Go",
+        "SQLite",
+        "Docker",
+        "GitHub Apps"
+      ],
       "url": "https://openpreflight.xyz",
-      "type": "application"
-    },
-    {
-      "name": "Knock",
-      "description": "Copy-paste React and Tailwind components for private previews: access screens, invitations, and draft controls. Drops into a shadcn project.",
-      "highlights": [],
-      "keywords": ["React", "Tailwind", "shadcn/ui"],
-      "url": "https://knock.codes",
-      "type": "library"
-    },
-    {
-      "name": "InboxCraft",
-      "description": "A browser-only PowerShell generator for Microsoft 365 Outlook inbox rules. Quick and Advanced modes, with templates for GitHub, Slack, and Jira. Scripts stay in the browser.",
-      "highlights": [],
-      "keywords": ["TypeScript", "React", "PowerShell"],
-      "url": "https://inboxcraft.app/",
       "type": "application"
     },
     {
@@ -381,9 +349,38 @@
         "Works with Claude Code, Cursor, and other assistants that follow the npx skills spec.",
         "Covers rule creation, folder trees, categories, large-folder scans, and empty-folder cleanup."
       ],
-      "keywords": ["PowerShell", "Agent Skills", "Outlook"],
+      "keywords": [
+        "PowerShell",
+        "Agent Skills",
+        "Outlook"
+      ],
       "url": "https://github.com/trivedi-vatsal/inboxcraft-skills",
+      "type": "library",
+      "hidden": true
+    },
+    {
+      "name": "Knock",
+      "description": "Copy-paste React and Tailwind components for private previews: access screens, invitations, and draft controls. Drops into a shadcn project.",
+      "highlights": [],
+      "keywords": [
+        "React",
+        "Tailwind",
+        "shadcn/ui"
+      ],
+      "url": "https://knock.codes",
       "type": "library"
+    },
+    {
+      "name": "InboxCraft",
+      "description": "A browser-only PowerShell generator for Microsoft 365 Outlook inbox rules. Quick and Advanced modes, with templates for GitHub, Slack, and Jira. Scripts stay in the browser.",
+      "highlights": [],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "PowerShell"
+      ],
+      "url": "https://inboxcraft.app/",
+      "type": "application"
     },
     {
       "name": "audit-plan-tasks",
@@ -392,7 +389,10 @@
         "Audit first: read the code, run the commands, hit the real endpoints, then plan.",
         "Install with npx skills add trivedi-vatsal/audit-plan-tasks."
       ],
-      "keywords": ["Agent Skills", "Planning"],
+      "keywords": [
+        "Agent Skills",
+        "Planning"
+      ],
       "url": "https://github.com/trivedi-vatsal/audit-plan-tasks",
       "type": "library"
     },
@@ -400,31 +400,66 @@
       "name": "StaleGuard",
       "description": "Reloads a stale SPA when the tab is focused again, by checking ETag and Last-Modified. No polling and no banner.",
       "highlights": [],
-      "keywords": ["TypeScript", "React"],
+      "keywords": [
+        "TypeScript",
+        "React"
+      ],
       "url": "https://vatsal.xyz/StaleGuard/",
-      "type": "library"
+      "type": "library",
+      "hidden": true
     },
     {
       "name": "PySecRecipes",
       "description": "GitHub Actions recipes that audit Python dependencies against PyPI, OSV, and Python Packaging advisories, and open or close issues as findings change.",
       "highlights": [],
-      "keywords": ["Python", "GitHub Actions", "DevSecOps"],
+      "keywords": [
+        "Python",
+        "GitHub Actions",
+        "DevSecOps"
+      ],
       "url": "https://vatsal.xyz/pysec-recipes/",
-      "type": "application"
+      "type": "application",
+      "hidden": true
     },
     {
       "name": "PyImportSync",
       "description": "AST check that every Python import is declared in requirements.txt. Ships as a GitHub Action and a pre-commit hook.",
       "highlights": [],
-      "keywords": ["Python", "AST", "pre-commit"],
+      "keywords": [
+        "Python",
+        "AST",
+        "pre-commit"
+      ],
       "url": "https://github.com/trivedi-vatsal/PyImportSync",
-      "type": "application"
+      "type": "application",
+      "hidden": true
     }
   ],
   "meta": {
     "canonical": "https://resume.vatsal.xyz",
     "version": "v1.0.0",
-    "lastModified": "2026-09-30T00:00:00",
-    "theme": "jsonresume-theme-local"
+    "lastModified": "2026-10-02T00:00:00",
+    "theme": "jsonresume-theme-ink",
+    "experiments": "https://vatsal.xyz/experiments",
+    "emphasis": [
+      "generative AI (GenAI)",
+      "eight pharma and life-sciences client deployments",
+      "Large Language Model (LLM)",
+      "Azure OpenAI",
+      "MLR (medical, legal, regulatory) review",
+      "Retrieval-Augmented Generation (RAG)",
+      "551 medical publications",
+      "Healthcare Professional (HCP)",
+      "14-check validator",
+      "20 security fixes",
+      "three client release lines",
+      "26 operators",
+      "48 segmentation tests",
+      "above 90%",
+      "Apache NiFi",
+      "10 billion transactions",
+      "71 customer datasets and 998 scheduled queries",
+      "Google Cloud"
+    ]
   }
 }
