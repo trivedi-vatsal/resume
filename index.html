@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Principal Engineer · AI Platforms · Enterprise Integrations - Vatsal Trivedi" />
+    <meta name="description" content="Principal Engineer · Generative AI Platforms · Enterprise Integrations - Vatsal Trivedi" />
     <meta name="author" content="Vatsal Trivedi" />
     <title>Vatsal Trivedi - Resume</title>
     <style>:root {
@@ -31,50 +31,55 @@ strong { font-weight: 700; }
 .resume-section { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule); }
 .profile-section { border: 0; margin-top: 0; padding-top: 0; }
 .resume-section > h2 { margin-bottom: 9px; font: 700 14px/1.3 Arial, sans-serif; }
-.work-entry { margin-bottom: 16px; }
+.work-entry { margin-bottom: 16px; break-inside: avoid; }
+h2, h3, .entry-heading { break-after: avoid; }
 .entry-heading { margin-bottom: 4px; }
-.company-line, .role-line, .project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+.company-line, .role-line, .project-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
 .company-line h3 { font: 700 14px/1.35 Arial, sans-serif; }
 .role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 16px; line-height: 1.35; font-weight: 700; }
 .entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font: 12px/1.4 Arial, sans-serif; color: var(--muted); }
 .entry-date { flex-shrink: 0; }
 .company-description { margin: 3px 0 5px; }
 .role-summary { color: var(--muted); margin: 5px 0; }
-.achievements, .project-highlights { margin: 4px 0 0; padding-left: 16px; }
-.achievements li, .project-highlights li { margin-bottom: 3px; padding-left: 1px; }
-li::marker { color: #8a8f99; }
-.project-entry { margin-bottom: 10px; padding-bottom: 9px; border-bottom: 1px solid #e8eaef; }
+.achievements, .project-highlights { list-style: none; margin: 8px 0 0; padding-left: 0; }
+.achievements li, .project-highlights li { margin-bottom: 8px; padding-left: 1.15em; text-indent: -1.15em; }
+.project-list { display: block; }
+.project-entry { margin-bottom: 10px; padding-bottom: 9px; border-bottom: 1px solid #e8eaef; break-inside: avoid; }
 .project-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.keep { white-space: nowrap; }
 .project-entry p { margin: 3px 0 4px; }
 .project-highlights { margin-bottom: 5px; }
 .project-url { overflow-wrap: anywhere; }
-.technology-line span + span::before, .skill-group dd span + span::before { content: " · "; }
-.skills-list { margin: 0; font: inherit; }
+.project-more { margin: 12px 0 0; }
+.skill-group, .technology-line { display: flex; flex-wrap: wrap; align-items: baseline; max-width: 100%; }
 .skill-group { margin-bottom: 8px; }
-.skill-group dt { margin-bottom: 2px; font-weight: 700; }
-.skill-group dd { margin: 0; color: var(--muted); }
+.skill-group dt { font-weight: 700; }
+.skill-group dt::after { content: ":"; font-weight: 400; margin-right: 0.35em; }
+.skill-group dd { display: contents; color: var(--muted); }
+.technology-line span, .skill-group dd span { white-space: nowrap; }
+.technology-line span:not(:last-child)::after, .skill-group dd span:not(:last-child)::after { content: ",\00a0"; }
+.skills-list { margin: 0; font: inherit; max-width: 100%; }
 .education-entry { margin-bottom: 10px; }
-.resume-controls { max-width: 960px; margin: 20px auto -16px; text-align: right; padding: 0 4px; }
+.resume-controls { max-width: 960px; margin: 20px auto 0; text-align: right; padding: 0 4px; }
 .resume-controls a { display: inline-block; border: 1px solid var(--rule); border-radius: 4px; padding: 8px 12px; background: white; color: var(--muted); font: 12px Arial, sans-serif; }
 blockquote { margin: 8px 0; padding-left: 12px; border-left: 2px solid var(--rule); }
 
 @media (max-width: 640px) {
   .resume { margin: 12px; padding: 24px; }
-  .resume-controls { margin: 12px 16px; }
+  .resume-controls { margin: 12px 16px 0; }
   .resume-header h1 { font-size: 30px; }
   .company-line, .role-line, .project-heading { flex-wrap: wrap; gap: 2px 12px; }
   .entry-date { width: 100%; }
 }
 
-.focus-areas { margin-top: 10px; font: inherit; color: var(--text); }
-.focus-areas strong { color: var(--text); margin-right: 5px; }
+.focus-section p { margin-bottom: 0; }
 </style>
-    <style media="print">@page { size: A4; margin: 12mm; }
+    <style media="print">@page { size: legal; margin: 12mm; }
 
 body {
   background: white;
-  font-size: 9.8pt;
-  line-height: 1.28;
+  font-size: 11pt;
+  line-height: 1.4;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -82,70 +87,75 @@ body {
 .resume { max-width: none; margin: 0; padding: 0; box-shadow: none; }
 .resume-controls { display: none; }
 
-/* The PDF exporter repeats this header in the reserved page margin. */
-.pdf-export .resume-header { display: none; }
 .resume-header {
   margin: 0 0 4mm;
   padding: 0 0 3mm;
   background: white;
 }
-.resume-header h1 { font-size: 23pt; line-height: 1.1; }
-.headline { font-size: 10pt; margin: 2mm 0 2mm; }
-.contact-line, .profile-line { font-size: 8pt; line-height: 1.4; gap: 1mm 4mm; }
+.resume-header h1 { font-size: 20pt; line-height: 1.15; }
+.headline { font-size: 12pt; margin: 2mm 0 2mm; }
+.contact-line, .profile-line { font-size: 10.5pt; line-height: 1.4; gap: 1mm 4mm; }
 .profile-line { margin-top: 1mm; }
+.profile-line svg { display: none; }
 
-.resume-section { margin-top: 3mm; padding-top: 2mm; }
+.resume-section { margin-top: 4mm; padding-top: 2.5mm; }
 .profile-section { margin-top: 0; padding-top: 0; }
-.resume-section > h2 { font-size: 10pt; margin-bottom: 2mm; break-after: avoid; page-break-after: avoid; }
-.work-entry { margin-bottom: 2.5mm; }
-.entry-heading { break-inside: avoid; page-break-inside: avoid; break-after: avoid; page-break-after: avoid; }
-.company-line h3 { font-size: 10pt; }
-.role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 11pt; }
-.entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font-size: 8.5pt; }
+.focus-section { break-inside: avoid; page-break-inside: avoid; }
+.focus-section p { margin-bottom: 0; }
+.resume-section > h2 { font-size: 12pt; margin-bottom: 2mm; break-after: avoid; page-break-after: avoid; }
+.work-entry { break-inside: auto; page-break-inside: auto; margin-bottom: 4mm; }
+.project-entry { break-inside: avoid; page-break-inside: avoid; }
+h2, h3, .entry-heading { break-after: avoid; page-break-after: avoid; }
+.entry-heading { break-inside: avoid; page-break-inside: avoid; }
+.keep { white-space: nowrap; }
+.company-line h3 { font-size: 11pt; }
+.role-line h4, .project-heading h3, .education-entry h3, .resume-section article > h3 { font-size: 12pt; }
+.entry-date, .entry-location, .project-url, .company-description, .technology-line, .entry-note { font-size: 10.5pt; }
 .company-description { margin: 1mm 0; }
-.role-summary { display: none; }
-.achievements { margin-top: 1mm; padding-left: 3.5mm; }
-.achievements li, .project-highlights li { margin-bottom: 0.6mm; break-inside: avoid; page-break-inside: avoid; }
-.project-entry { break-inside: avoid; page-break-inside: avoid; margin-bottom: 0.5mm; padding-bottom: 0.5mm; }
+.achievements, .project-highlights { list-style: none; margin-top: 1.5mm; padding-left: 0; }
+.achievements li, .project-highlights li { margin-bottom: 1.2mm; padding-left: 1.1em; text-indent: -1.1em; break-inside: avoid; page-break-inside: avoid; }
+.project-list { display: block; }
+.project-entry { margin-bottom: 2mm; padding-bottom: 1.5mm; }
 .project-entry p { margin: 1px 0 2px; }
-.project-highlights { display: none; }
 .skills-list { font: inherit; }
-.skill-group { break-inside: avoid; page-break-inside: avoid; margin-bottom: 0.5mm; }
-.skill-group dt, .skill-group dd { display: inline; }
-.skill-group dt::after { content: " - "; font-weight: 400; }
+.skill-group { display: flex; flex-wrap: wrap; align-items: baseline; margin-bottom: 1.5mm; break-inside: avoid; page-break-inside: avoid; }
+.skill-group dt::after { content: ":"; font-weight: 400; margin-right: 0.35em; }
+.skill-group dd { display: contents; }
 .education-entry { break-inside: avoid; page-break-inside: avoid; }
 .education-section { margin-top: 2mm; padding-top: 1.5mm; }
 .education-section > h2 { margin-bottom: 1mm; }
 .education-entry, .education-entry p { margin-bottom: 0; }
-.volunteer-section { display: none; }
 a[href]::after { content: none; }
 </style>
   </head>
   <body>
     <nav class="resume-controls" aria-label="Resume actions">
-      <a href="./pdf/Vatsal Trivedi.pdf">Download PDF</a>
+      <a href="./pdf/Vatsal_Trivedi_Principal_Engineer.pdf">Download PDF</a>
     </nav>
     <main class="resume">
       <header class="resume-header">
         <h1>Vatsal Trivedi</h1>
-        <p class="headline">Principal Engineer · AI Platforms · Enterprise Integrations</p>
+        <p class="headline">Principal Engineer · Generative AI Platforms · Enterprise Integrations</p>
         <div class="contact-line">
           <span>Bengaluru, India</span>
           <a href="mailto:trivedivatsal005@gmail.com">trivedivatsal005@gmail.com</a>
-          <a href="tel:+91 760-063-5053">+91 760-063-5053</a>
+          <a href="tel:+917600635053">+91 76006 35053</a>
           <a href="https:&#x2F;&#x2F;vatsal.xyz">https:&#x2F;&#x2F;vatsal.xyz</a>
         </div>
         <div class="profile-line">
-          <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal" aria-label="Github profile for trivedi-vatsal" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg><span>trivedi-vatsal</span></a><a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal" aria-label="LinkedIn profile for trivedi-vatsal" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="white" d="M5 9h3v11H5zM5 4h3v3H5zM10 9h3v1.5c.8-1.2 1.8-1.8 3.3-1.8 2.8 0 3.7 1.8 3.7 4.8V20h-3v-6c0-1.5-.4-2.5-1.7-2.5-1.6 0-2.3 1.1-2.3 2.8V20h-3z"/></svg><span>trivedi-vatsal</span></a><a href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal" aria-label="Behance profile for trivedivatsal" title="Behance"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>Behance</title><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"></path></svg><span>trivedivatsal</span></a><a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" aria-label="Dribbble profile for trivedivatsal" title="Dribbble"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>Dribbble</title><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"></path></svg><span>trivedivatsal</span></a><a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" aria-label="Dev.to profile for trivedivatsal" title="Dev.to"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>dev.to</title><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"></path></svg><span>trivedivatsal</span></a>
+          <a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal" aria-label="Github profile"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg><span>github.com&#x2F;trivedi-vatsal</span></a><a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;trivedi-vatsal" aria-label="LinkedIn profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="white" d="M5 9h3v11H5zM5 4h3v3H5zM10 9h3v1.5c.8-1.2 1.8-1.8 3.3-1.8 2.8 0 3.7 1.8 3.7 4.8V20h-3v-6c0-1.5-.4-2.5-1.7-2.5-1.6 0-2.3 1.1-2.3 2.8V20h-3z"/></svg><span>linkedin.com&#x2F;in&#x2F;trivedi-vatsal</span></a><a href="https:&#x2F;&#x2F;behance.net&#x2F;trivedivatsal" aria-label="Behance profile"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>Behance</title><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"></path></svg><span>behance.net&#x2F;trivedivatsal</span></a><a href="https:&#x2F;&#x2F;dribbble.com&#x2F;trivedivatsal" aria-label="Dribbble profile"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>Dribbble</title><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"></path></svg><span>dribbble.com&#x2F;trivedivatsal</span></a><a href="https:&#x2F;&#x2F;dev.to&#x2F;trivedivatsal" aria-label="Dev.to profile"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><title>dev.to</title><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"></path></svg><span>dev.to&#x2F;trivedivatsal</span></a>
         </div>
       </header>
 
       <section class="resume-section profile-section">
         <h2>Profile</h2>
-        <p>I&#39;m a principal engineer who builds AI products and the platforms they run on. At Phamax, I lead Ariya&#39;s <strong>architecture and delivery</strong> across <strong>eight pharma and life-sciences client deployments</strong>. The platform handles source-backed generation, regulated content workflows, and enterprise integrations. Before that, I led engineering for Factoreal&#39;s omnichannel marketing product and Comviva&#39;s MobiLytix Rewards, working on analytics at scale, loyalty targeting, and event-driven services. I write code, set engineering standards, and lead teams through production releases. I also build open-source developer tools.</p>
+        <p>I&#39;m a principal engineer who builds <strong>generative AI (GenAI)</strong> products and the platforms they run on. At Phamax, I lead Ariya&#39;s architecture and delivery across <strong>eight pharma and <span class="keep">life-sciences</span> client deployments</strong>. The platform handles <span class="keep">source-backed</span> generation, regulated content workflows, and enterprise integrations. Before that, I led engineering for Factoreal&#39;s omnichannel marketing product and Comviva&#39;s MobiLytix Rewards, working on analytics at scale, loyalty targeting, and <span class="keep">event-driven</span> services. I write <span class="keep">full-stack</span> code, set engineering standards, and lead teams through production releases.</p>
       </section>
 
-      <p class="focus-areas"><strong>Focus areas</strong> Production RAG · LLM orchestration · AI evaluation · Tool calling &amp; agent workflows · Regulated content lifecycle · Enterprise integrations · Platform engineering · Multi-tenant SaaS · Distributed systems · Event-driven architecture · Large-scale analytics · Data engineering · Observability &amp; reliability · Application security · Developer tooling · Engineering leadership · Architecture &amp; delivery</p>
+      <section class="resume-section focus-section">
+        <h2>Focus areas</h2>
+        <p>Generative AI platforms, Large Language Model pipelines, Retrieval-Augmented Generation, MLR (medical, legal, regulatory) review, and enterprise integrations across pharma client deployments.</p>
+      </section>
 
       <section class="resume-section experience-section">
         <h2>Experience</h2>
@@ -159,11 +169,11 @@ a[href]::after { content: none; }
               <h4>Principal Engineer (Ariya Platform)</h4>
               <span class="entry-date">May 2025 - Present</span>
             </div>
-            <p class="company-description">Ariya: AI platform for pharmaceutical content, research, analytics, and engagement</p>
+            <p class="company-description">Ariya: generative AI platform for pharmaceutical content, research, analytics, and engagement</p>
           </header>
-          <p class="role-summary">I lead engineering for Ariya across eight client deployments. I design the architecture, write code, set engineering standards, and manage production delivery for pharma marketing and medical teams.</p>
+          <p class="role-summary">I lead architecture and delivery for Ariya across eight pharma and life-sciences client deployments.</p>
           <ul class="achievements">
-            <li>Restructured Ariya into core API, portal, and authoring applications. Set <strong>shared engineering standards</strong> and reusable staging, UAT, and production deployment workflows.</li><li>Built the AI Content Wizard and <strong>regulated content lifecycle</strong>, with configuration-driven authoring, localization, <strong>multi-stage approval, compliance checks, and distribution</strong> across content types and markets.</li><li>Designed <strong>Content Compose</strong> with three LLM stages, hybrid Azure AI Search retrieval, <strong>source-linked bibliographies</strong> rebuilt after generation, and a <strong>14-check validator</strong> for completeness and citations.</li><li>Designed <strong>LLM orchestration</strong> with prompts, context injection, RAG, embeddings, and tool calling. Integrated <strong>Veeva CRM and Salesforce Marketing Cloud</strong> into omnichannel workflows for each tenant.</li><li>Delivered a white-label RAG assistant over <strong>551 medical publications</strong> with access controls, inspectable source PDFs, feedback, audit logs, and an admin console on Azure Container Apps.</li><li>Built the <strong>Speech Avatar</strong> across Azure Speech, Django, and the portal, including streaming chat, credential exchange, conversation logs, and post-call analysis.</li><li>Designed <strong>Bronze&#x2F;Silver&#x2F;Gold ingestion</strong> with a DBML registry and run tracking. Fixed six causes of production failures and added deterministic keys for <strong>repeatable UPSERTs</strong>.</li><li>Built the <strong>Data Catalog</strong> for metadata discovery, observability, and <strong>self-service access</strong>, and the HCP and SFMC email-data APIs for the Daily Sales Brief.</li><li>Built repeatable SonarQube checks and applied <strong>20 security fixes</strong> across <strong>three client release lines</strong> for encryption, JWT validation, hashing, SQL access, and application controls.</li><li><strong>Encrypted phone numbers at rest</strong>, automated dependency security audits, and coordinated database certificate rotation across <strong>seven environments and four services</strong>.</li><li>Added uv and Docker caching to Python builds. Built a <strong>JSON-to-PPTX service</strong> and admin APIs for content metrics and event reports.</li>
+            <li>• Led system design for splitting Ariya into core API, portal, and authoring services on Azure App Service and Azure Functions, and standardized CI&#x2F;CD across staging, UAT, and production for eight client deployments.</li><li>• Architected a <span class="keep">three-stage</span> <strong>Large Language Model (LLM)</strong> generation pipeline (Content Compose) on <strong>Azure OpenAI</strong> with hybrid Azure AI Search retrieval, <span class="keep">post-generation</span> citation rebuilding, and a <strong><span class="keep">14-check</span> validator</strong>.</li><li>• Owned <span class="keep">configuration-driven</span> authoring, localization, and <strong>MLR (medical, legal, regulatory) review</strong>, with compliance checks and distribution across content types and markets.</li><li>• Designed LLM orchestration with prompts, context injection, embeddings, and tool calling, and integrated Veeva CRM and Salesforce Marketing Cloud into each tenant&#39;s workflows.</li><li>• Shipped a <span class="keep">white-label</span> <strong><span class="keep">Retrieval-Augmented</span> Generation (RAG)</strong> assistant over <strong>551 medical publications</strong> on Azure Container Apps, with <span class="keep">role-based</span> access, <span class="keep">source-PDF</span> citations, audit logs, and an admin console.</li><li>• Owned a streaming voice assistant (Speech Avatar) on Azure Speech and Django, including credential exchange, conversation logs, and <span class="keep">post-call</span> analysis.</li><li>• Designed medallion (Bronze&#x2F;Silver&#x2F;Gold) ingestion with a DBML registry, run tracking, and deterministic keys for repeatable UPSERTs. Built a data catalog and <strong>Healthcare Professional (HCP)</strong> <span class="keep">email-data</span> APIs for the daily sales brief.</li><li>• Drove <strong>20 security fixes</strong> across <strong>three client release lines</strong>, including encrypted phone numbers at rest, JWT validation, hashing, SQL access, SonarQube checks, security automation on pipeline runs, dependency audits, and database certificate rotation across seven environments and four services.</li>
           </ul>
         </article>
         <article class="work-entry">
@@ -178,9 +188,9 @@ a[href]::after { content: none; }
             </div>
             <p class="company-description">MobiLytix Rewards: multi-tenant loyalty and campaign platform for telecom and retail</p>
           </header>
-          <p class="role-summary">I was technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards. I owned full-stack architecture, targeting services, and shared backend packages, and worked with in-house and vendor teams on delivery.</p>
+          <p class="role-summary">Technical lead for the cloud-agnostic SaaS rewrite of MobiLytix Rewards, a multi-tenant loyalty platform for telecom and retail.</p>
           <ul class="achievements">
-            <li>Led the <strong>cloud-agnostic, multi-tenant platform rewrite</strong> in TypeScript, React, and FeathersJS, with PostgreSQL, Delta Lake, and vector databases. Built product features and the services and data systems they use.</li><li>Owned <strong>Kafka campaign processing</strong> for high-throughput reward and loyalty workflows, with asynchronous execution and caching. Delivered <strong>AI&#x2F;ML personalization and segmentation</strong>.</li><li>Built a <strong>JSON-to-PostgreSQL segmentation engine</strong> with 26 operators, including 11 date operators. Added <strong>custom member attributes without schema changes</strong>, scheduled runs, and run history.</li><li>Made <strong>club provisioning transactional</strong> so partial tenant setup rolls back. Used Kafka to recompute segments when their rules change.</li><li>Wrote PostgreSQL and Redis <strong>clients used by five services</strong> and service-to-service JWT helpers. Built a shared member package for enrollment, membership validation, attribute updates, and caching.</li><li>Introduced <strong>platform observability and monitoring</strong> for more reliable deployments and faster incident diagnosis. Coordinated releases and security fixes across six services.</li><li>Introduced Jest tests and coverage gates for segmentation, scheduling, and tiers, including <strong>48 segmentation tests</strong>. Moved shared packages to TypeScript and automated publishing.</li>
+            <li>• Led the <span class="keep">multi-tenant</span> platform rewrite in TypeScript, React, FeathersJS, PostgreSQL, Delta Lake, and vector databases, with Azure Key Vault for tenant secrets and the product features and shared services.</li><li>• Owned Kafka campaign processing for <span class="keep">high-throughput</span> reward and loyalty workflows, with asynchronous execution, caching, and AI&#x2F;ML personalization and segmentation.</li><li>• Architected a <span class="keep">JSON-to-PostgreSQL</span> segmentation engine with <strong>26 operators</strong>, including 11 date operators, custom member attributes without schema changes, scheduled runs, and run history.</li><li>• Drove transactional club provisioning so partial tenant setup rolls back, and built shared PostgreSQL and Redis clients used by five services.</li><li>• Introduced observability and Jest coverage gates, including <strong>48 segmentation tests</strong> and platform test coverage <strong>above 90%</strong>, and coordinated releases and security fixes across six services.</li>
           </ul>
         </article>
         <article class="work-entry">
@@ -193,11 +203,11 @@ a[href]::after { content: none; }
               <h4>Technical Lead</h4>
               <span class="entry-date">December 2021 - September 2023</span>
             </div>
-            <p class="company-description">Factoreal: omnichannel marketing automation platform, incubated by Comviva</p>
+            <p class="company-description">Omnichannel marketing automation for ecommerce, sports, and other businesses</p>
           </header>
-          <p class="role-summary">I led engineering for Factoreal's email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics features. The product served ecommerce, sports, and other businesses.</p>
+          <p class="role-summary">Led engineering for email, SMS, WhatsApp, push, social, customer journeys, commerce, and analytics.</p>
           <ul class="achievements">
-            <li>Built and expanded BigQuery analytics for a platform handling <strong>10 billion transactions</strong>. Automated provisioning and scoring across <strong>71 customer datasets and 998 scheduled queries</strong>.</li><li>Designed the <strong>Fan Maturity Model</strong> for the sports vertical. Six channel scores and customer-configurable weights produce four audience tiers, with daily scoring and portal controls.</li><li>Rebuilt the <strong>Shopify app for its App Store relaunch</strong>: installation, signup, store provisioning, and OAuth. Expanded webhook coverage from <strong>17 to 40 topics</strong> and added GraphQL billing subscriptions.</li><li>Built <strong>SeatGeek ticketing synchronization</strong> and WhatsApp commerce data capture. Kept Shopify API compatibility current and fixed duplicate contacts with <strong>country-aware phone normalization</strong>.</li><li>Built shared <strong>contact operations across five services</strong> and <strong>plan entitlements across twelve</strong>. Automated customer retirement and improved contact queries and data-cleanup routines.</li><li>Added <strong>tenant-configurable session expiry and risk-scored signup protection</strong>. Automated GoodData cache invalidation and built social dashboards and Jira-to-BigQuery reporting sync.</li>
+            <li>• Owned <strong>Google Cloud</strong> BigQuery analytics for a platform handling <strong>10 billion transactions</strong>, including automated provisioning and scoring across <strong>71 customer datasets and 998 scheduled queries</strong>.</li><li>• Designed an audience scoring model (Fan Maturity Model) for sports: six channel scores, <span class="keep">customer-configurable</span> weights, dynamic tiers, and daily scoring that improved retention.</li><li>• Rebuilt the Shopify app for its App Store relaunch, including installation, signup, store provisioning, OAuth, webhook coverage from 17 to 40 topics, and GraphQL billing subscriptions.</li><li>• Built SeatGeek ticketing synchronization, WhatsApp commerce capture, and shared contact operations across five services, with <span class="keep">country-aware</span> phone normalization to stop duplicate contacts.</li><li>• Led the platform UI&#x2F;UX revamp on Strapi, and owned the WordPress side of the product and website.</li>
           </ul>
         </article>
         <article class="work-entry">
@@ -210,11 +220,11 @@ a[href]::after { content: none; }
               <h4>Senior Engineer</h4>
               <span class="entry-date">June 2020 - November 2021</span>
             </div>
-            <p class="company-description">Factoreal: omnichannel marketing automation platform, incubated by Comviva</p>
+            <p class="company-description">Omnichannel marketing automation for ecommerce, sports, and other businesses</p>
           </header>
-          <p class="role-summary">I built data pipelines, integrations, and channel support across Factoreal's core API, React portal, and backend services. They feed its analytics and automated campaigns.</p>
+          <p class="role-summary">Built data pipelines, integrations, and channel support for the core API, React portal, and backend services.</p>
           <ul class="achievements">
-            <li>Built <strong>PostgreSQL and Cassandra-to-BigQuery synchronization</strong> across 24 entity workflows, with <strong>incremental processing and pagination</strong>. Automated customer dataset provisioning at signup.</li><li>Built <strong>email delivery and engagement KPI APIs</strong> and embedded GoodData dashboards so customers can see deliverability, audience response, and unsubscribe rates.</li><li>Made Shopify order ingestion safe under retries with <strong>application idempotency and database uniqueness constraints</strong>. Built <strong>Redis- and Kafka-driven abandoned-cart triggers</strong> with tenant-configurable timeouts.</li><li>Published <strong>Razorpay payment events into Kafka</strong>. Built web-push subscriptions and mobile SDK registration and events for commerce and engagement workflows.</li><li>Fixed <strong>tracking accuracy</strong> with page deduplication, tenant-specific event exclusions, and first-visit corrections. Built verified-domain trial onboarding and <strong>HubSpot contact migration</strong>.</li>
+            <li>• Built PostgreSQL and <span class="keep">Cassandra-to-BigQuery</span> synchronization on <strong>Google Cloud</strong> with <strong>Apache NiFi</strong>, across platform microservice workflows, with incremental processing, pagination, and automated dataset provisioning at signup.</li><li>• Built email delivery and engagement KPI APIs, stored email and content in Azure Blob Storage, and embedded GoodData dashboards for deliverability, audience response, and unsubscribe rates.</li><li>• Made Shopify order ingestion safe under retries with application idempotency and database uniqueness constraints, published Razorpay payment events into Kafka, and migrated contacts from HubSpot.</li>
           </ul>
         </article>
         <article class="work-entry">
@@ -229,24 +239,24 @@ a[href]::after { content: none; }
             </div>
             <p class="company-description">Life sciences work for global clients.</p>
           </header>
-          <p class="role-summary">I built full-stack applications, enterprise workflows, and reports for global life-sciences clients in a regulated environment.</p>
+          <p class="role-summary">Built full-stack applications and analytics for global life-sciences clients in a regulated environment.</p>
           <ul class="achievements">
-            <li>Built <strong>React and Angular applications</strong> with Node.js and Express backends for enterprise life-sciences workflows.</li><li>Built <strong>Microsoft 365 workflows</strong> with SharePoint, Teams, Power Automate, and Power BI for collaboration, process automation, and reporting.</li><li>Set up <strong>GA360, Google Tag Manager, and Data Studio analytics</strong> so life-sciences teams can measure digital activity and performance.</li>
+            <li>• Delivered more than 10 solutions from the start through customer deployment.</li><li>• Built React and Angular applications with Node.js and Express backends for enterprise <span class="keep">life-sciences</span> workflows.</li><li>• Set up Google Analytics 360, Google Tag Manager, and Google Data Studio (now Looker Studio) so <span class="keep">life-sciences</span> teams can measure digital activity and performance.</li>
           </ul>
         </article>
       </section>
 
       <section class="resume-section projects-section">
-        <h2>Projects I built</h2>
-        <p>Personal projects and developer tools I built, including open-source software.</p>
+        <h2>Projects</h2>
+        <div class="project-list">
         <article class="project-entry">
           <header class="project-heading">
             <h3><a href="https:&#x2F;&#x2F;openpreflight.xyz">openpreflight</a></h3>
             <a class="project-url" href="https:&#x2F;&#x2F;openpreflight.xyz">openpreflight.xyz</a>
           </header>
-          <p><strong>Self-hosted GitHub Check Runs</strong> for private pull requests. One Go binary, one SQLite file, on a server you run. Apache-2.0.</p>
+          <p><span class="keep">Self-hosted</span> GitHub Check Runs for private pull requests. One Go binary, one SQLite file, on a server you run. <span class="keep">Apache-2</span>.0.</p>
           <ul class="project-highlights">
-            <li>GitHub App, webhooks, runner, UI, and local state in one deployable unit. Docker Compose or a Linux release binary.</li><li>The project checks itself: docs, site, and the binary each get a Check Run from ci.openpreflight.xyz. GitHub Actions is only used to publish release images.</li><li>Wrote a five-part series on vatsal.xyz, from the trigger model through running untrusted code.</li>
+            <li>• GitHub App, webhooks, runner, UI, and local state in one deployable unit. Docker Compose or a Linux release binary.</li><li>• The project checks itself: docs, site, and the binary each get a Check Run from ci.openpreflight.xyz. GitHub Actions is only used to publish release images.</li><li>• Wrote a <span class="keep">five-part</span> series on vatsal.xyz, from the trigger model through running untrusted code.</li>
           </ul>
           <div class="technology-line"><span>Go</span><span>SQLite</span><span>Docker</span><span>GitHub Apps</span></div>
         </article>
@@ -255,7 +265,7 @@ a[href]::after { content: none; }
             <h3><a href="https:&#x2F;&#x2F;knock.codes">Knock</a></h3>
             <a class="project-url" href="https:&#x2F;&#x2F;knock.codes">knock.codes</a>
           </header>
-          <p>Copy-paste React and Tailwind components for private previews: access screens, invitations, and draft controls. Drops into a shadcn project.</p>
+          <p><span class="keep">Copy-paste</span> React and Tailwind components for private previews: access screens, invitations, and draft controls. Drops into a shadcn project.</p>
           <div class="technology-line"><span>React</span><span>Tailwind</span><span>shadcn&#x2F;ui</span></div>
         </article>
         <article class="project-entry">
@@ -263,19 +273,8 @@ a[href]::after { content: none; }
             <h3><a href="https:&#x2F;&#x2F;inboxcraft.app&#x2F;">InboxCraft</a></h3>
             <a class="project-url" href="https:&#x2F;&#x2F;inboxcraft.app&#x2F;">inboxcraft.app</a>
           </header>
-          <p>A <strong>browser-only PowerShell generator</strong> for Microsoft 365 Outlook inbox rules. Quick and Advanced modes, with templates for GitHub, Slack, and Jira. Scripts stay in the browser.</p>
+          <p>A <span class="keep">browser-only</span> PowerShell generator for Microsoft 365 Outlook inbox rules. Quick and Advanced modes, with templates for GitHub, Slack, and Jira. Scripts stay in the browser.</p>
           <div class="technology-line"><span>TypeScript</span><span>React</span><span>PowerShell</span></div>
-        </article>
-        <article class="project-entry">
-          <header class="project-heading">
-            <h3><a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills">InboxCraft Skills</a></h3>
-            <a class="project-url" href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills">github.com&#x2F;trivedi-vatsal&#x2F;inboxcraft-skills</a>
-          </header>
-          <p>Official Agent Skills pack for InboxCraft. <strong>Nine PowerShell tools</strong> so assistants can manage Outlook rules, folders, and categories from a prompt.</p>
-          <ul class="project-highlights">
-            <li>Works with Claude Code, Cursor, and other assistants that follow the npx skills spec.</li><li>Covers rule creation, folder trees, categories, large-folder scans, and empty-folder cleanup.</li>
-          </ul>
-          <div class="technology-line"><span>PowerShell</span><span>Agent Skills</span><span>Outlook</span></div>
         </article>
         <article class="project-entry">
           <header class="project-heading">
@@ -284,34 +283,12 @@ a[href]::after { content: none; }
           </header>
           <p>Agent Skill that scaffolds AUDIT.md, PLAN.md, and TASKS.md so a plan is based on what you actually checked, not on the request.</p>
           <ul class="project-highlights">
-            <li>Audit first: read the code, run the commands, hit the real endpoints, then plan.</li><li>Install with npx skills add trivedi-vatsal/audit-plan-tasks.</li>
+            <li>• Audit first: read the code, run the commands, hit the real endpoints, then plan.</li><li>• Install with npx skills add <span class="keep">trivedi-vatsal</span>&#x2F;<span class="keep">audit-plan-tasks</span>.</li>
           </ul>
           <div class="technology-line"><span>Agent Skills</span><span>Planning</span></div>
         </article>
-        <article class="project-entry">
-          <header class="project-heading">
-            <h3><a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;StaleGuard&#x2F;">StaleGuard</a></h3>
-            <a class="project-url" href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;StaleGuard&#x2F;">vatsal.xyz&#x2F;StaleGuard</a>
-          </header>
-          <p>Reloads a stale SPA when the tab is focused again, by checking ETag and Last-Modified. No polling and no banner.</p>
-          <div class="technology-line"><span>TypeScript</span><span>React</span></div>
-        </article>
-        <article class="project-entry">
-          <header class="project-heading">
-            <h3><a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;pysec-recipes&#x2F;">PySecRecipes</a></h3>
-            <a class="project-url" href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;pysec-recipes&#x2F;">vatsal.xyz&#x2F;pysec-recipes</a>
-          </header>
-          <p>GitHub Actions recipes that <strong>audit Python dependencies</strong> against PyPI, OSV, and Python Packaging advisories, and open or close issues as findings change.</p>
-          <div class="technology-line"><span>Python</span><span>GitHub Actions</span><span>DevSecOps</span></div>
-        </article>
-        <article class="project-entry">
-          <header class="project-heading">
-            <h3><a href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync">PyImportSync</a></h3>
-            <a class="project-url" href="https:&#x2F;&#x2F;github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync">github.com&#x2F;trivedi-vatsal&#x2F;PyImportSync</a>
-          </header>
-          <p>AST check that <strong>every Python import is declared</strong> in requirements.txt. Ships as a GitHub Action and a pre-commit hook.</p>
-          <div class="technology-line"><span>Python</span><span>AST</span><span>pre-commit</span></div>
-        </article>
+        </div>
+        <p class="project-more">Other experiments and smaller tools are at <a href="https:&#x2F;&#x2F;vatsal.xyz&#x2F;experiments">vatsal.xyz&#x2F;experiments</a>.</p>
       </section>
 
       <section class="resume-section skills-section">
@@ -319,15 +296,15 @@ a[href]::after { content: none; }
         <dl class="skills-list">
           <div class="skill-group">
             <dt>Core Areas</dt>
-            <dd><span>AI Platforms</span><span>Enterprise Integrations</span><span>Multi-Tenant SaaS</span><span>LLM Systems</span><span>Distributed Systems</span><span>Event-Driven Architecture</span><span>Developer Tooling</span><span>Data Engineering</span><span>Application Security</span><span>Regulated Environments</span><span>Platform Architecture</span><span>Engineering Leadership</span><span>Regulated Content Workflows</span></dd>
+            <dd><span>Generative AI</span><span>AI Platforms</span><span>Enterprise Integrations</span><span>Multi-Tenant SaaS</span><span>LLM Systems</span><span>Distributed Systems</span><span>Event-Driven Architecture</span><span>Developer Tooling</span><span>Data Engineering</span><span>Application Security</span><span>Regulated Environments</span><span>Platform Architecture</span><span>Engineering Leadership</span><span>Regulated Content Workflows</span></dd>
           </div>
           <div class="skill-group">
             <dt>AI &amp; LLM Engineering</dt>
-            <dd><span>LLM Orchestration</span><span>RAG Pipelines</span><span>Prompt Engineering</span><span>Tool Calling</span><span>AI Evaluations</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>OpenAI API</span><span>Claude</span><span>LangChain</span><span>LangGraph</span><span>CopilotKit &#x2F; AG-UI</span><span>Azure Speech</span><span>Vector Databases</span><span>MCP</span><span>Agent Skills</span></dd>
+            <dd><span>Generative AI</span><span>Large Language Models</span><span>Retrieval-Augmented Generation</span><span>LLM Orchestration</span><span>RAG Pipelines</span><span>Prompt Engineering</span><span>Tool Calling</span><span>AI Evaluations</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>Azure Speech</span><span>Vector Databases</span><span>Agent Skills</span></dd>
           </div>
           <div class="skill-group">
             <dt>Platform Engineering</dt>
-            <dd><span>CI&#x2F;CD</span><span>GitHub Actions</span><span>GitLab CI</span><span>Docker</span><span>Azure (App Service, Functions, Blob Storage, Key Vault)</span><span>Bicep</span><span>SonarQube</span><span>Observability</span><span>Infrastructure as Code</span><span>Security Automation</span><span>Azure Container Apps</span></dd>
+            <dd><span>CI&#x2F;CD</span><span>GitHub Actions</span><span>Docker</span><span>Azure App Service</span><span>Azure Functions</span><span>Azure Blob Storage</span><span>Azure Key Vault</span><span>SonarQube</span><span>Observability</span><span>Security Automation</span><span>Azure Container Apps</span></dd>
           </div>
           <div class="skill-group">
             <dt>Programming Languages</dt>
@@ -335,19 +312,15 @@ a[href]::after { content: none; }
           </div>
           <div class="skill-group">
             <dt>Frameworks &amp; Tools</dt>
-            <dd><span>React</span><span>Next.js</span><span>Node.js</span><span>Django</span><span>FastAPI</span><span>Celery</span><span>Strapi</span><span>FeathersJS</span><span>Express</span><span>Keycloak</span><span>Kafka</span><span>BullMQ</span><span>Jest</span><span>GraphQL &amp; REST</span><span>Vercel AI SDK</span><span>Shopify</span><span>Turborepo</span><span>shadcn&#x2F;ui</span></dd>
+            <dd><span>React</span><span>Node.js</span><span>Django</span><span>Strapi</span><span>FeathersJS</span><span>Express</span><span>Kafka</span><span>Jest</span><span>GraphQL</span><span>REST</span><span>Shopify</span><span>WordPress</span></dd>
           </div>
           <div class="skill-group">
             <dt>Databases</dt>
-            <dd><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>MongoDB</span><span>BigQuery</span><span>Redis</span><span>Cassandra</span><span>Delta Lake</span></dd>
+            <dd><span>PostgreSQL</span><span>SQLite</span><span>BigQuery</span><span>Redis</span><span>Cassandra</span><span>Delta Lake</span></dd>
           </div>
           <div class="skill-group">
             <dt>Data Engineering</dt>
-            <dd><span>Medallion Architecture</span><span>ETL &amp; Sync Pipelines</span><span>Pandas</span><span>PyArrow</span><span>SQLAlchemy</span><span>GoodData</span><span>Data Catalogs</span><span>Metadata Discovery</span></dd>
-          </div>
-          <div class="skill-group">
-            <dt>Design</dt>
-            <dd><span>Figma</span><span>Affinity Designer</span><span>Procreate</span></dd>
+            <dd><span>Google Cloud</span><span>Apache NiFi</span><span>Medallion Architecture</span><span>ETL &amp; Sync Pipelines</span><span>GoodData</span><span>Data Catalogs</span><span>Metadata Discovery</span></dd>
           </div>
           <div class="skill-group">
             <dt>Enterprise Integrations</dt>
@@ -360,7 +333,7 @@ a[href]::after { content: none; }
         <h2>Education</h2>
         <article class="education-entry">
           <div class="role-line">
-            <h3>Bachelor of Engineering, Computer Engineering</h3>
+            <h3>Bachelor of Engineering (B.E.), Computer Engineering</h3>
             <span class="entry-date">2014 - 2018</span>
           </div>
           <p><a href="https:&#x2F;&#x2F;bvmengineering.ac.in&#x2F;">Birla Vishvakarma Mahavidyalaya Engineering College, Vallabh Vidyanagar</a></p>
@@ -371,7 +344,7 @@ a[href]::after { content: none; }
 
 
       <section class="resume-section volunteer-section">
-        <h2>Community</h2>
+        <h2>Volunteer</h2>
         <article class="education-entry">
           <div class="role-line"><h3>Creative Designer - Google Developer Groups Ahmedabad</h3><span class="entry-date">2018 - Present</span></div>
           <p>Design for the GDG Ahmedabad chapter: event visuals, branding, and social graphics.</p>
@@ -386,7 +359,7 @@ a[href]::after { content: none; }
 
       
       
-      
+      <section class="resume-section"><h2>Languages</h2><div class="technology-line"><span>English - Proficient</span><span>Gujarati - Native</span><span>Hindi - Fluent</span></div></section>
       
       
     </main>
